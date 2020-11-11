@@ -29,7 +29,7 @@
       <div
         class="h-screen flex flex-row items-center justify-center leading-loose"
       >
-        <div class="w-1/4 px-6">
+        <div class="w-1/5 px-6">
           <img src="../assets/images/bio@2x.png" class="object-contain" />
         </div>
         <div class="px-6">
@@ -38,29 +38,35 @@
           >
             hi!
           </h2>
-          <br />
           <p>
             i'm
-            <span class="bg-rose text-night mx-1 px-1 font-bold">lynn</span
-            >.<br />
+            <span class="bg-rose text-night px-1 font-bold">lynn</span>.<br />
             i’m interested in careers in
-            <span class="bg-lemon text-night mx-1 px-1 font-bold"
+            <span class="bg-lemon text-night px-1 font-bold"
               >front-end development, accessibility, UI & UX</span
             >.<br />
             the tools i use most include
-            <span class="bg-lavender text-night mx-1 px-1 font-bold"
+            <span class="bg-lavender text-night px-1 font-bold"
               >vue, react, html, css, js, & figma</span
             >.<br />
             i’m searching for communities where
-            <span class="bg-leaf text-night mx-1 px-1 font-bold"
-              >mutual growth & mentorship
-            </span>
-            are valued & celebrated. ✨<br />
+            <span class="bg-leaf text-night px-1 font-bold"
+              >mutual growth & mentorship</span
+            >
+            &nbsp;are valued & celebrated. ✨<br />
             when i’m not building things, i love learning new
-            <span class="bg-rose text-night mx-1 px-1 font-bold"
+            <span class="bg-rose text-night px-1 font-bold"
               >skills & disciplines</span
             >. some things i'm currently working on:
           </p>
+          <bullet-list>
+            <bullet-item>minimalism</bullet-item>
+            <bullet-item>ethical veganism</bullet-item>
+            <bullet-item>sustainable & slow living</bullet-item>
+            <bullet-item>living car-free</bullet-item>
+            <bullet-item>jogging (this one is a challenge)</bullet-item>
+            <bullet-item>slacklining (when indiana weather allows)</bullet-item>
+          </bullet-list>
         </div>
       </div>
     </div>
@@ -86,7 +92,9 @@ body {
 </style>
 
 <script>
+import BulletItem from '../components/bullet-item'
+import BulletList from '../components/bullet-list'
 export default {
-  components: {},
+  components: { BulletItem, BulletList },
 }
 </script>
