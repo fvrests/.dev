@@ -1,8 +1,8 @@
 <template>
   <li>
-    <div class="flex flex-row items-center justify-center font-bold">
+    <div class="flex flex-row items-center font-bold">
       <div
-        class="bullet w-2 h-2 bg-transparent border-solid border-2 border-night mr-2"
+        class="bullet w-2 h-2 bg-transparent border-solid border-2 border-night mr-4"
       />
       <slot />
     </div>

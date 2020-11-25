@@ -1,7 +1,5 @@
 <template>
-  <ul
-    class="grid grid-flow-col grid-cols-2 grid-rows-4 place-content-center gap-2 pt-4"
-  >
+  <ul class="pt-4 leading-loose">
     <slot />
   </ul>
 </template>
