@@ -8,6 +8,15 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   theme: {
     extend: {
+      colors: {
+        lavender: '#DAD4E0',
+        rose: '#F5E0DC',
+        lemon: '#FCE5C4',
+        leaf: '#CED9CD',
+        coal: '#312C2C',
+        night: '#232121',
+        paper: '#FFFAF3',
+      },
       screens: {
         light: { raw: '(prefers-color-scheme: light)' },
         dark: { raw: '(prefers-color-scheme: dark)' },
@@ -19,18 +28,6 @@ module.exports = {
     },
     letterSpacing: {
       widest: '.4em',
-    },
-    textColor: {
-      night: '#232121',
-    },
-    colors: {
-      lavender: '#DAD4E0',
-      rose: '#F5E0DC',
-      lemon: '#FCE5C4',
-      leaf: '#CED9CD',
-      coal: '#312C2C',
-      night: '#232121',
-      paper: '#FFFAF3',
     },
   },
   variants: {},
