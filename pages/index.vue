@@ -11,22 +11,22 @@
       image-width="64"
     >
       i'm
-      <span class="highlight bg-rose">lynn</span>.<br />
-      i’m interested in careers in
+      <span class="highlight bg-rose">lynn</span>.<br /><br />
+      i’m exploring
       <span class="highlight bg-lemon"
         >front-end development, accessibility, UI & UX</span
-      >.<br />
+      >.<br /><br />
       the tools i use most include
-      <span class="highlight bg-lavender"
-        >vue, react, html, css, js, & figma</span
-      >.<br />
+      <span class="highlight bg-leaf">vue, react, html, css, js, & figma</span
+      >.<br /><br />
       i’m searching for communities where
       <span class="highlight bg-lavender">mutual growth & mentorship</span>
-      are valued & celebrated. ✨<br />
+      are valued & celebrated. ✨<br /><br />
       i love learning
-      <span class="highlight bg-rose">hobbies & disciplines</span>. &nbsp;some
-      things i'm currently working on can be found HERE .
+      <span class="highlight bg-rose">hobbies & disciplines</span>. &nbsp; get
+      to know me over HERE.
     </BaseSection>
+    <BaseHeading>Projects</BaseHeading>
     <BaseSection
       title="lavender"
       image="lavender@2x.png"
@@ -34,27 +34,13 @@
       inverse
     >
       lavender is a calming, minimal chrome extension that overrides the new tab
-      with live-updating time & weather data against a pastel theme.
-      <BulletList>
-        <BulletItem>vue & vue composition API</BulletItem>
-        <BulletItem>fetching data from external APIs</BulletItem>
-        <BulletItem>state management with vuex</BulletItem>
-        <BulletItem>live-updating components</BulletItem>
-        <BulletItem>asynchronous data fetching</BulletItem>
-      </BulletList>
+      with live-updating time & weather data and a pastel theme.
     </BaseSection>
     <BaseSection title="rosé pine" image="rosepine@2x.png" theme-color="rose">
       rosé pine is a theme suite that began with support for visual studio code,
       hyper, and iterm2 and has expanded in popularity to include many community
       submissions. it features dark, moonlit, & dawn variants, each with subdued
       palettes chosen for readability.
-      <BulletList>
-        <BulletItem>managing & orgaizing a public git repo</BulletItem>
-        <BulletItem>color theory</BulletItem>
-        <BulletItem>navigating & writing JSON files</BulletItem>
-        <BulletItem>building & presenting a brand</BulletItem>
-        <BulletItem>pair programming</BulletItem>
-      </BulletList>
     </BaseSection>
     <BaseSection
       title="wakely"
@@ -65,13 +51,6 @@
       wakely is a conceptual promotional site i designed & built to strengthen
       my skills in page layout & design, CSS & HTML structures, & basic
       principles of UI / UX.
-      <BulletList>
-        <BulletItem>react & nextJS</BulletItem>
-        <BulletItem>building page layouts with CSS</BulletItem>
-        <BulletItem>logo design</BulletItem>
-        <BulletItem>brand identity</BulletItem>
-        <BulletItem>writing copy & call to action components</BulletItem>
-      </BulletList>
     </BaseSection>
     <div class="fixed bg-night -top-12 h-14 overscroll overscroll-bottom"></div>
   </div>
@@ -94,16 +73,14 @@
 
 <script>
 import BaseSection from '../components/base-section'
-import BulletItem from '../components/bullet-item'
-import BulletList from '../components/bullet-list'
 import BaseNav from '../components/base-nav'
+import BaseHeading from '../components/base-heading'
 
 export default {
   components: {
-    BulletItem,
-    BulletList,
     BaseSection,
     BaseNav,
+    BaseHeading,
   },
 }
 </script>

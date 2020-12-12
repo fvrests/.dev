@@ -1,29 +1,32 @@
 <template>
-  <div class="h-screen w-full flex flex-col justify-center space-y-40">
+  <div
+    class="w-full flex flex-col justify-center items-center mb-96 max-w-screen-4xl"
+  >
     <div
-      class="flex flex-col sm:flex-row items-center justify-center max-w-screen-lg mx-auto space-x-16"
-      :class="inverse ? 'sm:flex-row-reverse' : null"
+      class="flex flex-col lg:flex-row items-between justify-center items-center"
+      :class="inverse ? 'lg:flex-row-reverse' : null"
     >
       <div
-        class="backdrop relative max-w-full"
-        :class="[themeColor, `w-${imageWidth}`]"
+        v-if="image"
+        class="backdrop relative max-w-md mr-6 mt-6"
+        :class="[themeColor, `md:w-${imageWidth}`]"
       >
         <img
           :src="require(`~/assets/images/${image}`)"
           class="w-full border-8 border-night border-solid relative z-20"
         />
       </div>
-      <div class="max-w-lg mr-16">
-        <h2
-          v-if="heading"
-          class="font-display tracking-widest text-xl sm:text-4xl font-bold mb-4"
-        >
+      <div
+        class="w-full max-w-md md:min-w-sm"
+        :class="inverse ? 'md:mr-24' : 'md:ml-24'"
+      >
+        <h2 v-if="heading" class="font-display text-3xl md:text-5xl mb-4">
           {{ heading }}
         </h2>
-        <h3 class="text-xl font-bold mb-4">
+        <h3 class="text-xl md:text-3xl font-display mb-4 capitalize">
           {{ title }}
         </h3>
-        <div class="leading-loose">
+        <div class="leading-relaxed">
           <slot />
         </div>
       </div>

@@ -1,12 +1,10 @@
 <template>
   <div class="h-24 w-full">
     <div class="h-24 flex flex-row items-center justify-between mx-8">
-      <router-link
-        to="/"
-        class="title font-display tracking-widest text-xl sm:text-4xl font-bold"
+      <router-link to="/" class="title font-display text-2xl md:text-4xl"
         >fvrests
       </router-link>
-      <nav class="hidden sm:inline-block">
+      <nav class="hidden md:inline-block">
         <ul class="flex flex-row font-bold">
           <li class="px-6">
             <router-link active-class="text-red-500" to="/about"
