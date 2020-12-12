@@ -15,19 +15,16 @@ module.exports = {
         leaf: '#CED9CD',
         coal: '#312C2C',
         night: '#232121',
-        paper: '#FFFAF3',
+        paper: '#FFF9F3',
       },
       screens: {
         light: { raw: '(prefers-color-scheme: light)' },
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
       fontFamily: {
-        display: ['Rubik'],
-        sans: ['Lato', ...fontFamily.sans],
+        display: ['DM Serif Text'],
+        sans: ['Public Sans', ...fontFamily.sans],
       },
-    },
-    letterSpacing: {
-      widest: '.4em',
     },
   },
   variants: {},
