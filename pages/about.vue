@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <BaseNav></BaseNav>
+  <PageLayout>
     <bullet-list
       :items="[
         'minimalism',
@@ -11,13 +10,13 @@
         'jogging',
       ]"
     />
-  </div>
+  </PageLayout>
 </template>
 
 <script>
 import BulletList from '../components/bullet-list'
-import BaseNav from '../components/base-nav'
+import PageLayout from '../components/page-layout'
 export default {
-  components: { BulletList, BaseNav },
+  components: { BulletList, PageLayout },
 }
 </script>
