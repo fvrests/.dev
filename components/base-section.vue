@@ -8,23 +8,25 @@
         {{ heading }}
       </h2>
       <div
-        class="flex flex-col lg:flex-row justify-start items-start lg:items-center"
-        :class="inverse ? 'lg:flex-row-reverse' : null"
+        class="flex flex-col lg:flex-row justify-start items-start lg:items-center relative"
       >
         <div
           v-if="image"
-          class="backdrop relative max-w-xs mb-8 lg:mb-0 ml-6 mt-6"
+          class="backdrop relative max-w-sm mb-8 lg:mb-0 mr-12 mt-8"
           :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
         >
+          <div
+            v-if="numeral !== null"
+            class="font-display text-xl absolute -left-16 opacity-60 tracking-wider"
+          >
+            {{ numeral < 10 ? '0' + numeral : numeral }}
+          </div>
           <img
             :src="require(`~/assets/images/${image}`)"
             class="w-full border-8 border-night border-solid light:border-coal relative z-20"
           />
         </div>
-        <div
-          class="w-full md:w-md mb-20 lg:mb-0 max-w-md"
-          :class="inverse ? 'lg:mr-24' : 'lg:ml-24'"
-        >
+        <div class="w-full md:w-md mb-20 lg:mb-0 max-w-md">
           <h3 class="text-xl sm:text-3xl font-display mb-4">
             {{ title }}
           </h3>
@@ -54,12 +56,12 @@
 <script>
 export default {
   props: {
+    numeral: { type: Number, default: null },
     title: { type: String, default: '' },
     heading: { type: String, default: '' },
     image: { type: String, default: null },
     imageSize: { type: String, default: '' },
     themeColor: { type: String, default: 'rose' },
-    inverse: { type: Boolean, default: false },
     extraLoose: { type: Boolean, default: false },
     links: { type: Array, default: null },
   },
