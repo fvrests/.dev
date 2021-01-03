@@ -3,13 +3,9 @@
   --color-rose: #f5e0dc;
   --color-lemon: #fce5c4;
   --color-leaf: #ced9cd;
-  --color-coal: #312c2c;
-  --color-night: #232121;
-  --color-paper: #fdf8f6;
-}
-
-.highlight {
-  @apply text-night px-1 mx-1 font-bold;
+  --color-coal: #252222;
+  --color-night: #111010;
+  --color-paper: #fffdfd;
 }
 
 html {
@@ -20,6 +16,7 @@ body {
   height: 100%;
 }
 
+/* dark & light modes */
 @media (prefers-color-scheme: light) {
   body {
     background: var(--color-paper);
@@ -32,4 +29,51 @@ body {
     background: var(--color-coal);
     color: white;
   }
+}
+
+/* use with bg-(theme color) for emphasized text */
+.highlight {
+  @apply text-night px-0.5 mx-0.5 font-bold;
+}
+
+/* body link styles- give a class of (themeColor) for underline & bg color */
+.link-button {
+  position: relative;
+  z-index: 10;
+  border-bottom: 8px solid transparent;
+  font-weight: bold;
+}
+.link-button:hover {
+  color: var(--color-night);
+}
+
+.link-button::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0px;
+  bottom: -6px;
+  transition: all 50ms ease;
+  transition-property: width height bottom left;
+}
+.link-button:hover::after {
+  bottom: -12px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  bottom: -4px;
+  left: -4px;
+  z-index: -10;
+}
+.link-button.rose::after {
+  background-color: var(--color-rose);
+}
+.link-button.lavender::after {
+  background-color: var(--color-lavender);
+}
+.link-button.lemon::after {
+  background-color: var(--color-lemon);
+}
+.link-button.leaf::after {
+  background-color: var(--color-leaf);
 }

@@ -7,15 +7,25 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
  */
 module.exports = {
   theme: {
+    borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+      '12': '12px',
+    },
     extend: {
       colors: {
-        lavender: '#DAD4E0',
-        rose: '#F5E0DC',
-        lemon: '#FCE5C4',
-        leaf: '#CED9CD',
-        coal: '#312C2C',
-        night: '#232121',
-        paper: '#FFF9F3',
+        lavender: 'var(--color-lavender)',
+        rose: 'var(--color-rose)',
+        lemon: 'var(--color-lemon)',
+        leaf: 'var(--color-leaf)',
+        coal: 'var(--color-coal)',
+        night: 'var(--color-night)',
+        paper: 'var(--color-paper)',
       },
       screens: {
         light: { raw: '(prefers-color-scheme: light)' },
@@ -24,6 +34,9 @@ module.exports = {
       fontFamily: {
         display: ['DM Serif Text'],
         sans: ['Public Sans', ...fontFamily.sans],
+      },
+      lineHeight: {
+        'extra-loose': '2.5',
       },
     },
   },
