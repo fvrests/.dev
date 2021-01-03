@@ -23,7 +23,8 @@
           </div>
           <img
             :src="require(`~/assets/images/${image}`)"
-            class="w-full border-8 border-night border-solid light:border-coal relative z-20"
+            class="w-full border-8 max-h-64 object-cover border-night border-solid light:border-coal relative z-20"
+            :class="imageSize !== 'small' ? 'lg:-h64' : ''"
           />
         </div>
         <div class="w-full md:w-md mb-20 lg:mb-0 max-w-md">
