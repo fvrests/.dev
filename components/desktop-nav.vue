@@ -1,5 +1,5 @@
 <template>
-  <nav class="hidden sm:inline-block">
+  <nav class="hidden md:inline-block">
     <ul class="flex font-bold flex-row">
       <li v-for="link in links" :key="link.name" class="px-4">
         <nuxt-link

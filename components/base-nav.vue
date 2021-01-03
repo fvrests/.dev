@@ -6,7 +6,7 @@
         >fvrests
       </nuxt-link>
       <div
-        class="flex flex-col items-center justify-center space-y-1.5 w-10 h-10 cursor-pointer sm:hidden absolute top-10 right-10 z-50"
+        class="flex flex-col items-center justify-center space-y-1.5 w-10 h-10 cursor-pointer md:hidden absolute top-10 right-10 z-50"
         @click="toggleMenu"
       >
         <div
