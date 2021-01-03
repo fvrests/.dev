@@ -52,6 +52,24 @@ const projects = [
       { name: 'live demo', url: '#', isExternal: false },
     ],
   },
+  {
+    title: 'rosé pine images',
+    image: 'rose-pine-images.png',
+    themeColor: 'leaf',
+    content: 'dynamic image generator for rosé pine collaborators',
+    links: [
+      {
+        name: 'github',
+        url: 'https://github.com/rose-pine/og-image',
+        isExternal: true,
+      },
+      {
+        name: 'try it',
+        url: 'https://rose-pine-images.vercel.app',
+        isExternal: true,
+      },
+    ],
+  },
 ]
 
 export default projects
