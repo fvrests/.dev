@@ -7,6 +7,7 @@
       image-size="small"
       extra-loose
       class="my-24 lg:my-48"
+      :links="[{ name: 'get to know me →', url: '/about', isExternal: false }]"
     >
       <p>
         i’m exploring
@@ -16,10 +17,7 @@
         <span class="highlight bg-leaf">vue, react, html, css, js, & figma</span
         >. &nbsp;i’m searching for communities where
         <span class="highlight bg-lavender">mutual growth & mentorship</span>
-        &nbsp;are valued & celebrated. ✨ i love learning
-        <span class="highlight bg-rose">hobbies & disciplines</span>,&nbsp;
-        which you can read more about
-        <router-link class="body-link lemon" to="/about">here</router-link>.
+        &nbsp;are valued & celebrated. ✨
       </p>
     </BaseSection>
     <BaseHeading>projects </BaseHeading>
@@ -34,6 +32,11 @@
       class="py-8"
     >
       {{ project.content }}</BaseSection
+    >
+    <BaseSection class="mt-12">
+      <router-link to="/projects" class="link-button text-lg rose"
+        >more projects →</router-link
+      ></BaseSection
     >
   </PageLayout>
 </template>
