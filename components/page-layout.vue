@@ -4,7 +4,9 @@
   >
     <div class="overscroll overscroll-top" />
     <BaseNav />
-    <slot />
+    <div class="min-h-screen">
+      <slot />
+    </div>
     <div class="overscroll overscroll-bottom" />
   </div>
 </template>
