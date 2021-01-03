@@ -12,7 +12,7 @@ const projects = [
         isExternal: true,
       },
       {
-        name: 'project',
+        name: 'install for chrome',
         url:
           'https://chrome.google.com/webstore/detail/lavender-new-tab/ffobepdbanoiodmfimpmanafepclokbc',
         isExternal: true,
@@ -31,7 +31,7 @@ const projects = [
         isExternal: true,
       },
       {
-        name: 'project',
+        name: 'install for vscode',
         url:
           'https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine',
         isExternal: true,
@@ -49,7 +49,7 @@ const projects = [
         url: 'https://github.com/fvrests/wakely',
         isExternal: true,
       },
-      { name: 'project', url: '#', isExternal: false },
+      { name: 'live demo', url: '#', isExternal: false },
     ],
   },
 ]
