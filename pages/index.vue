@@ -34,8 +34,8 @@
       {{ project.content }}</BaseSection
     >
     <BaseSection class="mt-12">
-      <router-link to="/projects" class="link-button text-lg rose"
-        >more projects →</router-link
+      <nuxt-link to="/projects" class="link-button text-lg rose"
+        >more projects →</nuxt-link
       ></BaseSection
     >
   </PageLayout>

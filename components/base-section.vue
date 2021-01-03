@@ -46,13 +46,13 @@
                 :href="link.url"
                 >{{ link.name }}</a
               >
-              <router-link
+              <nuxt-link
                 v-else
                 :key="link.url"
                 class="link-button"
                 :class="themeColor"
                 :to="link.url"
-                >{{ link.name }}</router-link
+                >{{ link.name }}</nuxt-link
               >
             </template>
           </div>
