@@ -30,6 +30,7 @@
       :image="project.image"
       :theme-color="project.themeColor"
       :links="project.links"
+      :numeral="Projects.indexOf(project) + 1"
       class="py-8"
     >
       {{ project.content }}</BaseSection
