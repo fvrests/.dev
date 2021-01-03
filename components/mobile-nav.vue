@@ -9,7 +9,7 @@
           :to="link.url"
           :class="link.classes"
           :active-class="link.activeClasses"
-          class="p-1 hover:text-night"
+          class="p-1 hover:text-night text-xl select-none"
           >{{ link.name }}</router-link
         >
       </li>

@@ -1,20 +1,20 @@
 <template>
   <div class="h-24 w-full">
     <div class="h-24 flex flex-row items-center justify-between mx-8">
-      <router-link to="/" class="title font-display text-2xl md:text-4xl"
+      <router-link to="/" class="title font-display text-xl sm:text-3xl z-50"
         >fvrests
       </router-link>
       <div
-        class="flex flex-col items-center justify-center space-y-1 w-10 h-10 cursor-pointer sm:hidden absolute top-10 right-10 z-50"
+        class="flex flex-col items-center justify-center space-y-1.5 w-10 h-10 cursor-pointer sm:hidden absolute top-10 right-10 z-50"
         @click="toggleMenu"
       >
         <div
           class="w-4 h-0.5 bg-white transition-transform"
-          :class="[isMenuOpen ? 'rotate-45' : '']"
+          :class="[isMenuOpen ? 'transform rotate-45 translate-y-1' : '']"
         />
         <div
           class="w-4 h-0.5 bg-white transition-transform"
-          :class="[isMenuOpen ? `-rotate-45` : '']"
+          :class="[isMenuOpen ? `transform -rotate-45 -translate-y-1` : '']"
         />
       </div>
       <DesktopNav :links="links" />
