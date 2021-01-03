@@ -1,6 +1,7 @@
 <template>
   <div class="h-24 w-full">
-    <div class="h-24 flex flex-row items-center justify-between mx-8">
+    <!-- TODO fix alignment to sections -->
+    <div class="h-24 mx-6 sm:mx-32 flex flex-row items-center justify-between">
       <router-link to="/" class="title font-display text-xl sm:text-3xl z-50"
         >fvrests
       </router-link>
@@ -37,12 +38,6 @@ export default {
 
     const links = [
       {
-        name: 'about',
-        url: '/about',
-        classes: 'hover:bg-rose',
-        activeClasses: 'bg-rose text-night',
-      },
-      {
         name: 'projects',
         url: '/projects',
         classes: 'hover:bg-lavender',
@@ -53,6 +48,12 @@ export default {
         url: '/blog',
         classes: 'hover:bg-lemon',
         activeClasses: 'bg-lemon text-night',
+      },
+      {
+        name: 'about',
+        url: '/about',
+        classes: 'hover:bg-rose',
+        activeClasses: 'bg-rose text-night',
       },
       {
         name: 'contact',

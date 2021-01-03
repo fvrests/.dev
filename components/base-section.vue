@@ -17,7 +17,7 @@
         >
           <div
             v-if="numeral !== null"
-            class="font-display text-xl absolute -left-16 opacity-60 tracking-wider"
+            class="font-display text-2xl absolute -left-20 opacity-50 tracking-wider"
           >
             {{ numeral < 10 ? '0' + numeral : numeral }}
           </div>
@@ -36,16 +36,25 @@
           >
             <slot />
           </div>
-          <div class="space-x-10" v-if="links">
-            <a
-              v-for="link in links"
-              :key="link.url"
-              class="link-button"
-              :class="themeColor"
-              :href="link.url"
-            >
-              {{ link.name }}
-            </a>
+          <div class="space-x-8" v-if="links">
+            <template v-for="link in links">
+              <a
+                v-if="link.isExternal"
+                :key="link.url"
+                class="link-button"
+                :class="themeColor"
+                :href="link.url"
+                >{{ link.name }}</a
+              >
+              <router-link
+                v-else
+                :key="link.url"
+                class="link-button"
+                :class="themeColor"
+                :to="link.url"
+                >{{ link.name }}</router-link
+              >
+            </template>
           </div>
         </div>
       </div>
