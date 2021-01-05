@@ -7,7 +7,8 @@
       image-size="small"
       extra-loose
       class="my-24 lg:my-48"
-      :links="[{ name: 'get to know me →', url: '/about', isExternal: false }]"
+      :links="[{ name: 'get to know me →', url: '/about' }]"
+      limitWidth
     >
       <p>
         i’m exploring

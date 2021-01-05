@@ -17,7 +17,7 @@
         >
           <div
             v-if="numeral !== null"
-            class="font-display text-2xl absolute -left-20 opacity-50 tracking-wider"
+            class="font-display text-2xl absolute -left-20 opacity-50 tracking-wider invisible sm:visible"
           >
             {{ numeral < 10 ? '0' + numeral : numeral }}
           </div>
@@ -27,7 +27,7 @@
             :class="imageSize !== 'small' ? 'lg:-h64' : ''"
           />
         </div>
-        <div class="w-full md:w-md mb-20 lg:mb-0 max-w-md">
+        <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
           <h3 class="text-xl sm:text-3xl font-display mb-4">
             {{ title }}
           </h3>
