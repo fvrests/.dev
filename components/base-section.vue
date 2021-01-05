@@ -17,7 +17,7 @@
         >
           <div
             v-if="numeral !== null"
-            class="font-display text-2xl absolute -left-20 opacity-50 tracking-wider invisible sm:visible"
+            class="font-display text-2xl absolute -left-16 opacity-50 tracking-wider invisible sm:visible"
           >
             {{ numeral < 10 ? '0' + numeral : numeral }}
           </div>
@@ -28,11 +28,11 @@
           />
         </div>
         <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
-          <h3 class="text-xl sm:text-3xl font-display mb-4">
+          <h3 class="text-2xl sm:text-3xl font-display mb-8">
             {{ title }}
           </h3>
           <div
-            class="mb-8"
+            class="mb-8 sm:text-lg"
             :class="extraLoose ? 'leading-extra-loose' : 'leading-relaxed'"
           >
             <slot />
