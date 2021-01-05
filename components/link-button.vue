@@ -16,6 +16,12 @@
 </template>
 
 <style scoped>
+.button {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
 .button::after {
   content: '';
   position: absolute;
