@@ -9,13 +9,11 @@ const projects = [
       {
         name: 'github',
         url: 'https://github.com/fvrests/lavender',
-        isExternal: true,
       },
       {
         name: 'install for chrome',
         url:
           'https://chrome.google.com/webstore/detail/lavender-new-tab/ffobepdbanoiodmfimpmanafepclokbc',
-        isExternal: true,
       },
     ],
   },
@@ -28,13 +26,11 @@ const projects = [
       {
         name: 'github',
         url: 'https://github.com/rose-pine/rose-pine-theme',
-        isExternal: true,
       },
       {
         name: 'install for vscode',
         url:
           'https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine',
-        isExternal: true,
       },
     ],
   },
@@ -47,9 +43,8 @@ const projects = [
       {
         name: 'github',
         url: 'https://github.com/fvrests/wakely',
-        isExternal: true,
       },
-      { name: 'live demo', url: '#', isExternal: false },
+      { name: 'live demo', url: '#' },
     ],
   },
   {
@@ -60,13 +55,11 @@ const projects = [
     links: [
       {
         name: 'github',
-        url: 'https://github.com/rose-pine/og-image',
-        isExternal: true,
+        url: 'https://github.com/fvrests/og-image',
       },
       {
         name: 'try it',
         url: 'https://rose-pine-images.vercel.app',
-        isExternal: true,
       },
     ],
   },

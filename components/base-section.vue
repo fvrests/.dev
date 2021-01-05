@@ -39,22 +39,9 @@
           </div>
           <div class="space-x-8" v-if="links">
             <template v-for="link in links">
-              <a
-                v-if="link.isExternal"
-                :key="link.url"
-                class="link-button"
-                :class="themeColor"
-                :href="link.url"
-                >{{ link.name }}</a
-              >
-              <nuxt-link
-                v-else
-                :key="link.url"
-                class="link-button"
-                :class="themeColor"
-                :to="link.url"
-                >{{ link.name }}</nuxt-link
-              >
+              <LinkButton :url="link.url" :themeColor="themeColor">{{
+                link.name
+              }}</LinkButton>
             </template>
           </div>
         </div>
@@ -74,6 +61,7 @@ export default {
     themeColor: { type: String, default: 'rose' },
     extraLoose: { type: Boolean, default: false },
     links: { type: Array, default: null },
+    limitWidth: { type: Boolean, default: false },
   },
 }
 </script>

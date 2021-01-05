@@ -31,12 +31,13 @@
       :links="project.links"
       :numeral="Projects.indexOf(project) + 1"
       class="py-8"
+      limitWidth
     >
       {{ project.content }}</BaseSection
     >
-    <BaseSection class="mt-12">
-      <nuxt-link to="/projects" class="link-button text-lg rose"
-        >more projects →</nuxt-link
+    <BaseSection class="lg:my-12">
+      <link-button url="/projects" class="text-xl" theme-color="rose"
+        >more projects →</link-button
       ></BaseSection
     >
   </PageLayout>
@@ -47,12 +48,14 @@ import BaseSection from '../components/base-section'
 import PageLayout from '../components/page-layout'
 import BaseHeading from '../components/base-heading'
 import Projects from '../data/projects.js'
+import LinkButton from '~/components/link-button.vue'
 
 export default {
   components: {
     BaseSection,
     PageLayout,
     BaseHeading,
+    LinkButton,
   },
   setup() {
     return {
