@@ -17,10 +17,10 @@
 
 <style scoped>
 .button {
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid transparent;
 }
 .button::after {
   content: '';
@@ -28,18 +28,29 @@
   height: 4px;
   width: 100%;
   left: 0px;
-  bottom: -6px;
+  bottom: -7px;
   transition: all 50ms ease;
   transition-property: width height bottom left;
   background-color: var(--themeColor);
+  z-index: -10;
 }
 .button:hover::after {
-  bottom: -12px;
+  bottom: -8px;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
   bottom: -4px;
   left: -4px;
-  z-index: -10;
+}
+@media (prefers-color-scheme: light) {
+  .button::after {
+    height: 3px;
+    background-color: var(--color-coal);
+    outline: 3px solid transparent;
+  }
+  .button:hover::after {
+    background-color: var(--themeColor);
+    outline: 3px solid var(--color-coal);
+  }
 }
 </style>
 <script>

@@ -12,11 +12,11 @@
         @click="toggleMenu"
       >
         <div
-          class="w-4 h-0.5 bg-white transition-transform"
+          class="w-4 h-0.5 bg-white light:bg-night transition-transform"
           :class="[isMenuOpen ? 'transform rotate-45 translate-y-1' : '']"
         />
         <div
-          class="w-4 h-0.5 bg-white transition-transform"
+          class="w-4 h-0.5 bg-white light:bg-night transition-transform"
           :class="[isMenuOpen ? `transform -rotate-45 -translate-y-1` : '']"
         />
       </div>

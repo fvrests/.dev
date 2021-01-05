@@ -6,13 +6,26 @@
           :to="link.url"
           :class="link.classes"
           :active-class="link.activeClasses"
-          class="p-1 hover:text-night select-none"
+          class="link p-1 hover:text-night select-none"
           >{{ link.name }}</nuxt-link
         >
       </li>
     </ul>
   </nav>
 </template>
+
+<style scoped>
+@media (prefers-color-scheme: light) {
+  .link {
+    border: 3px solid transparent;
+    margin: 0px -3px;
+  }
+  .link:hover,
+  .link:active {
+    border: 3px solid var(--color-coal);
+  }
+}
+</style>
 
 <script>
 export default {
