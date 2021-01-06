@@ -13,11 +13,11 @@
       >
         <div
           class="w-4 h-0.5 bg-white light:bg-night transition-transform"
-          :class="[isMenuOpen ? 'transform rotate-45 translate-y-1' : '']"
+          :class="[isMenuOpen ? 'transform -rotate-45 translate-y-1' : '']"
         />
         <div
           class="w-4 h-0.5 bg-white light:bg-night transition-transform"
-          :class="[isMenuOpen ? `transform -rotate-45 -translate-y-1` : '']"
+          :class="[isMenuOpen ? `transform rotate-45 -translate-y-1` : '']"
         />
       </div>
       <DesktopNav :links="links" />
@@ -42,26 +42,22 @@ export default {
       {
         name: 'projects',
         url: '/projects',
-        classes: 'hover:bg-lavender',
-        activeClasses: 'bg-lavender text-night',
+        themeColor: 'lavender',
       },
       {
         name: 'blog',
         url: '/blog',
-        classes: 'hover:bg-lemon',
-        activeClasses: 'bg-lemon text-night',
+        themeColor: 'lemon',
       },
       {
         name: 'about',
         url: '/about',
-        classes: 'hover:bg-rose',
-        activeClasses: 'bg-rose text-night',
+        themeColor: 'rose',
       },
       {
         name: 'contact',
         url: '/contact',
-        classes: 'hover:bg-leaf',
-        activeClasses: 'bg-leaf text-night',
+        themeColor: 'leaf',
       },
     ]
 
