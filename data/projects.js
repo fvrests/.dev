@@ -16,6 +16,7 @@ const projects = [
           'https://chrome.google.com/webstore/detail/lavender-new-tab/ffobepdbanoiodmfimpmanafepclokbc',
       },
     ],
+    highlighted: true,
   },
   {
     title: 'rosé pine',
@@ -33,6 +34,7 @@ const projects = [
           'https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine',
       },
     ],
+    highlighted: true,
   },
   {
     title: 'wakely',
@@ -46,6 +48,7 @@ const projects = [
       },
       { name: 'live demo', url: '#' },
     ],
+    highlighted: false,
   },
   {
     title: 'rosé pine images',
@@ -62,6 +65,7 @@ const projects = [
         url: 'https://rose-pine-images.vercel.app',
       },
     ],
+    highlighted: false,
   },
 ]
 

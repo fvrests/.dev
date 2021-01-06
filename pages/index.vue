@@ -24,6 +24,7 @@
     <BaseHeading>projects </BaseHeading>
     <BaseSection
       v-for="project in Projects"
+      v-if="project.highlighted"
       :key="project.title"
       :title="project.title"
       :image="project.image"
