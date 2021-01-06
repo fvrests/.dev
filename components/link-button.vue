@@ -1,14 +1,14 @@
 <template>
   <a
     v-if="isExternal"
-    class="button relative z-10 bold hover:text-night font-bold"
+    class="button relative z-10 bold hover:text-night font-bold p-1"
     :style="{ '--themeColor': `var(--color-${themeColor})` }"
     :href="url"
     ><slot
   /></a>
   <nuxt-link
     v-else
-    class="button relative z-10 bold hover:text-night font-bold"
+    class="button relative z-10 bold hover:text-night font-bold p-1"
     :style="{ '--themeColor': `var(--color-${themeColor})` }"
     :to="url"
     ><slot
@@ -16,40 +16,32 @@
 </template>
 
 <style scoped>
-.button {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid transparent;
-  border-bottom: 9px solid transparent;
-}
 .button::after {
   content: '';
   position: absolute;
   height: 4px;
-  width: 100%;
-  left: 0px;
-  bottom: -7px;
+  width: calc(100% - 0.5rem);
+  left: 0.25rem;
+  bottom: -0.25rem;
   transition: all 50ms ease;
   transition-property: width height bottom left;
   background-color: var(--themeColor);
   z-index: -10;
 }
 .button:hover::after {
-  bottom: -8px;
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  bottom: -4px;
-  left: -4px;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  bottom: -0.25rem;
+  left: -0.25rem;
 }
 @media (prefers-color-scheme: light) {
   .button::after {
-    height: 3px;
     background-color: var(--color-coal);
-    outline: 3px solid transparent;
+    height: 4px;
   }
   .button:hover::after {
     background-color: var(--themeColor);
-    outline: 3px solid var(--color-coal);
+    border: 4px solid var(--color-coal);
   }
 }
 </style>
