@@ -17,7 +17,7 @@
         >
           <div
             v-if="numeral !== null"
-            class="font-display text-2xl absolute -left-16 opacity-50 tracking-wider invisible sm:visible"
+            class="font-display text-xl text-coal opacity-70 absolute -left-16 tracking-wider invisible px-1 sm:visible"
           >
             {{ numeral < 10 ? '0' + numeral : numeral }}
           </div>
