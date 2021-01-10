@@ -1,4 +1,23 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
+
+let themePrefixes = ['text', 'bg', 'border', 'hover:bg', 'active:bg']
+let themeColors = [
+  'rose',
+  'lemon',
+  'lavender',
+  'leaf',
+  'coal',
+  'night',
+  'paper',
+]
+
+let modifiedColors = []
+for (let i = 0; i < themePrefixes.length; i++) {
+  for (let j = 0; j < themeColors.length; j++) {
+    modifiedColors.push(`${themePrefixes[i]}-${themeColors[j]}`)
+  }
+}
+
 /*
  ** TailwindCSS Configuration File
  **
@@ -38,6 +57,7 @@ module.exports = {
       lineHeight: {
         'extra-loose': '2.5',
       },
+      borderOpacity: ['active'],
     },
   },
   variants: {},
@@ -59,6 +79,8 @@ module.exports = {
   ],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
+
+    // TODO: use below
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'components/**/*.vue',
@@ -67,5 +89,8 @@ module.exports = {
       'plugins/**/*.js',
       'nuxt.config.js',
     ],
+    options: {
+      safelist: [...modifiedColors],
+    },
   },
 }
