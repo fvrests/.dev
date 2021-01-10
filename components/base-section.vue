@@ -15,12 +15,6 @@
           class="backdrop relative max-w-sm mb-8 lg:mb-0 mr-12 mt-8"
           :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
         >
-          <div
-            v-if="numeral !== null"
-            class="font-display text-xl text-coal opacity-70 absolute -left-16 tracking-wider invisible px-1 sm:visible"
-          >
-            {{ numeral < 10 ? '0' + numeral : numeral }}
-          </div>
           <img
             :src="require(`~/assets/images/${image}`)"
             class="w-full border-8 max-h-64 object-cover border-night border-solid light:border-coal relative z-20"
