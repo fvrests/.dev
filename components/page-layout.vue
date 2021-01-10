@@ -1,29 +1,28 @@
 <template>
   <div
-    class="w-full border-solid border-12 border-night light:text-coal text-sm h-full min-h-screen"
+    class="w-full border-solid border-12 border-night light:text-coal text-sm h-full min-h-screen overscroll"
     :style="`background-color: var(--color-${navBackground})`"
   >
-    <div class="overscroll overscroll-top" />
     <BaseNav :style="`color: var(--color-${navForeground})`" />
-    <div class="my-16 lg:my-56">
+    <div class="my-16 lg:my-36">
       <slot />
     </div>
-    <div class="overscroll overscroll-bottom" />
   </div>
 </template>
 
 <style>
-.overscroll {
+.overscroll::after,
+.overscroll::before {
   left: -1rem;
   right: -1rem;
-  position: fixed;
+  position: absolute;
   background: var(--color-night);
   height: 20.5rem;
 }
-.overscroll-top {
+.overscroll::before {
   top: -20rem;
 }
-.overscroll-bottom {
+.overscroll::after {
   bottom: -20rem;
 }
 </style>
