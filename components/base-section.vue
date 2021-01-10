@@ -17,7 +17,7 @@
         >
           <img
             :src="require(`~/assets/images/${image}`)"
-            class="w-full border-8 max-h-64 object-cover border-night border-solid light:border-coal relative z-20"
+            class="w-full border-8 max-h-64 object-cover border-night light:border-coal relative z-20 rounded-xl"
             :class="imageSize !== 'small' ? 'lg:-h64' : ''"
           />
         </div>
@@ -67,6 +67,7 @@ export default {
   height: 100%;
   z-index: 10;
   border: 8px solid var(--color-night);
+  border-radius: 0.75rem;
   @apply light:border-coal -top-6 -left-6;
 }
 .backdrop.lemon::after {

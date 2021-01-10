@@ -35,6 +35,7 @@
   height: calc(100% + 0.5rem);
   bottom: -0.25rem;
   left: -0.25rem;
+  @apply rounded-md;
 }
 
 .button.lightBackground::after {
