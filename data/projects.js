@@ -3,6 +3,7 @@ const projects = [
   {
     title: 'lavender',
     image: 'lavender@2x.png',
+    icon: 'lavender-icon.png',
     themeColor: 'lavender',
     content: 'calming, minimal chrome new tab with live time & weather',
     links: [
@@ -20,7 +21,8 @@ const projects = [
   },
   {
     title: 'rosé pine',
-    image: 'rosepine@2x.png',
+    image: 'rose-pine@2x.png',
+    icon: 'rose-pine-icon.png',
     themeColor: 'rose',
     content: 'theme suite with a subdued palette & 30+ community ports',
     links: [
@@ -39,6 +41,7 @@ const projects = [
   {
     title: 'wakely',
     image: 'wakely@2x.png',
+    icon: 'wakely-icon.png',
     themeColor: 'lemon',
     content: 'promotional site for a conceptual coffee delivery service',
     links: [
@@ -53,6 +56,7 @@ const projects = [
   {
     title: 'rosé pine images',
     image: 'rose-pine-images.png',
+    icon: 'rose-pine-images-icon.png',
     themeColor: 'leaf',
     content: 'dynamic image generator for rosé pine collaborators',
     links: [
