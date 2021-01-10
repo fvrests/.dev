@@ -6,7 +6,7 @@
       theme-color="leaf"
       image-size="small"
       extra-loose
-      class="my-24 lg:my-48"
+      class="mb-20 lg:mb-40"
       :links="[{ name: 'get to know me →', url: '/about' }]"
       limitWidth
     >

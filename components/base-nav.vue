@@ -1,10 +1,10 @@
 <template>
   <div class="h-24 w-full">
     <!-- TODO fix alignment to sections -->
-    <div class="h-24 mx-12 sm:mx-36 flex flex-row items-center justify-between">
+    <div class="h-24 mx-12 lg:mx-36 flex flex-row items-center justify-between">
       <nuxt-link
         to="/"
-        class="title font-display text-xl sm:text-3xl z-50 hover:border hover:border-coal"
+        class="title font-display text-3xl z-50 hover:border-coal hover:border-3"
         >fvrests
       </nuxt-link>
       <div
