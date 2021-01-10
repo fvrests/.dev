@@ -3,7 +3,7 @@
     <BaseSection
       title="hi! i'm lynn."
       image="bio@2x.png"
-      theme-color="rose"
+      theme-color="leaf"
       image-size="small"
       extra-loose
       class="my-24 lg:my-48"
@@ -36,7 +36,7 @@
       {{ project.content }}</BaseSection
     >
     <BaseSection class="lg:my-12">
-      <link-button url="/projects" class="text-xl" theme-color="rose"
+      <link-button url="/projects" class="text-xl" theme-color="lemon"
         >more projects →</link-button
       ></BaseSection
     >

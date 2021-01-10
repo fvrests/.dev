@@ -6,6 +6,9 @@
   --color-coal: #252222;
   --color-night: #111010;
   --color-paper: #fffefd;
+
+  --color-background: var(--color-coal);
+  --color-foreground: white;
 }
 
 html {
@@ -14,6 +17,15 @@ html {
 
 body {
   height: 100%;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color-background: var(--color-paper);
+    --color-foreground: var(--color-coal);
+  }
 }
 
 /* dark & light modes */
@@ -24,17 +36,17 @@ body {
     --color-lemon: #f7cc95;
     --color-leaf: #c2ccc1;
   }
-  body {
+  /* body {
     background: var(--color-paper);
     color: var(--color-coal);
-  }
+  } */
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  /* body {
     background: var(--color-coal);
     color: white;
-  }
+  } */
 }
 
 /* use with bg-(theme color) for emphasized text */
