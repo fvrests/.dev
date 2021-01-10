@@ -4,8 +4,9 @@
       <li v-for="link in links" :key="link.name">
         <nuxt-link
           :to="link.url"
-          :style="{ '--themeColor': `var(--color-${link.themeColor})` }"
-          class="link p-1 hover:text-night select-none"
+          class="link p-2 select-none rounded-md hover:text-night hover:border-3 hover:border-night"
+          :class="`hover:bg-${link.themeColor}`"
+          :active-class="`bg-${link.themeColor} text-night border-3 border-night light:border-coal`"
           >{{ link.name }}</nuxt-link
         >
       </li>
@@ -14,20 +15,21 @@
 </template>
 
 <style scoped>
-.link:hover,
+/* .link:hover,
 .nuxt-link-active {
-  background-color: var(--themeColor);
   color: var(--color-night);
-}
+} */
 @media (prefers-color-scheme: light) {
-  .link {
+  /* .link {
     border: 3px solid transparent;
     margin: 0px -3px;
+  } */
+  /* 
+  .link:hover, */
+  .nuxt-link-exact-active {
+    @apply border-opacity-100;
   }
-  .link:hover,
-  .nuxt-link-active {
-    border: 3px solid var(--color-coal);
-  }
+  /* border: 3px solid var(--color-coal); */
 }
 </style>
 
