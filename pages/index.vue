@@ -35,11 +35,39 @@
     >
       {{ project.content }}</BaseSection
     >
-    <BaseSection class="lg:my-12">
+    <BaseSection class="mb-20 lg:mb-40">
       <link-button url="/projects" class="text-xl" theme-color="lemon"
         >more projects →</link-button
       ></BaseSection
     >
+    <BaseHeading>blog</BaseHeading>
+    <div class="mx-12 sm:mx-36">
+      <div class="text-3xl font-display mb-2">love letter to a monstera</div>
+      <div class="text-md bold mb-6">
+        preparing your plants to become even more of plants
+      </div>
+      <div class="text-3xl font-display mb-2">
+        pockets for you and your friends
+      </div>
+      <div class="text-md bold mb-6">
+        having a great day without even putting your snake in your backpack
+      </div>
+      <div class="text-3xl font-display mb-2">
+        quick setup guide
+      </div>
+      <div class="text-md bold mb-6">
+        that feeling when your favorite appendage grows a new attachment
+      </div>
+    </div>
+    <BaseSection class="mb-20 lg:mb-40">
+      <link-button url="/blog" class="text-xl" theme-color="leaf"
+        >more articles →</link-button
+      ></BaseSection
+    >
+    <BaseHeading>contact me</BaseHeading>
+    <LinkButton url="/contact" class="text-lg mx-12 sm:mx-36">
+      fvrests@icloud.com
+    </LinkButton>
   </PageLayout>
 </template>
 
@@ -49,7 +77,6 @@ import PageLayout from '../components/page-layout'
 import BaseHeading from '../components/base-heading'
 import Projects from '../data/projects.js'
 import LinkButton from '~/components/link-button.vue'
-
 export default {
   components: {
     BaseSection,

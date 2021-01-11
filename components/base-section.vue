@@ -22,7 +22,7 @@
           />
         </div>
         <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
-          <h3 class="text-2xl sm:text-3xl font-display mb-8">
+          <h3 class="text-2xl sm:text-3xl font-display mb-4">
             {{ title }}
           </h3>
           <div
