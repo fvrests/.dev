@@ -6,47 +6,19 @@
   --color-coal: #252222;
   --color-night: #111010;
   --color-paper: #fcf9f8;
-
-  --color-background: var(--color-coal);
-  --color-foreground: white;
+}
+.light:root {
+  --color-lavender: #cdc5d4;
+  --color-rose: #e2bab4;
+  --color-lemon: #f7cc95;
+  --color-leaf: #c2ccc1;
 }
 
 html {
-  background: var(--color-night);
+  @apply bg-night;
 }
-
 body {
-  height: 100%;
-  background: var(--color-background);
-  color: var(--color-foreground);
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    --color-background: var(--color-paper);
-    --color-foreground: var(--color-coal);
-  }
-}
-
-/* dark & light modes */
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-lavender: #cdc5d4;
-    --color-rose: #e2bab4;
-    --color-lemon: #f7cc95;
-    --color-leaf: #c2ccc1;
-  }
-  /* body {
-    background: var(--color-paper);
-    color: var(--color-coal);
-  } */
-}
-
-@media (prefers-color-scheme: dark) {
-  /* body {
-    background: var(--color-coal);
-    color: white;
-  } */
+  @apply h-full;
 }
 
 /* use with bg-(theme color) for emphasized text */

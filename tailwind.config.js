@@ -25,6 +25,7 @@ for (let i = 0; i < themePrefixes.length; i++) {
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
+  darkMode: 'class',
   theme: {
     borderWidth: {
       DEFAULT: '1px',
@@ -46,10 +47,6 @@ module.exports = {
         night: 'var(--color-night)',
         paper: 'var(--color-paper)',
       },
-      screens: {
-        light: { raw: '(prefers-color-scheme: light)' },
-        dark: { raw: '(prefers-color-scheme: dark)' },
-      },
       fontFamily: {
         display: ['DM Serif Text'],
         sans: ['Public Sans', ...fontFamily.sans],
@@ -60,23 +57,6 @@ module.exports = {
       borderOpacity: ['active'],
     },
   },
-  variants: {},
-  plugins: [
-    function ({ addBase, config }) {
-      addBase({
-        body: {
-          color: config('theme.colors.black'),
-          backgroundColor: config('theme.colors.white'),
-        },
-        '@screen dark': {
-          body: {
-            color: config('theme.colors.white'),
-            backgroundColor: config('theme.colors.black'),
-          },
-        },
-      })
-    },
-  ],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
 

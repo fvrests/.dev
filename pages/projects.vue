@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
     <h2
-      class="mx-12 lg:mx-36 mb-6 text-6xl lg:text-7xl font-display text-white light:text-coal"
+      class="mx-12 lg:mx-36 mb-6 text-6xl lg:text-7xl font-display text-coal dark:text-white"
     >
       projects
     </h2>

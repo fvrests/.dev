@@ -54,6 +54,7 @@ export default {
     '@nuxtjs/composition-api',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
   ],
   /*
    ** Nuxt.js modules
@@ -62,6 +63,16 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode',
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
