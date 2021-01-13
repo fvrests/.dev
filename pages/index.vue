@@ -30,7 +30,7 @@
       :image="project.image"
       :theme-color="project.themeColor"
       :links="project.links"
-      class="py-8"
+      class="project py-8"
       limitWidth
     >
       {{ project.content }}</BaseSection
@@ -42,21 +42,41 @@
     >
     <BaseHeading>blog</BaseHeading>
     <div class="mx-12 sm:mx-36">
-      <div class="text-3xl font-display mb-2">love letter to a monstera</div>
-      <div class="text-md bold mb-6">
-        preparing your plants to become even more of plants
+      <div class="blog-item">
+        <div
+          class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
+        >
+          love letter to a monstera
+        </div>
+        <div
+          class="blog-text transform transition-all duration-300 text-md bold mb-6"
+        >
+          preparing your plants to become even more of plants
+        </div>
       </div>
-      <div class="text-3xl font-display mb-2">
-        pockets for you and your friends
+      <div class="blog-item">
+        <div
+          class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
+        >
+          pockets for you and your friends
+        </div>
+        <div
+          class="blog-text transform transition-all duration-300 text-md bold mb-6"
+        >
+          having a great day without even putting your snake in your backpack
+        </div>
       </div>
-      <div class="text-md bold mb-6">
-        having a great day without even putting your snake in your backpack
-      </div>
-      <div class="text-3xl font-display mb-2">
-        quick setup guide
-      </div>
-      <div class="text-md bold mb-6">
-        that feeling when your favorite appendage grows a new attachment
+      <div class="blog-item">
+        <div
+          class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
+        >
+          quick setup guide
+        </div>
+        <div
+          class="blog-text transform transition-all duration-300 text-md bold mb-6"
+        >
+          that feeling when your favorite appendage grows a new attachment
+        </div>
       </div>
     </div>
     <BaseSection class="mb-20 lg:mb-40">
@@ -70,6 +90,11 @@
     </LinkButton>
   </PageLayout>
 </template>
+<style scoped>
+.blog-item:hover .blog-text {
+  @apply -translate-y-1;
+}
+</style>
 
 <script>
 import BaseSection from '../components/base-section'
