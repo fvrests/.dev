@@ -25,10 +25,7 @@
           <h3 class="text-2xl sm:text-3xl font-display mb-4">
             {{ title }}
           </h3>
-          <div
-            class="mb-8 sm:text-lg"
-            :class="extraLoose ? 'leading-extra-loose' : 'leading-relaxed'"
-          >
+          <div class="mb-8 sm:text-lg">
             <slot />
           </div>
           <div class="space-x-8" v-if="links">
@@ -47,13 +44,11 @@
 <script>
 export default {
   props: {
-    numeral: { type: Number, default: null },
     title: { type: String, default: '' },
     heading: { type: String, default: '' },
     image: { type: String, default: null },
     imageSize: { type: String, default: '' },
     themeColor: { type: String, default: 'rose' },
-    extraLoose: { type: Boolean, default: false },
     links: { type: Array, default: null },
     limitWidth: { type: Boolean, default: false },
   },
