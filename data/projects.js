@@ -2,6 +2,7 @@ const projects = [
   // TODO alt tags
   {
     title: 'lavender',
+    slug: 'lavender',
     image: 'lavender@2x.png',
     icon: 'lavender-icon.png',
     themeColor: 'lavender',
@@ -22,6 +23,7 @@ const projects = [
   },
   {
     title: 'rosé pine',
+    slug: 'rose-pine',
     image: 'rose-pine@2x.png',
     icon: 'rose-pine-icon.png',
     themeColor: 'rose',
@@ -42,6 +44,7 @@ const projects = [
   },
   {
     title: 'wakely',
+    slug: 'wakely',
     image: 'wakely@2x.png',
     icon: 'wakely-icon.png',
     themeColor: 'lemon',
@@ -58,6 +61,7 @@ const projects = [
   },
   {
     title: 'rosé pine images',
+    slug: 'rose-pine-images',
     image: 'rose-pine-images.png',
     icon: 'rose-pine-images-icon.png',
     themeColor: 'leaf',

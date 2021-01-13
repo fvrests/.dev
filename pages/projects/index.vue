@@ -9,18 +9,16 @@
       <nuxt-link
         v-for="project in Projects"
         :key="project.title"
-        :to="project.links[0].url"
+        :to="`projects/${project.slug}`"
         class="card flex flex-col mx-12 lg:mx-0 mb-12 lg:mb-0 rounded-xl max-h-screen-sm p-8 hover:shadow-xl transition duration-300"
         :class="`bg-${project.themeColor}`"
       >
         <h3
-          class="card-text text-3xl lg:text-4xl font-display mb-1 transition-all transform scale-100 duration-300"
+          class="card-text text-3xl lg:text-4xl font-display mb-1 transform transition-all duration-300"
         >
           {{ project.title }}
         </h3>
-        <div
-          class="card-text font-bold transition-all transform scale-100 duration-300"
-        >
+        <div class="card-text font-bold transform transition-all duration-300">
           {{ project.type }}
         </div>
         <div
@@ -38,11 +36,11 @@
 </template>
 
 <script>
-import PageLayout from '../components/page-layout'
-import BaseSection from '../components/base-section'
-import BaseHeading from '../components/base-heading'
-import LinkButton from '../components/link-button'
-import Projects from '../data/projects.js'
+import PageLayout from '../../components/page-layout'
+import BaseSection from '../../components/base-section'
+import BaseHeading from '../../components/base-heading'
+import LinkButton from '../../components/link-button'
+import Projects from '../../data/projects.js'
 import { ref } from '@nuxtjs/composition-api'
 export default {
   props: {
