@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <BaseSection
+    <IndexSection
       title="hi! i'm lynn."
       image="bio@2x.png"
       theme-color="leaf"
@@ -20,9 +20,9 @@
         <span class="highlight bg-lavender">mutual growth & mentorship</span>
         &nbsp;are valued & celebrated. ✨
       </p>
-    </BaseSection>
+    </IndexSection>
     <BaseHeading>projects </BaseHeading>
-    <BaseSection
+    <IndexSection
       v-for="project in Projects"
       v-if="project.highlighted"
       :key="project.title"
@@ -33,12 +33,12 @@
       class="project py-8"
       limitWidth
     >
-      {{ project.content }}</BaseSection
+      {{ project.content }}</IndexSection
     >
-    <BaseSection class="mb-20 lg:mb-40">
+    <IndexSection class="mb-20 lg:mb-40">
       <link-button url="/projects" class="text-xl" theme-color="lemon"
         >more projects →</link-button
-      ></BaseSection
+      ></IndexSection
     >
     <BaseHeading>blog</BaseHeading>
     <div class="mx-12 sm:mx-36">
@@ -79,10 +79,10 @@
         </div>
       </div>
     </div>
-    <BaseSection class="mb-20 lg:mb-40">
+    <IndexSection class="mb-20 lg:mb-40">
       <link-button url="/blog" class="text-xl" theme-color="leaf"
         >more articles →</link-button
-      ></BaseSection
+      ></IndexSection
     >
     <BaseHeading>contact me</BaseHeading>
     <LinkButton url="/contact" class="text-lg mx-12 sm:mx-36">
@@ -97,14 +97,14 @@
 </style>
 
 <script>
-import BaseSection from '../components/base-section'
+import IndexSection from '../components/index-section'
 import PageLayout from '../components/page-layout'
 import BaseHeading from '../components/base-heading'
 import Projects from '../data/projects.js'
 import LinkButton from '~/components/link-button.vue'
 export default {
   components: {
-    BaseSection,
+    IndexSection,
     PageLayout,
     BaseHeading,
     LinkButton,

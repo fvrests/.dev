@@ -37,7 +37,6 @@
 
 <script>
 import PageLayout from '../../components/page-layout'
-import BaseSection from '../../components/base-section'
 import BaseHeading from '../../components/base-heading'
 import LinkButton from '../../components/link-button'
 import Projects from '../../data/projects.js'
@@ -47,7 +46,6 @@ export default {
     image: { type: String, default: null },
   },
   components: {
-    BaseSection,
     PageLayout,
     BaseHeading,
     LinkButton,

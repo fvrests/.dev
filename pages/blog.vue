@@ -1,17 +1,16 @@
 <template>
   <PageLayout>
-    <BaseSection>
+    <p>
       <article>
         <h1>{{ page.title }}</h1>
         <nuxt-content :document="page" />
       </article>
-    </BaseSection>
+    </p>
   </PageLayout>
 </template>
 
 <script>
 import PageLayout from '../components/page-layout'
-import BaseSection from '../components/base-section'
 export default {
   async asyncData({ $content }) {
     const page = await $content('hello').fetch()
