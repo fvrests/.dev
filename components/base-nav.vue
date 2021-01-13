@@ -2,7 +2,12 @@
   <div class="h-24 w-full">
     <!-- TODO fix alignment to sections -->
     <div class="h-24 mx-12 lg:mx-36 flex flex-row items-center justify-between">
-      <link-button url="/" class="font-display text-4xl z-50" themeColor="lemon"
+      <link-button
+        url="/"
+        class="font-display text-4xl z-50"
+        themeColor="lemon"
+        :class="isMenuOpen ? 'text-white' : ''"
+        @click="isMenuOpen ? toggleMenu : null"
         >fvrests</link-button
       >
       <div
@@ -10,12 +15,20 @@
         @click="toggleMenu"
       >
         <div
-          class="w-4 h-0.5 bg-white light:bg-night transition-transform"
-          :class="[isMenuOpen ? 'transform -rotate-45 translate-y-1' : '']"
+          class="w-4 h-0.5 transition-transform"
+          :class="[
+            isMenuOpen
+              ? 'transform -rotate-45 translate-y-1 bg-white'
+              : 'bg-night dark:bg-white',
+          ]"
         />
         <div
-          class="w-4 h-0.5 bg-white light:bg-night transition-transform"
-          :class="[isMenuOpen ? `transform rotate-45 -translate-y-1` : '']"
+          class="w-4 h-0.5 transition-transform"
+          :class="[
+            isMenuOpen
+              ? `bg-white transform rotate-45 -translate-y-1`
+              : 'bg-night dark:bg-white',
+          ]"
         />
       </div>
       <DesktopNav :links="links" />

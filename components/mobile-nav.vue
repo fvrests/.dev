@@ -7,9 +7,9 @@
       <li v-for="link in links" :key="link.name">
         <nuxt-link
           :to="link.url"
-          :class="link.classes"
-          :active-class="link.activeClasses"
-          class="p-1 hover:text-night text-xl select-none"
+          class="p-1 text-white hover:text-night text-xl select-none rounded-md"
+          :class="`hover:bg-${link.themeColor}`"
+          :active-class="`bg-${link.themeColor} text-night border-3 border-night light:border-coal`"
           >{{ link.name }}</nuxt-link
         >
       </li>
