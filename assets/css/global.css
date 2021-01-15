@@ -8,6 +8,8 @@
   --color-paper: #fcf9f8;
 }
 .light:root {
+  --color-coal: #332e2e;
+  --color-night: #252222;
   --color-lavender: #cdc5d4;
   --color-rose: #e2bab4;
   --color-lemon: #f7cc95;
