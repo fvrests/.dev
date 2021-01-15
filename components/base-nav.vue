@@ -2,14 +2,16 @@
   <div class="h-24 w-full">
     <!-- TODO fix alignment to sections -->
     <div class="h-24 mx-12 lg:mx-36 flex flex-row items-center justify-between">
-      <link-button
-        url="/"
-        class="font-display text-4xl z-50"
-        themeColor="lemon"
-        :class="isMenuOpen ? 'text-white' : ''"
-        @click="isMenuOpen ? toggleMenu : null"
-        >fvrests</link-button
+      <div
+        class="rounded-full border-coal dark:border-night border-4 w-12 h-12 z-50 overflow-hidden"
       >
+        <NuxtLink to="/">
+          <img
+            :src="require('~/assets/images/portrait.png')"
+            class="transform scale-125 z-50"
+          />
+        </NuxtLink>
+      </div>
       <div
         class="flex flex-col items-center justify-center space-y-1.5 w-10 h-10 cursor-pointer md:hidden absolute top-10 right-10 z-50"
         @click="toggleMenu"
