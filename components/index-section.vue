@@ -1,12 +1,6 @@
 <template>
   <div class="w-full flex flex-col max-w-screen">
     <div class="mx-12 sm:mx-36">
-      <h2
-        v-if="heading"
-        class="self-start font-display text-4xl sm:text-5xl mb-16 sm:mb-24"
-      >
-        {{ heading }}
-      </h2>
       <div
         class="flex flex-col lg:flex-row justify-start items-start lg:items-center relative"
       >

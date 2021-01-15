@@ -3,7 +3,7 @@
     <IndexSection
       title="hi! i'm lynn."
       image="bio@2x.png"
-      theme-color="leaf"
+      theme-color="lemon"
       image-size="small"
       extra-loose
       class="mb-20 lg:mb-40"
