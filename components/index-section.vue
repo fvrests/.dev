@@ -1,35 +1,31 @@
 <template>
-  <div class="w-full flex flex-col max-w-screen">
-    <div class="mx-12 sm:mx-36">
-      <div
-        class="flex flex-col lg:flex-row justify-start items-start lg:items-center relative"
-      >
-        <div
-          v-if="image"
-          class="backdrop relative max-w-sm mb-8 lg:mb-0 mr-12 mt-8"
-          :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
-        >
-          <img
+  <div
+    class="flex flex-col lg:flex-row justify-start items-start lg:items-center relative"
+  >
+    <div
+      v-if="image"
+      class="backdrop relative max-w-sm mb-8 lg:mb-0 mr-12 mt-8"
+      :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
+    >
+      <img
         :src="`/${image}`"
-            class="w-full border-8 max-h-64 object-cover border-coal dark:border-night relative z-20 rounded-xl"
-            :class="imageSize !== 'small' ? 'lg:-h64' : ''"
-          />
-        </div>
-        <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
-          <h3 class="text-2xl sm:text-3xl font-display mb-4">
-            {{ title }}
-          </h3>
-          <div class="mb-8 sm:text-lg">
-            <slot />
-          </div>
-          <div class="space-x-8" v-if="links">
-            <template v-for="link in links">
-              <LinkButton :url="link.url" :themeColor="themeColor">{{
-                link.name
-              }}</LinkButton>
-            </template>
-          </div>
-        </div>
+        class="w-full border-8 max-h-64 object-cover border-coal dark:border-night relative z-20 rounded-xl"
+        :class="imageSize !== 'small' ? 'lg:-h64' : ''"
+      />
+    </div>
+    <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
+      <h3 class="text-2xl sm:text-3xl font-display mb-4">
+        {{ title }}
+      </h3>
+      <div class="mb-8 sm:text-lg">
+        <slot />
+      </div>
+      <div class="space-x-8" v-if="links">
+        <template v-for="link in links">
+          <LinkButton :url="link.url" :themeColor="themeColor">{{
+            link.name
+          }}</LinkButton>
+        </template>
       </div>
     </div>
   </div>

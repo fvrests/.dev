@@ -1,8 +1,8 @@
 <template>
   <PageLayout>
-    <div class="mx-12 sm:mx-36">
+    <div class="p-12 max-w-screen-lg mx-auto">
       <h2
-        class="mb-6 text-6xl lg:text-7xl font-display text-coal dark:text-white"
+        class="mb-12 text-6xl lg:text-7xl font-display text-coal dark:text-white"
       >
         blog
       </h2>
