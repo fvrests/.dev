@@ -6,10 +6,7 @@
         class="rounded-full border-coal dark:border-night border-4 w-12 h-12 z-50 overflow-hidden"
       >
         <NuxtLink to="/">
-          <img
-            :src="require('~/assets/images/portrait.png')"
-            class="transform scale-125 z-50"
-          />
+          <img src="/portrait.png" class="transform scale-150 z-50" />
         </NuxtLink>
       </div>
       <div

@@ -10,7 +10,7 @@
           :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
         >
           <img
-            :src="require(`~/assets/images/${image}`)"
+        :src="`/${image}`"
             class="w-full border-8 max-h-64 object-cover border-coal dark:border-night relative z-20 rounded-xl"
             :class="imageSize !== 'small' ? 'lg:-h64' : ''"
           />

@@ -27,7 +27,7 @@
       v-if="project.highlighted"
       :key="project.title"
       :title="project.title"
-      :image="project.image"
+        :image="`${project.slug}/${project.image}`"
       :theme-color="project.themeColor"
       :links="project.links"
       class="project py-8"

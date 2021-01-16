@@ -8,7 +8,7 @@
           class="overflow-hidden border-8 -mx-4 border-night light:border-coal rounded-xl w-full max-w-screen-md mb-8 sm:mb-12"
         >
           <img
-            :src="require(`~/assets/images/${article.img}`)"
+          :src="`/blog/${article.img}`"
             class="object-cover w-full h-full transform scale-100 transition-all duration-300"
           />
         </div>

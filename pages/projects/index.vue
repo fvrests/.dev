@@ -26,7 +26,7 @@
           class="overflow-hidden border-8 border-night light:border-coal rounded-xl w-full mx-auto mt-8"
         >
           <img
-            :src="require(`~/assets/images/${project.image}`)"
+              :src="`/${project.slug}/${project.image}`"
             class="object-cover w-full h-full transform scale-100 transition-all duration-300"
           />
         </div>
