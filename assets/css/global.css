@@ -8,26 +8,24 @@
   --color-paper: #fcf9f8;
 }
 .light:root {
-  --color-coal: #332e2e;
-  --color-night: #252222;
   --color-lavender: #cdc5d4;
   --color-rose: #e2bab4;
   --color-lemon: #f7cc95;
   --color-leaf: #c2ccc1;
-}
-
-body {
-  @apply antialiased bg-coal text-white;
-}
-.light body {
-  @apply bg-paper text-coal;
+  --color-coal: #332e2e;
+  --color-night: #252222;
 }
 
 html {
   @apply bg-night;
 }
+
 body {
-  @apply h-full;
+  @apply h-full antialiased bg-coal text-white;
+}
+
+.light body {
+  @apply bg-paper text-coal;
 }
 
 /* use with bg-(theme color) for emphasized text */
