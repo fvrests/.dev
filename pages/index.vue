@@ -1,5 +1,5 @@
 <template>
-  <PageLayout>
+  <div>
     <IndexSection
       title="hi! i'm lynn."
       image="bio@2x.png"
@@ -24,7 +24,7 @@
     <div class="px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto">
       <BaseHeading>projects</BaseHeading>
       <IndexSection
-        v-for="project in Projects"
+        v-for="project in projects"
         v-if="project.highlighted"
         :key="project.title"
         :title="project.title"
@@ -32,7 +32,6 @@
         :theme-color="project.themeColor"
         :links="project.links"
         class="project py-8"
-        limitWidth
       >
         {{ project.content }}</IndexSection
       >
@@ -91,11 +90,12 @@
     <div class="px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto">
       <BaseHeading>contact me</BaseHeading>
       <LinkButton url="/contact" class="text-lg">
-        fvrests@icloud.com
+        details →
       </LinkButton>
     </div>
-  </PageLayout>
+  </div>
 </template>
+
 <style scoped>
 .blog-item:hover .blog-text {
   @apply -translate-y-1;
@@ -103,21 +103,12 @@
 </style>
 
 <script>
-import IndexSection from '../components/index-section'
-import PageLayout from '../components/page-layout'
-import BaseHeading from '../components/base-heading'
-import Projects from '../data/projects.js'
-import LinkButton from '~/components/link-button.vue'
+import projects from '../data/projects.js'
+
 export default {
-  components: {
-    IndexSection,
-    PageLayout,
-    BaseHeading,
-    LinkButton,
-  },
   setup() {
     return {
-      Projects,
+      projects,
     }
   },
 }

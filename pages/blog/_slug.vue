@@ -1,5 +1,5 @@
 <template>
-  <PageLayout>
+  <div>
     <div class="p-12 max-w-screen-lg mx-auto flex flex-col items-center">
       <AppSearchInput class="mb-8 md:mb-0 md:float-right" />
       <div
@@ -40,17 +40,10 @@
       </article>
     </div>
     <prev-next :prev="prev" :next="next" />
-  </PageLayout>
+  </div>
 </template>
 
 <script>
-import Projects from '../../data/projects'
-import onMounted from '@nuxtjs/composition-api'
-import PageLayout from '../../components/page-layout'
-import LinkButton from '../../components/link-button'
-import PrevNext from '../../components/prev-next'
-import AppSearchInput from '../../components/app-search-input'
-
 export default {
   methods: {
     formatDate(date) {
