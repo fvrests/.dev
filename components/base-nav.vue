@@ -1,7 +1,9 @@
 <template>
   <div class="h-24 w-full">
     <!-- TODO fix alignment to sections -->
-    <div class="h-24 mx-12 lg:mx-36 flex flex-row items-center justify-between">
+    <div
+      class="h-24 px-12 w-full max-w-screen-lg xl:max-w-screen-lg mx-auto flex flex-row items-center justify-between"
+    >
       <div
         class="rounded-full border-coal dark:border-night border-4 w-12 h-12 z-50 overflow-hidden"
       >

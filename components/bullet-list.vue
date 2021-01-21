@@ -1,16 +1,14 @@
 <template>
-  <ul class="pt-4 leading-loose">
-    <li>
+  <ul class="py-8 leading-loose md:grid gap-y-1 grid-cols-2">
+    <li
+      v-for="item in items"
+      :key="item"
+      class="flex flex-row items-center font-bold"
+    >
       <div
-        v-for="item in items"
-        :key="item"
-        class="flex flex-row items-center font-bold"
-      >
-        <div
-          class="bullet w-2 h-2 bg-transparent border-solid border-2 border-night mr-4"
-        />
-        <div>{{ item }}</div>
-      </div>
+        class="bullet w-2 h-2 bg-transparent border-solid border-2 border-night mr-4"
+      />
+      <div>{{ item }}</div>
     </li>
   </ul>
 </template>

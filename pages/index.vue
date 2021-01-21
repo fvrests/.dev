@@ -6,7 +6,7 @@
       theme-color="lemon"
       image-size="small"
       extra-loose
-      class="mb-20 lg:mb-40 px-12 max-w-screen-lg mx-auto"
+      class="mb-20 lg:mb-40 px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto"
       :links="[{ name: 'get to know me →', url: '/about' }]"
       limitWidth
     >
@@ -21,7 +21,7 @@
         &nbsp;are valued & celebrated. ✨
       </p>
     </IndexSection>
-    <div class="px-12 max-w-screen-lg mx-auto">
+    <div class="px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto">
       <BaseHeading>projects</BaseHeading>
       <IndexSection
         v-for="project in Projects"
@@ -42,7 +42,7 @@
         ></IndexSection
       >
     </div>
-    <div class="px-12 max-w-screen-lg mx-auto">
+    <div class="px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto">
       <BaseHeading>blog</BaseHeading>
       <div class="py-8">
         <div class="blog-item">
@@ -88,7 +88,7 @@
         ></IndexSection
       >
     </div>
-    <div class="px-12 max-w-screen-lg mx-auto">
+    <div class="px-12 max-w-screen-sm xl:max-w-screen-lg mx-auto">
       <BaseHeading>contact me</BaseHeading>
       <LinkButton url="/contact" class="text-lg">
         fvrests@icloud.com

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex flex-col lg:flex-row justify-start items-start lg:items-center relative"
+    class="flex flex-col xl:flex-row justify-start items-start xl:items-center relative"
   >
     <div
       v-if="image"
-      class="backdrop relative max-w-sm mb-8 lg:mb-0 mr-12 mt-8"
+      class="backdrop relative max-w-sm mb-8 xl:mb-0 xl:mr-12 mt-8"
       :class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
     >
       <img
@@ -13,7 +13,7 @@
         :class="imageSize !== 'small' ? 'lg:-h64' : ''"
       />
     </div>
-    <div class="w-full mb-20 lg:mb-0" :class="limitWidth ? 'max-w-lg' : ''">
+    <div class="w-full mb-20 xl:mb-0">
       <h3 class="text-2xl sm:text-3xl font-display mb-4">
         {{ title }}
       </h3>
