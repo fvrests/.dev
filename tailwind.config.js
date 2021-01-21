@@ -2,9 +2,9 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 
 let themePrefixes = ['text', 'bg', 'border', 'hover:bg', 'active:bg']
 let themeColors = [
+  'lavender',
   'rose',
   'lemon',
-  'lavender',
   'leaf',
   'coal',
   'night',
@@ -48,7 +48,7 @@ module.exports = {
         paper: 'var(--color-paper)',
       },
       fontFamily: {
-        display: ['DM Serif Text'],
+        display: ['DM Serif Text', 'Public Sans', ...fontFamily.sans],
         sans: ['Public Sans', ...fontFamily.sans],
       },
       lineHeight: {
@@ -60,7 +60,6 @@ module.exports = {
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
 
-    // TODO: use below
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'components/**/*.vue',
