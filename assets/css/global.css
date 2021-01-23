@@ -1,34 +1,34 @@
 :root {
-  --color-lavender: #dad4e0;
-  --color-rose: #f5e0dc;
-  --color-lemon: #fce5c4;
-  --color-leaf: #ced9cd;
-  --color-coal: #252222;
-  --color-night: #111010;
-  --color-paper: #fcf9f8;
+	--color-lavender: #dad4e0;
+	--color-rose: #f5e0dc;
+	--color-lemon: #fce5c4;
+	--color-leaf: #ced9cd;
+	--color-coal: #252222;
+	--color-night: #111010;
+	--color-paper: #fcf9f8;
 }
 .light:root {
-  --color-lavender: #cdc5d4;
-  --color-rose: #e2bab4;
-  --color-lemon: #f7cc95;
-  --color-leaf: #c2ccc1;
-  --color-coal: #332e2e;
-  --color-night: #252222;
+	--color-lavender: #cdc5d4;
+	--color-rose: #e2bab4;
+	--color-lemon: #f7cc95;
+	--color-leaf: #c2ccc1;
+	--color-coal: #332e2e;
+	--color-night: #252222;
 }
 
 html {
-  @apply bg-night;
+	@apply bg-night;
 }
 
 body {
-  @apply h-full antialiased bg-coal text-white;
+	@apply h-full antialiased bg-coal text-white;
 }
 
 .light body {
-  @apply bg-paper text-coal;
+	@apply bg-paper text-coal;
 }
 
 /* use with bg-(theme color) for emphasized text */
 .highlight {
-  @apply text-night px-0.5 mx-0.5 font-bold;
+	@apply text-night px-0.5 mx-0.5 font-bold;
 }

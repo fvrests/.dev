@@ -1,12 +1,12 @@
 <template>
-  <div
-    class="w-full border-solid border-12 border-night light:text-coal text-sm h-full min-h-screen overscroll"
-  >
-    <BaseNav />
-    <div class="my-16 lg:my-36">
-      <Nuxt />
-    </div>
-  </div>
+	<div
+		class="w-full border-solid border-12 border-night light:text-coal text-sm h-full min-h-screen overscroll"
+	>
+		<BaseNav />
+		<div class="my-16 lg:my-36">
+			<Nuxt />
+		</div>
+	</div>
 </template>
 
 <style>
