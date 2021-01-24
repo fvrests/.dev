@@ -26,7 +26,7 @@
 			</IndexSection>
 		</Section>
 		<Section>
-			<BaseHeading>projects</BaseHeading>
+			<Heading>projects</Heading>
 			<IndexSection
 				v-for="project in projects"
 				v-if="project.highlighted"
@@ -35,7 +35,7 @@
 				:image="`${project.slug}/${project.image}`"
 				:theme-color="project.themeColor"
 				:links="project.links"
-				class="project py-8"
+				class="project"
 			>
 				{{ project.content }}</IndexSection
 			>
@@ -46,45 +46,33 @@
 			>
 		</Section>
 		<Section>
-			<BaseHeading>blog</BaseHeading>
-			<div class="py-8">
+			<Heading>blog</Heading>
+			<div>
 				<div class="blog-item">
-					<div
-						class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
-					>
+					<Subheading>
 						love letter to a monstera
-					</div>
-					<div
-						class="blog-text transform transition-all duration-300 text-md bold mb-6"
-					>
+					</Subheading>
+					<BaseText>
 						preparing your plants to become even more of plants
-					</div>
+					</BaseText>
 				</div>
 				<div class="blog-item">
-					<div
-						class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
-					>
+					<Subheading>
 						pockets for you and your friends
-					</div>
-					<div
-						class="blog-text transform transition-all duration-300 text-md bold mb-6"
-					>
+					</Subheading>
+					<BaseText>
 						having a great day without even putting your snake in
 						your backpack
-					</div>
+					</BaseText>
 				</div>
 				<div class="blog-item">
-					<div
-						class="blog-text transform transition-all duration-300 text-3xl font-display mb-2"
-					>
+					<Subheading>
 						quick setup guide
-					</div>
-					<div
-						class="blog-text transform transition-all duration-300 text-md bold mb-6"
-					>
+					</Subheading>
+					<BaseText>
 						that feeling when your favorite appendage grows a new
 						attachment
-					</div>
+					</BaseText>
 				</div>
 			</div>
 
@@ -95,7 +83,7 @@
 			>
 		</Section>
 		<Section>
-			<BaseHeading>contact me</BaseHeading>
+			<Heading>contact me</Heading>
 			<LinkButton url="/contact" class="text-lg"> details → </LinkButton>
 		</Section>
 	</div>

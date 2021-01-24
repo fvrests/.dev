@@ -2,25 +2,20 @@
 	<div
 		class="flex flex-col xl:flex-row justify-start items-start xl:items-center relative"
 	>
-		<div
+		<BaseImage
 			v-if="image"
-			class="backdrop relative max-w-sm mb-8 xl:mb-0 xl:mr-12 mt-8"
-			:class="[themeColor, imageSize == 'small' ? 'w-36 sm:w-48' : null]"
-		>
-			<img
-				:src="`/${image}`"
-				class="w-full border-8 max-h-64 object-cover border-coal dark:border-night relative z-20 rounded-xl"
-			/>
-		</div>
+			:url="image"
+			:themeColor="themeColor"
+			backdrop
+			class="mb-8 xl:mb-0 xl:mr-12 mt-8 max-w-screen-sm"
+		/>
 		<div class="w-full mb-20 xl:mb-0">
-			<h3 class="text-2xl sm:text-3xl font-display mb-4">
+			<Subheading>
 				{{ title }}
-			</h3>
-			<div class="mb-8">
-				<p>
-					<slot />
-				</p>
-			</div>
+			</Subheading>
+			<BaseText class="mb-8 text-lg opacity-90">
+				<slot />
+			</BaseText>
 			<LinkList v-if="links" :links="links" :themeColor="themeColor" />
 		</div>
 	</div>

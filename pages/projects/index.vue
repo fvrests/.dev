@@ -1,10 +1,6 @@
 <template>
 	<Section>
-		<h2
-			class="mb-12 text-6xl lg:text-7xl font-display text-coal dark:text-white"
-		>
-			projects
-		</h2>
+		<Heading>projects</Heading>
 		<div class="grid grid-cols-1 lg:gap-8 lg:grid-cols-2">
 			<ProjectCard
 				v-for="project in projects"
