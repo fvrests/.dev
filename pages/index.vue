@@ -21,9 +21,10 @@
 					<span class="highlight bg-lavender"
 						>mutual growth & mentorship</span
 					>
-					&nbsp;are valued & celebrated. ✨
-				</p>
-			</IndexSection>
+					<link-list
+						themeColor="leaf"
+						:links="[{ name: 'get to know me →', url: '/about' }]"
+					/>
 		</Section>
 		<Section>
 			<Heading>projects</Heading>
@@ -40,8 +41,8 @@
 				{{ project.content }}</IndexSection
 			>
 			<IndexSection class="mb-20 lg:mb-40">
-				<link-button url="/projects" class="text-xl" theme-color="lemon"
-					>more projects →</link-button
+				<ButtonLink url="/projects" class="text-xl" theme-color="lemon"
+					>more projects →</ButtonLink
 				></IndexSection
 			>
 		</Section>
@@ -77,14 +78,14 @@
 			</div>
 
 			<IndexSection class="mb-20 lg:mb-40">
-				<link-button url="/blog" class="text-xl" theme-color="leaf"
-					>more articles →</link-button
+				<ButtonLink url="/blog" class="text-xl" theme-color="leaf"
+					>more articles →</ButtonLink
 				></IndexSection
 			>
 		</Section>
 		<Section>
 			<Heading>contact me</Heading>
-			<LinkButton url="/contact" class="text-lg"> details → </LinkButton>
+			<ButtonLink url="/contact" class="text-lg"> details → </ButtonLink>
 		</Section>
 	</div>
 </template>

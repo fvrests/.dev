@@ -1,9 +1,9 @@
 <template>
 	<div class="space-x-8">
 		<template v-for="link in links">
-			<LinkButton :url="link.url" :themeColor="themeColor">{{
+			<ButtonLink :url="link.url" :themeColor="themeColor">{{
 				link.name
-			}}</LinkButton>
+			}}</ButtonLink>
 		</template>
 	</div>
 </template>

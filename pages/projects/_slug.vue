@@ -17,9 +17,11 @@
 			</div>
 			<div class="space-x-8 mb-12 sm:mb-16" v-if="project.links">
 				<template v-for="link in project.links">
-					<LinkButton :url="link.url" :themeColor="project.themeColor">{{
-						link.name
-					}}</LinkButton>
+					<ButtonLink
+						:url="link.url"
+						:themeColor="project.themeColor"
+						>{{ link.name }}</ButtonLink
+					>
 				</template>
 			</div>
 			<div
