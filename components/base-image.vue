@@ -2,7 +2,7 @@
 	<div class="relative" :class="[themeColor, { backdrop: backdrop }]">
 		<img
 			:src="`/${url}`"
-			class="w-full border-8 object-cover border-coal dark:border-night relative z-20 rounded-xl"
+			class="w-full border-8 border-coal dark:border-night relative z-20 rounded-xl"
 		/>
 	</div>
 </template>
@@ -32,7 +32,6 @@ export default {
 		url: { type: String, required: true },
 		themeColor: { type: String, required: 'rose' },
 		backdrop: { type: Boolean, default: false },
-		imageWidth: { type: String, default: 'screen-sm' },
 	},
 }
 </script>

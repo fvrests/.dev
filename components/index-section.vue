@@ -9,6 +9,7 @@
 			backdrop
 			class="mb-8 xl:mb-0 xl:mr-12 mt-8 max-w-screen-sm"
 		/>
+
 		<div class="w-full mb-20 xl:mb-0">
 			<Subheading>
 				{{ title }}

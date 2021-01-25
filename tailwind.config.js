@@ -51,9 +51,6 @@ module.exports = {
 				display: ['DM Serif Text', 'Public Sans', ...fontFamily.sans],
 				sans: ['Public Sans', ...fontFamily.sans],
 			},
-			lineHeight: {
-				'extra-loose': '2.5',
-			},
 			borderOpacity: ['active'],
 		},
 	},
