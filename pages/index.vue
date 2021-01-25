@@ -1,30 +1,35 @@
 <template>
 	<div>
 		<Section>
-			<IndexSection
-				title="hi! i'm lynn."
-				image="bio@2x.png"
-				theme-color="lemon"
-				image-size="small"
-				extra-loose
-				class="mb-20 lg:mb-40 max-w-screen-sm xl:max-w-screen-lg mx-auto"
-				:links="[{ name: 'get to know me →', url: '/about' }]"
-			>
-				<p>
-					i’m exploring
-					<span class="highlight bg-lemon"
-						>front-end development, accessibility, UI & UX</span
-					>. &nbsp;the tools i use most include
-					<span class="highlight bg-leaf"
-						>vue, react, html, css, js, & figma</span
-					>. &nbsp;i’m searching for communities where
-					<span class="highlight bg-lavender"
-						>mutual growth & mentorship</span
+			<Responsive class="mb-20 lg:mb-40">
+				<BaseImage
+					backdrop
+					class="w-48 md:w-56 mb-8 xl:mb-0 mt-8"
+					url="bio@2x.png"
+					themeColor="leaf"
+				/>
+
+				<div class="flex-1">
+					<Subheading>hi! i'm lynn.</Subheading>
+					<BaseText class="leading-loose"
+						>i’m exploring
+						<span class="highlight bg-lemon"
+							>front-end development, accessibility, UI & UX</span
+						>. &nbsp;the tools i use most include
+						<span class="highlight bg-leaf"
+							>vue, react, html, css, js, & figma</span
+						>. &nbsp;i’m searching for communities where
+						<span class="highlight bg-lavender"
+							>mutual growth & mentorship</span
+						>
+						&nbsp;are valued & celebrated. ✨</BaseText
 					>
 					<link-list
 						themeColor="leaf"
 						:links="[{ name: 'get to know me →', url: '/about' }]"
 					/>
+				</div>
+			</Responsive>
 		</Section>
 		<Section>
 			<Heading>projects</Heading>

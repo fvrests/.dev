@@ -1,35 +1,52 @@
 <template>
 	<Section>
-		<h2
-			class="mb-12 text-6xl lg:text-7xl font-display text-coal dark:text-white"
-		>
-			about me
-		</h2>
+		<div class="max-w-prose xl:max-w-none mx-auto">
+			<Heading>
+				about me
+			</Heading>
+		</div>
 
-		<div class="max-w-xs mb-8">
-			<img
-				src="/portrait.png"
-				class="w-full border-8 max-h-64 object-cover border-coal dark:border-night relative z-20 rounded-xl lg:h-80"
-			/>
-		</div>
-		<div class="text-lg">
-			i'm a biology and psychology grad in migration to tech due to a discovered
-			passion for development & design. i love oat lattes, building functional
-			things that are also filled with pastels, pair programming with my partner
-			<a href="https://mellow.dev/">mvllow</a>, and working on hobbies and
-			disciplines. some of those at the moment include:
-			<bullet-list
-				:items="[
-					'minimalism',
-					'daily yoga practice',
-					'ethical veganism',
-					'sustainable & slow living',
-					'living car-free',
-					'slacklining',
-				]"
-			/>
-			i am motivated by a sense of community and love making new connections, so
-			my twitter DMs, email address, etc. are always open to new friends. 🌱
-		</div>
+		<Responsive>
+			<div class="mb-8">
+				<img
+					src="/portrait.png"
+					class="w-full max-w-prose mx-auto xl:max-w-sm border-8 object-cover border-coal dark:border-night relative z-20 rounded-xl"
+				/>
+			</div>
+			<div class="max-w-prose mx-auto">
+				<BaseText>
+					i'm a biology and psychology grad in migration to tech due
+					to a discovered passion for development & design. i love oat
+					lattes, building functional things that happen to be pastel,
+					pair programming with my partner
+					<TextLink url="https://twitter.com/mvllow">@mvllow</TextLink
+					>, and working on hobbies and disciplines. some of those at
+					the moment include:
+					<CapsuleList
+						:items="[
+							{ symbol: '🧺', text: 'minimalism' },
+							{ symbol: '🧘🏼‍♀️', text: 'daily yoga practice' },
+							{ symbol: '🐷', text: 'ethical veganism' },
+							{
+								symbol: '🌱',
+								text: 'sustainable & slow living',
+							},
+							{ symbol: '🚲', text: 'living car-free' },
+							{ symbol: '🌳', text: 'slacklining' },
+						]"
+					/>
+					i am motivated by a sense of community and love building
+					connections, so my
+					<TextLink url="https://twitter.com/fvrests/"
+						>twitter DMs</TextLink
+					>
+					&
+					<TextLink url="https://twitter.com/fvrests/"
+						>email inbox</TextLink
+					>
+					are always open for suggestions, requests & new friends!
+				</BaseText>
+			</div>
+		</Responsive>
 	</Section>
 </template>

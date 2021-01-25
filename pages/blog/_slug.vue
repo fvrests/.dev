@@ -1,6 +1,6 @@
 <template>
 	<Section>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center max-w-prose mx-auto">
 			<AppSearchInput class="mb-8 md:mb-0 md:float-right" />
 			<div
 				v-if="article.img"
@@ -36,7 +36,7 @@
 			</nav>
 			<br />
 			<article>
-				<nuxt-content :document="article" />
+				<nuxt-content :document="article" class="text-lg" />
 			</article>
 			<prev-next :prev="prev" :next="next" />
 		</div>
