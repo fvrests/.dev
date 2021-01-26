@@ -14,11 +14,11 @@
 			{{ project.type }}
 		</div>
 		<div
-			v-if="project.image"
+			v-if="project.images"
 			class="overflow-hidden border-8 border-night light:border-coal rounded-xl w-full mx-auto mt-8"
 		>
 			<img
-				:src="`/${project.slug}/${project.image}`"
+				:src="`/${project.slug}/${project.images[0].url}`"
 				class="object-cover w-full h-full transform scale-100 transition-all duration-300"
 			/>
 		</div>

@@ -38,7 +38,7 @@
 				v-if="project.highlighted"
 				:key="project.title"
 				:title="project.title"
-				:image="`${project.slug}/${project.image}`"
+				:image="`${project.slug}/${project.images[0].url}`"
 				:theme-color="project.themeColor"
 				:links="project.links"
 				class="project"

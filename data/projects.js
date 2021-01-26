@@ -3,7 +3,23 @@ const projects = [
 	{
 		title: 'lavender',
 		slug: 'lavender',
-		image: 'lavender@2x.png',
+		images: [
+			{
+				url: 'lavender@2x.png',
+				details:
+					'Lavender offers a calming & minimal aesthetic for your browser new tab, featuring live-updating time and weather data and clean typography & iconography.',
+			},
+			{
+				url: 'lavender-colors@2x.png',
+				details:
+					'The theme offers several built-in color theming options, which are cached in Chrome Storage Sync to allow persistence between devices.',
+			},
+			{
+				url: 'lavender-options@2x.png',
+				details:
+					'Users can choose from standard or metric units, as well as toggle between layouts and choose to refresh the location used to fetch weather.',
+			},
+		],
 		icon: 'lavender-icon.png',
 		themeColor: 'lavender',
 		type: 'chrome new tab',
@@ -24,7 +40,7 @@ const projects = [
 	{
 		title: 'rosé pine',
 		slug: 'rose-pine',
-		image: 'rose-pine@2x.png',
+		images: [{ url: 'rose-pine@2x.png', details: '' }],
 		icon: 'rose-pine-icon.png',
 		themeColor: 'rose',
 		type: 'theme suite',
@@ -45,7 +61,7 @@ const projects = [
 	{
 		title: 'wakely',
 		slug: 'wakely',
-		image: 'wakely@2x.png',
+		images: [{ url: 'wakely@2x.png', details: '' }],
 		icon: 'wakely-icon.png',
 		themeColor: 'lemon',
 		type: 'brochure site',
@@ -62,7 +78,7 @@ const projects = [
 	{
 		title: 'rosé pine images',
 		slug: 'rose-pine-images',
-		image: 'rose-pine-images.png',
+		images: [{ url: 'rose-pine-images.png', details: '' }],
 		icon: 'rose-pine-images-icon.png',
 		themeColor: 'leaf',
 		type: 'image generator',

@@ -1,17 +1,19 @@
 <template>
 	<Section>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center mx-auto">
 			<div
 				v-if="project.icon"
 				class="w-16 h-16 border-6 border-coal dark:border-night rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
 				:style="`background-image: url(/${project.slug}/${project.icon});`"
 			></div>
-			<h2 class="font-display text-4xl sm:text-5xl mb-2 sm:mb-4">
+			<h2
+				class="font-display text-4xl sm:text-5xl mb-2 sm:mb-4 text-center"
+			>
 				{{ project.title }}
 			</h2>
 
 			<div
-				class="card-text font-bold transform transition-all duration-300 mb-4 sm:mb-8"
+				class="card-text font-bold transform transition-all duration-300 mb-6 sm:mb-8 text-center"
 			>
 				{{ project.content }}
 			</div>
@@ -24,15 +26,20 @@
 					>
 				</template>
 			</div>
-			<div
-				v-if="project.image"
-				class="overflow-hidden border-8 -mx-4 border-night light:border-coal rounded-xl w-full max-w-screen-lg"
-			>
-				<img
-					:src="`/${project.slug}/${project.image}`"
-					class="object-cover w-full h-full transform scale-100 transition-all duration-300"
-				/>
-			</div>
+			<template v-for="image in project.images">
+				<div
+					v-if="project.images"
+					class="overflow-hidden border-8 -mx-4 border-night light:border-coal rounded-xl w-full max-w-screen-lg mb-8"
+				>
+					<img
+						:src="`/${project.slug}/${image.url}`"
+						class="object-cover w-full h-full transform scale-100 transition-all duration-300"
+					/>
+				</div>
+				<BaseText class="mb-36 max-w-prose mx-auto">
+					{{ image.details }}
+				</BaseText>
+			</template>
 		</div>
 	</Section>
 </template>
