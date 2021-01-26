@@ -1,7 +1,7 @@
 ---
 title: Test article
 description: An article used to test
-img: test.jpg
+img: test2.png
 ---
 
 # My first blog post
