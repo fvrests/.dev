@@ -7,7 +7,7 @@
 		</div>
 
 		<Responsive>
-			<div class="mb-8">
+			<div class="mb-8 xl:mb-0">
 				<img
 					src="/portrait.png"
 					class="w-full max-w-prose mx-auto xl:max-w-sm border-8 object-cover border-coal dark:border-night relative z-20 rounded-xl"

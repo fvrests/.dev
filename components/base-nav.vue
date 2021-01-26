@@ -1,9 +1,6 @@
 <template>
-	<div class="h-24 w-full">
-		<!-- TODO fix alignment to sections -->
-		<div
-			class="h-24 px-12 w-full max-w-screen-lg xl:max-w-screen-lg mx-auto flex flex-row items-center justify-between"
-		>
+	<Section>
+		<div class="h-24 flex flex-row items-center justify-between">
 			<div
 				class="rounded-full border-coal dark:border-night border-4 w-12 h-12 z-50 overflow-hidden"
 			>
@@ -35,18 +32,13 @@
 			<DesktopNav :links="links" />
 			<MobileNav v-if="isMenuOpen" :links="links" />
 		</div>
-	</div>
+	</Section>
 </template>
 
 <script>
 import { ref } from '@nuxtjs/composition-api'
-import DesktopNav from './desktop-nav'
-import MobileNav from './mobile-nav'
+
 export default {
-	components: {
-		DesktopNav,
-		MobileNav,
-	},
 	setup() {
 		const isMenuOpen = ref()
 

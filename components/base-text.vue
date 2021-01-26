@@ -1,5 +1,5 @@
 <template>
-	<p class="mb-8 text-lg opacity-90">
+	<p class="text-lg opacity-90">
 		<slot />
 	</p>
 </template>
