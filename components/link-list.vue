@@ -1,5 +1,5 @@
 <template>
-	<div class="space-x-8">
+	<div class="space-x-8 -ml-1">
 		<template v-for="link in links">
 			<ButtonLink :url="link.url" :themeColor="themeColor">{{
 				link.name
