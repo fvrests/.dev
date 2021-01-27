@@ -36,7 +36,7 @@ export default {
 </script>
 <style>
 .backdrop {
-	margin-top: 14px;
+	margin-top: 20px;
 }
 .backdrop::after {
 	content: '';
@@ -46,7 +46,9 @@ export default {
 	z-index: 10;
 	border: 8px solid var(--color-coal);
 	border-radius: 0.75rem;
-	@apply dark:border-night -top-6 -left-6;
+	top: -20px;
+	left: -20px;
+	@apply dark:border-night;
 }
 .backdrop.lemon::after {
 	background-color: var(--color-lemon);

@@ -8,9 +8,14 @@
 </template>
 
 <style scoped>
+.backdrop {
+	margin-top: 20px;
+}
 .backdrop::after {
 	content: '';
-	@apply absolute w-full h-full border-8 border-solid border-coal dark:border-night -top-4 -left-4 rounded-xl z-10;
+	top: -20px;
+	left: -20px;
+	@apply absolute w-full h-full border-8 border-solid border-coal dark:border-night rounded-xl z-10;
 }
 .backdrop.lemon::after {
 	@apply bg-lemon;

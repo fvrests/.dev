@@ -4,7 +4,7 @@
 			<Responsive class="mb-20 lg:mb-40">
 				<BaseImage
 					backdrop
-					class="w-48 md:w-56 mb-8 xl:mb-0 mt-8"
+					class="w-48 md:w-56 mb-8 xl:mb-0"
 					url="bio@2x.png"
 					themeColor="leaf"
 				/>
