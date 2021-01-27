@@ -7,7 +7,7 @@
 			:url="image"
 			:themeColor="themeColor"
 			backdrop
-			class="mb-8 xl:mb-0 xl:mr-12 mt-8 max-w-screen-sm"
+			class="mb-8 xl:mb-0 xl:mr-12 max-w-lg"
 		/>
 
 		<div class="w-full mb-20 xl:mb-0">
@@ -35,6 +35,9 @@ export default {
 }
 </script>
 <style>
+.backdrop {
+	margin-top: 14px;
+}
 .backdrop::after {
 	content: '';
 	position: absolute;
