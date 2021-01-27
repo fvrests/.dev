@@ -69,12 +69,12 @@
 				<div class="blog-item">
 					<NuxtLink to="/blog">
 						<Subheading
-							class="blog-text opacity-80 transition-all duration-300"
+							class="blog-text opacity-90 transition-all duration-300"
 						>
 							love letter to a monstera
 						</Subheading>
 						<p
-							class="blog-text opacity-60 transition-all duration-300"
+							class="blog-text opacity-70 transition-all duration-300"
 						>
 							preparing your plants to become even more of plants
 						</p>
@@ -83,12 +83,12 @@
 				<div class="blog-item">
 					<NuxtLink to="/blog">
 						<Subheading
-							class="blog-text opacity-80 transition-all duration-300"
+							class="blog-text opacity-90 transition-all duration-300"
 						>
 							pockets for you and your friends
 						</Subheading>
 						<p
-							class="blog-text opacity-60 transition-all duration-300"
+							class="blog-text opacity-70 transition-all duration-300"
 						>
 							having a great day without even putting your snake
 							in your backpack
@@ -98,12 +98,12 @@
 				<div class="blog-item">
 					<NuxtLink to="/blog">
 						<Subheading
-							class="blog-text opacity-80 transition-all duration-300"
+							class="blog-text opacity-90 transition-all duration-300"
 						>
 							quick setup guide
 						</Subheading>
 						<p
-							class="blog-text opacity-60 transition-all duration-300"
+							class="blog-text opacity-70 transition-all duration-300"
 						>
 							that feeling when your favorite appendage grows a
 							new attachment
@@ -130,7 +130,7 @@
 	@apply mb-8;
 }
 .blog-item:hover .blog-text {
-	@apply opacity-100;
+	@apply opacity-100 text-night dark:text-white;
 }
 </style>
 

@@ -1,68 +1,84 @@
 <template>
 	<Section>
-		<Heading>
-			blog
-		</Heading>
-		<ul class="space-y-12">
-			<li v-for="article of articles" :key="article.slug">
-				<NuxtLink
-					:to="{ name: 'blog-slug', params: { slug: article.slug } }"
+		<div class="max-w-prose mx-auto">
+			<Heading>
+				blog
+			</Heading>
+			<ul class="space-y-24">
+				<li
+					v-for="article of articles"
+					:key="article.slug"
+					class="blog-item"
 				>
-					<div
-						class="blog-item transition-all duration-300 flex flex-row space-x-12 rounded-3xl items-center"
+					<NuxtLink
+						:to="{
+							name: 'blog-slug',
+							params: { slug: article.slug },
+						}"
 					>
-						<div class="text-right">
-							<p
-								class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
-							>
-								{{ formatDate(article.createdAt, 'date') }}
-							</p>
-							<p
-								class="blog-text text-xs opacity-70 leading-loose transition-all duration-300"
-							>
-								{{ formatDate(article.createdAt, 'year') }}
-							</p>
-						</div>
-						<div
-							v-if="article.img"
-							class="overflow-hidden border-6 border-night light:border-coal rounded-xl w-64 flex-grow-0"
-						>
-							<img
-								:src="`/blog/${article.img}`"
-								class="object-cover w-full transform scale-100 transition-all duration-300"
-							/>
-						</div>
-						<div
-							v-else
-							class="flex items-center justify-center w-64"
-						>
+						<div class="relative">
 							<div
-								class="h-0.5 w-36 bg-white blog-text opacity-30 transition-all duration-300"
-							/>
-						</div>
-						<div class="max-w-prose flex-1">
-							<h2
-								class="blog-text transition-all duration-300 text-3xl font-display mb-2 opacity-90"
+								class="absolute top-2 -left-28 text-right flex flex-row items-center"
 							>
-								{{ article.title }}
-							</h2>
+								<div>
+									<p
+										class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
+									>
+										{{
+											formatDate(
+												article.createdAt,
+												'date'
+											)
+										}}
+									</p>
+									<p
+										class="blog-text text-xs opacity-70 leading-loose transition-all duration-300"
+									>
+										{{
+											formatDate(
+												article.createdAt,
+												'year'
+											)
+										}}
+									</p>
+								</div>
+								<div
+									class="ml-4 h-10 w-0.5 bg-coal dark:bg-white blog-text opacity-70 transition-all duration-300"
+								/>
+							</div>
+							<div>
+								<Subheading
+									class="blog-text transition-all duration-300 opacity-90"
+								>
+									{{ article.title }}
+								</Subheading>
 
-							<p
-								class="blog-text transition-all duration-300 text-md bold mb-6 opacity-70"
-							>
-								{{ article.description }}
-							</p>
+								<p
+									class="blog-text transition-all duration-300 text-md bold mb-6 opacity-70"
+								>
+									{{ article.description }}
+								</p>
+								<div
+									v-if="article.img"
+									class="overflow-hidden border-6 border-night light:border-coal rounded-xl w-full max-h-72 flex-grow-0 flex flex-col justify-center"
+								>
+									<img
+										:src="`/blog/${article.img}`"
+										class="object-cover w-full transform scale-100 transition-all duration-300"
+									/>
+								</div>
+							</div>
 						</div>
-					</div>
-				</NuxtLink>
-			</li>
-		</ul>
+					</NuxtLink>
+				</li>
+			</ul>
+		</div>
 	</Section>
 </template>
 
 <style scoped>
 .blog-item:hover .blog-text {
-	@apply opacity-100;
+	@apply opacity-100 text-night dark:text-white;
 }
 .blog-item:hover img {
 	@apply scale-105;
@@ -70,7 +86,9 @@
 </style>
 
 <script>
+import subheading from '~/components/subheading.vue'
 export default {
+	components: { subheading },
 	async asyncData({ $content, params }) {
 		const articles = await $content('blog', params.slug)
 			.only(['title', 'description', 'img', 'slug', 'createdAt'])

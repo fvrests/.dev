@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Section>
-			<div class="flex flex-col items-center mx-auto">
+			<div class="flex flex-col items-center max-w-prose mx-auto">
 				<template v-if="data">
 					<div
 						v-if="data.icon"
@@ -39,8 +39,8 @@
 						/>
 					</div>
 				</template>
-				<div v-if="content" class="w-full">
-					<nuxt-content :document="content" class="text-lg" />
+				<div v-if="content" class="w-full prose">
+					<nuxt-content :document="content" />
 				</div>
 			</div>
 		</Section>
@@ -60,7 +60,7 @@ export default {
 			})
 
 		const projectData = projects.find(
-			(project) => content.slug === params.slug
+			(content) => content.slug === params.slug
 		)
 		if (projectData) {
 			data = { ...projectData }
