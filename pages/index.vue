@@ -11,7 +11,7 @@
 
 				<div class="flex-1">
 					<Subheading>hi! i'm lynn.</Subheading>
-					<BaseText class="leading-loose"
+					<BaseText class="leading-loose mb-8"
 						>i’m exploring
 						<span class="highlight bg-lemon"
 							>front-end development, accessibility, UI & UX</span
@@ -24,7 +24,7 @@
 						>
 						&nbsp;are valued & celebrated. ✨</BaseText
 					>
-					<link-list
+					<LinkList
 						themeColor="leaf"
 						:links="[{ name: 'get to know me →', url: '/about' }]"
 					/>
@@ -41,7 +41,7 @@
 				:image="`${project.slug}/${project.images[0].url}`"
 				:theme-color="project.themeColor"
 				:links="project.links"
-				class="project"
+				class="project mb-16"
 			>
 				{{ project.content }}</IndexSection
 			>
@@ -55,30 +55,48 @@
 			<Heading>blog</Heading>
 			<div>
 				<div class="blog-item">
-					<Subheading>
-						love letter to a monstera
-					</Subheading>
-					<BaseText>
-						preparing your plants to become even more of plants
-					</BaseText>
+					<NuxtLink to="/blog">
+						<Subheading
+							class="blog-text opacity-80 transition-all duration-300"
+						>
+							love letter to a monstera
+						</Subheading>
+						<p
+							class="blog-text opacity-60 transition-all duration-300"
+						>
+							preparing your plants to become even more of plants
+						</p>
+					</NuxtLink>
 				</div>
 				<div class="blog-item">
-					<Subheading>
-						pockets for you and your friends
-					</Subheading>
-					<BaseText>
-						having a great day without even putting your snake in
-						your backpack
-					</BaseText>
+					<NuxtLink to="/blog">
+						<Subheading
+							class="blog-text opacity-80 transition-all duration-300"
+						>
+							pockets for you and your friends
+						</Subheading>
+						<p
+							class="blog-text opacity-60 transition-all duration-300"
+						>
+							having a great day without even putting your snake
+							in your backpack
+						</p>
+					</NuxtLink>
 				</div>
 				<div class="blog-item">
-					<Subheading>
-						quick setup guide
-					</Subheading>
-					<BaseText>
-						that feeling when your favorite appendage grows a new
-						attachment
-					</BaseText>
+					<NuxtLink to="/blog">
+						<Subheading
+							class="blog-text opacity-80 transition-all duration-300"
+						>
+							quick setup guide
+						</Subheading>
+						<p
+							class="blog-text opacity-60 transition-all duration-300"
+						>
+							that feeling when your favorite appendage grows a
+							new attachment
+						</p>
+					</NuxtLink>
 				</div>
 			</div>
 
@@ -96,8 +114,11 @@
 </template>
 
 <style scoped>
+.blog-item {
+	@apply mb-8;
+}
 .blog-item:hover .blog-text {
-	@apply -translate-y-1;
+	@apply opacity-100;
 }
 </style>
 
