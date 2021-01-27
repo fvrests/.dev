@@ -33,23 +33,35 @@
 		</Section>
 		<Section>
 			<Heading>projects</Heading>
-			<IndexSection
-				v-for="project in projects"
-				v-if="project.highlighted"
-				:key="project.title"
-				:title="project.title"
-				:image="`${project.slug}/${project.images[0].url}`"
-				:theme-color="project.themeColor"
-				:links="project.links"
-				class="project mb-16"
-			>
-				{{ project.content }}</IndexSection
-			>
-			<IndexSection class="mb-20 lg:mb-40">
+			<div v-for="project in projects" class="project mb-16">
+				<Responsive v-if="project.highlighted">
+					<BaseImage
+						v-if="project.images"
+						:url="`${project.slug}/${project.images[0].url}`"
+						:themeColor="project.themeColor"
+						backdrop
+						class="mb-8 xl:mb-0 max-w-lg"
+					/>
+					<div class="w-full mb-20 xl:mb-0">
+						<Subheading>
+							{{ project.title }}
+						</Subheading>
+						<BaseText class="mb-8 text-lg opacity-90">
+							{{ project.content }}
+						</BaseText>
+						<LinkList
+							v-if="project.links"
+							:links="project.links"
+							:themeColor="project.themeColor"
+						/>
+					</div>
+				</Responsive>
+			</div>
+			<div class="mb-20 lg:mb-40">
 				<ButtonLink url="/projects" class="text-xl" theme-color="lemon"
 					>more projects →</ButtonLink
-				></IndexSection
-			>
+				>
+			</div>
 		</Section>
 		<Section>
 			<Heading>blog</Heading>
@@ -100,11 +112,11 @@
 				</div>
 			</div>
 
-			<IndexSection class="mb-20 lg:mb-40">
+			<div class="mb-20 lg:mb-40">
 				<ButtonLink url="/blog" class="text-xl" theme-color="leaf"
 					>more articles →</ButtonLink
-				></IndexSection
-			>
+				>
+			</div>
 		</Section>
 		<Section>
 			<Heading>contact me</Heading>
