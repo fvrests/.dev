@@ -1,5 +1,5 @@
 ---
-title: It Worked
+title: It worked
 description: 🥳 ✨ 🌙
 img: test2.png
 ---

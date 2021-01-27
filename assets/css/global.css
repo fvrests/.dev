@@ -32,3 +32,19 @@ body {
 .highlight {
 	@apply text-night px-0.5 mx-0.5 font-bold;
 }
+
+.nuxt-content h1 {
+	@apply font-display text-5xl mb-20;
+}
+.nuxt-content h2 {
+	@apply font-display text-4xl mb-16;
+}
+.nuxt-content h3 {
+	@apply font-bold text-3xl mb-12 opacity-90;
+}
+.nuxt-content h4 {
+	@apply font-bold italic text-2xl mb-12 opacity-90;
+}
+.nuxt-content p {
+	@apply text-lg mb-12 opacity-80;
+}
