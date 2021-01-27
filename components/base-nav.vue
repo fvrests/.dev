@@ -2,7 +2,7 @@
 	<Section>
 		<div class="h-24 flex flex-row items-center justify-between">
 			<div
-				class="rounded-full border-coal dark:border-night border-4 w-12 h-12 z-50 overflow-hidden"
+				class="rounded-full border-coal dark:border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
 			>
 				<NuxtLink to="/">
 					<img src="/portrait.png" class="transform scale-150 z-50" />
