@@ -2,14 +2,12 @@
 	<a
 		v-if="isExternal"
 		class="link font-bold dark:hover:text-lavender relative"
-		:style="{ '--themeColor': `var(--color-${themeColor})` }"
 		:href="url"
 		><slot
 	/></a>
 	<nuxt-link
 		v-else
 		class="link font-bold dark:hover:text-lavender relative"
-		:style="{ '--themeColor': `var(--color-${themeColor})` }"
 		:to="url"
 		><slot
 	/></nuxt-link>
@@ -21,12 +19,12 @@
 	transition: all 50ms ease;
 	transition-property: width height bottom left;
 	z-index: -10;
-	background-color: var(--themeColor);
 	bottom: -0.2rem;
-	@apply absolute h-0.5 w-full left-0;
+	@apply absolute h-0.5 w-full left-0 bg-lavender;
 }
 .link:hover::before {
 	bottom: -0.1rem;
+	@apply bg-rose;
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,7 +41,6 @@
 export default {
 	props: {
 		url: { type: String, required: true },
-		themeColor: { type: String, default: 'rose' },
 	},
 	setup(props) {
 		let isExternal = props.url.startsWith('http') || false
