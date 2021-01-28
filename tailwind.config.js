@@ -50,6 +50,7 @@ module.exports = {
 			fontFamily: {
 				display: ['DM Serif Text', 'Public Sans', ...fontFamily.sans],
 				sans: ['Public Sans', ...fontFamily.sans],
+				mono: ['Hack', ...fontFamily.mono],
 			},
 			borderOpacity: ['active'],
 		},

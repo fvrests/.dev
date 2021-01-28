@@ -34,6 +34,11 @@ export default {
 				href:
 					'https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Public+Sans:wght@400;600&display=swap',
 			},
+			{
+				rel: 'stylesheet',
+				href:
+					'//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css',
+			},
 		],
 	},
 	/*
