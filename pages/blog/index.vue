@@ -4,7 +4,7 @@
 			<Heading>
 				blog
 			</Heading>
-			<ul class="space-y-24">
+			<ul class="space-y-20">
 				<li
 					v-for="article of articles"
 					:key="article.slug"
@@ -58,7 +58,7 @@
 								>
 									{{ article.description }}
 								</p>
-								<div
+								<!-- <div
 									v-if="article.img"
 									class="overflow-hidden border-6 border-night light:border-coal rounded-xl w-full max-h-72 flex-grow-0 flex flex-col justify-center"
 								>
@@ -66,7 +66,7 @@
 										:src="`/blog/${article.img}`"
 										class="object-cover w-full transform scale-100 transition-all duration-300"
 									/>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</NuxtLink>
