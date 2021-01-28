@@ -1,6 +1,6 @@
 ---
 title: Test article
-description: An article used to test
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reiciendis voluptatibus. Nisi qui quasi pariatur obcaecati totam voluptate repudiandae labore explicabo id nemo minima, aspernatur autem assumenda ab nam at?
 img: test.jpg
 ---
 

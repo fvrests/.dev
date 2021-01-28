@@ -33,18 +33,140 @@ body {
 	@apply text-night px-0.5 mx-0.5 font-bold;
 }
 
+/* NUXT CONTENT MARKDOWN STYLES */
+
+/* text */
 .nuxt-content h1 {
-	@apply font-display text-5xl mb-20;
+	@apply font-display text-5xl pt-24 mb-14;
 }
 .nuxt-content h2 {
-	@apply font-display text-4xl mb-16;
+	@apply font-display text-4xl pt-20 mb-10 opacity-90;
 }
 .nuxt-content h3 {
-	@apply font-bold text-3xl mb-12 opacity-90;
+	@apply font-bold text-2xl opacity-90 pt-16 mb-8;
 }
 .nuxt-content h4 {
-	@apply font-bold italic text-2xl mb-12 opacity-90;
+	@apply font-bold italic text-xl opacity-90 pt-14 mb-6;
 }
 .nuxt-content p {
-	@apply text-lg mb-12 opacity-80;
+	@apply text-lg opacity-80 pt-4 mb-6;
 }
+
+/* text links */
+.nuxt-content a {
+	@apply font-bold dark:hover:text-lavender relative;
+}
+.nuxt-content a::before {
+	content: '';
+	transition: all 50ms ease;
+	transition-property: width height bottom left;
+	z-index: -10;
+	bottom: -0.2rem;
+	@apply absolute h-0.5 w-full left-0 bg-lavender;
+}
+.nuxt-content a:hover::before {
+	bottom: -0.1rem;
+	@apply bg-rose;
+}
+@media (prefers-color-scheme: light) {
+	.nuxt-content a::before {
+		z-index: -10;
+		@apply bg-lavender h-1 -bottom-1;
+	}
+	.nuxt-content a:hover::before {
+		@apply bg-rose h-1.5;
+	}
+}
+
+/* blockquotes */
+.nuxt-content blockquote {
+	@apply relative pl-8;
+}
+.nuxt-content blockquote :matches(h1, h2, h3, h4) {
+	@apply pt-4;
+}
+.nuxt-content blockquote::before {
+	content: '';
+	height: calc(100% - 1rem);
+	@apply absolute w-1 left-0 bottom-0 bg-lavender;
+}
+.nuxt-content blockquote > blockquote::before {
+	@apply absolute w-1 left-0 bottom-0 bg-rose;
+}
+
+/* lists */
+/* unordered list */
+.nuxt-content ul {
+	@apply pt-8 leading-loose;
+}
+.nuxt-content ul li {
+	@apply text-lg opacity-90 mb-8 font-bold relative pl-16;
+}
+.nuxt-content ul li p {
+	@apply text-lg opacity-90 pt-0 mb-8 font-bold relative;
+}
+.nuxt-content ul li::before {
+	content: '';
+	@apply absolute left-8 top-2 w-3 h-3 bg-lavender rounded-sm border-3 border-night;
+}
+
+/* ordered list */
+/* up to 10 items: if needed will have to create more */
+.nuxt-content ol {
+	@apply pt-8 leading-loose;
+}
+.nuxt-content ol li {
+	@apply text-lg opacity-90 mb-8 font-bold relative pl-16;
+}
+.nuxt-content ol li p {
+	@apply text-lg opacity-90 pt-0 mb-8 font-bold relative;
+}
+.nuxt-content ol li::before {
+	@apply absolute left-8 top-0 font-mono;
+}
+.nuxt-content ol li:nth-child(1):before {
+	content: '1.';
+}
+.nuxt-content ol li:nth-child(2):before {
+	content: '2.';
+}
+.nuxt-content ol li:nth-child(3):before {
+	content: '3.';
+}
+.nuxt-content ol li:nth-child(4):before {
+	content: '4.';
+}
+.nuxt-content ol li:nth-child(5):before {
+	content: '5.';
+}
+.nuxt-content ol li:nth-child(6):before {
+	content: '6.';
+}
+.nuxt-content ol li:nth-child(7):before {
+	content: '7.';
+}
+.nuxt-content ol li:nth-child(8):before {
+	content: '8.';
+}
+.nuxt-content ol li:nth-child(9):before {
+	content: '9.';
+}
+.nuxt-content ol li:nth-child(10):before {
+	content: '10.';
+}
+
+/* horizontal rule */
+.nuxt-content hr {
+	@apply my-16 h-1 bg-coal dark:bg-white opacity-60;
+}
+
+/* images */
+.nuxt-content img {
+	@apply border-8 border-coal dark:border-night rounded-xl;
+}
+
+/* code */
+/* do this with prism */
+
+/* inline code */
+/* looks like this is prism too */
