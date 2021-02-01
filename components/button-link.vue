@@ -36,16 +36,18 @@
 	@apply rounded-md;
 }
 
-@media (prefers-color-scheme: light) {
-	.button::after {
-		background-color: var(--color-coal);
-		height: 4px;
-	}
-	.button:hover::after {
-		background-color: var(--themeColor);
-		border: 4px solid var(--color-coal);
-	}
+.light .button::after {
+	height: 4px;
+	background-color: var(--color-coal);
 }
+.light .button:hover::after {
+	background-color: var(--themeColor);
+	height: calc(100% + 0.5rem);
+	border: 4px solid var(--color-coal);
+}
+
+/*
+} */
 </style>
 <script>
 export default {
