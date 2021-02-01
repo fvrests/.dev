@@ -2,35 +2,39 @@
 	<Section>
 		<div class="h-24 flex flex-row items-center justify-between">
 			<div
-				class="rounded-full border-coal dark:border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
+				class="rounded-full border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
 			>
 				<NuxtLink to="/">
 					<img src="/portrait.png" class="transform scale-150 z-50" />
 				</NuxtLink>
 			</div>
-			<div
-				class="flex flex-col items-center justify-center space-y-1.5 w-10 h-10 cursor-pointer md:hidden absolute top-10 right-10 z-50"
-				@click="toggleMenu"
-			>
-				<div
-					class="w-4 h-0.5 transition-transform"
-					:class="[
-						isMenuOpen
-							? 'transform -rotate-45 translate-y-1 bg-white'
-							: 'bg-night dark:bg-white',
-					]"
-				/>
-				<div
-					class="w-4 h-0.5 transition-transform"
-					:class="[
-						isMenuOpen
-							? `bg-white transform rotate-45 -translate-y-1`
-							: 'bg-night dark:bg-white',
-					]"
-				/>
+			<div class="flex flex-row space-x-8 items-center">
+				<DesktopNav :links="links" />
+				<MobileNav v-if="isMenuOpen" :links="links" />
+				<ColorModeToggle />
+				<button
+					class="flex flex-col items-center justify-center space-y-1 w-10 h-10 cursor-pointer md:hidden z-50"
+					@click="toggleMenu"
+				>
+					<div
+						class="w-4 h-1 transition-transform rounded-sm"
+						:class="[
+							isMenuOpen
+								? 'transform -rotate-45 translate-y-1 bg-white'
+								: 'bg-night dark:bg-white',
+						]"
+					/>
+
+					<div
+						class="w-4 h-1 transition-transform rounded-sm"
+						:class="[
+							isMenuOpen
+								? `bg-white transform rotate-45 -translate-y-1`
+								: 'bg-night dark:bg-white',
+						]"
+					/>
+				</button>
 			</div>
-			<DesktopNav :links="links" />
-			<MobileNav v-if="isMenuOpen" :links="links" />
 		</div>
 	</Section>
 </template>

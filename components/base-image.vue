@@ -2,7 +2,7 @@
 	<div class="relative" :class="[themeColor, { backdrop: backdrop }]">
 		<img
 			:src="`/${url}`"
-			class="w-full border-8 border-coal dark:border-night relative z-20 rounded-xl"
+			class="w-full border-8 border-night relative z-20 rounded-xl"
 		/>
 	</div>
 </template>
