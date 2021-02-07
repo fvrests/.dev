@@ -14,7 +14,7 @@
 				</div>
 
 				<h2
-					class="mb-6 text-4xl lg:text-5xl font-display text-coal dark:text-white"
+					class="mb-6 text-4xl lg:text-5xl font-display text-coal dark:text-paper"
 				>
 					{{ article.title }}
 				</h2>

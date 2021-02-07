@@ -20,8 +20,8 @@
 						class="w-4 h-1 transition-transform rounded-sm"
 						:class="[
 							isMenuOpen
-								? 'transform -rotate-45 translate-y-1 bg-white'
-								: 'bg-night dark:bg-white',
+								? 'transform -rotate-45 translate-y-1 bg-paper'
+								: 'bg-night dark:bg-paper',
 						]"
 					/>
 
@@ -29,8 +29,8 @@
 						class="w-4 h-1 transition-transform rounded-sm"
 						:class="[
 							isMenuOpen
-								? `bg-white transform rotate-45 -translate-y-1`
-								: 'bg-night dark:bg-white',
+								? `bg-paper transform rotate-45 -translate-y-1`
+								: 'bg-night dark:bg-paper',
 						]"
 					/>
 				</button>

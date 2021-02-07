@@ -43,7 +43,7 @@
 									</p>
 								</div>
 								<div
-									class="ml-4 h-10 w-0.5 bg-coal dark:bg-white blog-text opacity-70 transition-all duration-300"
+									class="ml-4 h-10 w-0.5 bg-coal dark:bg-paper blog-text opacity-70 transition-all duration-300"
 								/>
 							</div>
 							<div>
@@ -78,7 +78,7 @@
 
 <style scoped>
 .blog-item:hover .blog-text {
-	@apply opacity-100 text-night dark:text-white;
+	@apply opacity-100 text-night dark:text-paper;
 }
 .blog-item:hover img {
 	@apply scale-105;

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div
-			class="mb-2 h-10 border-3 border-white rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
+			class="mb-2 h-10 border-3 border-paper rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
 		>
 			<input
 				v-model="searchQuery"
@@ -16,7 +16,7 @@
 			<input
 				v-model="searchQuery"
 				autocomplete="off"
-				class="text-night font-bold dark:text-white bg-paper dark:bg-coal scale-150 border-3 border-coal dark:border-white p-2 rounded-md"
+				class="text-night font-bold dark:text-paper bg-paper dark:bg-coal scale-150 border-3 border-coal dark:border-paper p-2 rounded-md"
 			/>
 			<div class="clearSearch absolute right-2 w-24 h-24">
 				<svg
@@ -39,7 +39,12 @@
 		<div>
 			<ul v-if="articles.length">
 				<li v-for="article of articles" :key="article.slug">
-					<NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+					<NuxtLink
+						:to="{
+							name: 'blog-slug',
+							params: { slug: article.slug },
+						}"
+					>
 						{{ article.title }}
 					</NuxtLink>
 				</li>
@@ -62,7 +67,10 @@ export default {
 				this.articles = []
 				return
 			}
-			this.articles = await this.$content().limit(6).search(searchQuery).fetch()
+			this.articles = await this.$content()
+				.limit(6)
+				.search(searchQuery)
+				.fetch()
 		},
 	},
 }
