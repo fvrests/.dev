@@ -12,8 +12,6 @@
 	--color-rose: #e2bab4;
 	--color-lemon: #f7cc95;
 	--color-leaf: #bec2bb;
-	--color-coal: #252222;
-	--color-night: #111010;
 }
 
 html {
@@ -21,11 +19,11 @@ html {
 }
 
 body {
-	@apply h-full antialiased bg-coal text-white;
+	@apply h-full antialiased bg-coal text-paper transition-all duration-300;
 }
 
 .light body {
-	@apply bg-paper text-coal;
+	@apply bg-paper text-coal transition-all duration-300;
 }
 
 /* use with bg-(theme color) for emphasized text */
@@ -157,7 +155,7 @@ body {
 
 /* horizontal rule */
 .nuxt-content hr {
-	@apply my-16 h-1 bg-coal dark:bg-white opacity-60;
+	@apply my-16 h-1 bg-coal dark:bg-paper opacity-60;
 }
 
 /* images */
