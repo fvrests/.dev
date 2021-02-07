@@ -1,42 +1,21 @@
 <template>
-	<a
-		v-if="isExternal"
-		class="link font-bold dark:hover:text-lavender relative"
-		:href="url"
-		><slot
-	/></a>
-	<nuxt-link
-		v-else
-		class="link font-bold dark:hover:text-lavender relative"
-		:to="url"
-		><slot
-	/></nuxt-link>
+	<a v-if="isExternal" class="link" :href="url"><slot /></a>
+	<nuxt-link v-else class="link" :to="url"><slot /></nuxt-link>
 </template>
 
 <style>
+.link {
+	@apply font-bold opacity-90 hover:opacity-100 dark:text-paper dark:hover:text-rose relative;
+}
 .link::before {
 	content: '';
-	transition: all 50ms ease;
-	transition-property: width height bottom left;
-	z-index: -10;
-	bottom: -0.2rem;
-	@apply absolute h-0.5 w-full left-0 bg-lavender;
+	@apply absolute h-1 -bottom-1 w-full left-0 bg-lavender transition-all duration-300;
 }
 .link:hover::before {
-	bottom: -0.1rem;
-	@apply bg-rose;
-}
-
-@media (prefers-color-scheme: light) {
-	.link::before {
-		z-index: -10;
-		@apply bg-lavender h-1 -bottom-1;
-	}
-	.link:hover::before {
-		@apply bg-rose h-1.5;
-	}
+	@apply bg-rose dark:bg-lavender;
 }
 </style>
+
 <script>
 export default {
 	props: {
