@@ -20,7 +20,7 @@
 							<div
 								class="absolute top-2 -left-28 text-right flex flex-row items-center"
 							>
-								<div>
+								<div class="invisible md:visible">
 									<p
 										class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
 									>

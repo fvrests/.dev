@@ -11,7 +11,7 @@
 
 				<div class="flex-1">
 					<Subheading>hi! i'm lynn.</Subheading>
-					<BaseText class="leading-loose mb-8"
+					<BaseText class="leading-loose mb-12"
 						>i’m exploring
 						<span class="highlight bg-lemon"
 							>front-end development, accessibility, UI & UX</span
@@ -24,10 +24,9 @@
 						>
 						&nbsp;are valued & celebrated. ✨</BaseText
 					>
-					<LinkList
-						themeColor="leaf"
-						:links="[{ name: 'get to know me →', url: '/about' }]"
-					/>
+					<ButtonLink themeColor="leaf" url="/about">
+						get to know me →
+					</ButtonLink>
 				</div>
 			</Responsive>
 		</Section>
@@ -58,7 +57,7 @@
 				</Responsive>
 			</div>
 			<div class="mb-20 lg:mb-40">
-				<ButtonLink url="/projects" class="text-xl" theme-color="lemon"
+				<ButtonLink url="/projects" themeColor="lemon" class="text-xl"
 					>more projects →</ButtonLink
 				>
 			</div>
@@ -78,24 +77,29 @@
 		</Section>
 		<Section>
 			<Heading>contact me</Heading>
-			<ButtonLink url="/contact" class="text-lg"> details → </ButtonLink>
+			<ButtonLink url="/contact" class="text-lg" themeColor="lavender">
+				details →
+			</ButtonLink>
 		</Section>
 	</div>
 </template>
 
-<style scoped>
-.blog-item {
-	@apply mb-8;
-}
-.blog-item:hover .blog-text {
-	@apply opacity-100 text-night dark:text-white;
-}
-</style>
+<style scoped></style>
 
 <script>
 import projects from '../data/projects.js'
 
 export default {
+	async asyncData({ $content, params }) {
+		const articles = await $content('blog', params.slug)
+			.only(['title', 'description', 'img', 'slug', 'createdAt'])
+			.sortBy('createdAt', 'desc')
+			.fetch()
+
+		return {
+			articles,
+		}
+	},
 	setup() {
 		return {
 			projects,

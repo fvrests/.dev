@@ -26,7 +26,7 @@ const projects = [
 		content: 'calming, minimal chrome new tab with live time & weather',
 		links: [
 			{
-				name: 'github',
+				name: 'source code',
 				url: 'https://github.com/fvrests/lavender',
 			},
 			{
@@ -47,7 +47,7 @@ const projects = [
 		content: 'theme suite with a subdued palette & 30+ community ports',
 		links: [
 			{
-				name: 'github',
+				name: 'source code',
 				url: 'https://github.com/rose-pine/rose-pine-theme',
 			},
 			{
@@ -68,7 +68,7 @@ const projects = [
 		content: 'promotional site for a conceptual coffee delivery service',
 		links: [
 			{
-				name: 'github',
+				name: 'source code',
 				url: 'https://github.com/fvrests/wakely',
 			},
 			{ name: 'live demo', url: '#' },
@@ -85,7 +85,7 @@ const projects = [
 		content: 'dynamic image generator for rosé pine collaborators',
 		links: [
 			{
-				name: 'github',
+				name: 'source code',
 				url: 'https://github.com/fvrests/og-image',
 			},
 			{

@@ -1,6 +1,6 @@
 <template
 	><button
-		class="w-8 h-8 cursor-pointer bg-contain bg-center z-50"
+		class="w-6 h-6 cursor-pointer bg-contain bg-center z-50"
 		@click="
 			$colorMode.preference =
 				$colorMode.value == 'dark' ? 'light' : 'dark'
