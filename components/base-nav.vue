@@ -10,7 +10,11 @@
 			</div>
 			<div class="flex flex-row space-x-8 items-center">
 				<DesktopNav :links="links" />
-				<MobileNav v-if="isMenuOpen" :links="links" />
+				<MobileNav
+					v-if="isMenuOpen"
+					:links="links"
+					:isMenuOpen="isMenuOpen"
+				/>
 				<ColorModeToggle />
 				<button
 					class="flex flex-col items-center justify-center space-y-1 w-10 h-10 cursor-pointer md:hidden z-50"
