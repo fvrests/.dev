@@ -12,7 +12,9 @@
 						class="p-3 text-paper hover:text-night text-3xl select-none rounded-xl"
 						@click="toggleMenu"
 						:class="`hover:bg-${link.themeColor}`"
-						:active-class="`bg-${link.themeColor} text-night`"
+						:style="{
+							'--themeColor': `var(--color-${link.themeColor})`,
+						}"
 						>{{ link.name }}</nuxt-link
 					>
 				</li>
@@ -20,7 +22,12 @@
 		</div>
 	</div>
 </template>
-
+<style>
+.nuxt-link-active {
+	background-color: var(--themeColor);
+	@apply text-night;
+}
+</style>
 <script>
 import toggleMenu from './base-nav'
 export default {
