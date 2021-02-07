@@ -65,55 +65,13 @@
 		</Section>
 		<Section>
 			<Heading>blog</Heading>
-			<div>
-				<div class="blog-item">
-					<NuxtLink to="/blog">
-						<Subheading
-							class="blog-text opacity-90 transition-all duration-300"
-						>
-							love letter to a monstera
-						</Subheading>
-						<p
-							class="blog-text opacity-70 transition-all duration-300"
-						>
-							preparing your plants to become even more of plants
-						</p>
-					</NuxtLink>
-				</div>
-				<div class="blog-item">
-					<NuxtLink to="/blog">
-						<Subheading
-							class="blog-text opacity-90 transition-all duration-300"
-						>
-							pockets for you and your friends
-						</Subheading>
-						<p
-							class="blog-text opacity-70 transition-all duration-300"
-						>
-							having a great day without even putting your snake
-							in your backpack
-						</p>
-					</NuxtLink>
-				</div>
-				<div class="blog-item">
-					<NuxtLink to="/blog">
-						<Subheading
-							class="blog-text opacity-90 transition-all duration-300"
-						>
-							quick setup guide
-						</Subheading>
-						<p
-							class="blog-text opacity-70 transition-all duration-300"
-						>
-							that feeling when your favorite appendage grows a
-							new attachment
-						</p>
-					</NuxtLink>
-				</div>
-			</div>
-
-			<div class="mb-20 lg:mb-40">
-				<ButtonLink url="/blog" class="text-xl" theme-color="leaf"
+			<BlogLink
+				v-for="article of articles"
+				:article="article"
+				:key="article.slug"
+			></BlogLink>
+			<div class="mt-12 mb-20 lg:mb-40">
+				<ButtonLink url="/blog" class="text-xl" themeColor="rose"
 					>more articles →</ButtonLink
 				>
 			</div>
