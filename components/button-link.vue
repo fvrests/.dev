@@ -1,14 +1,14 @@
 <template>
 	<a
 		v-if="isExternal"
-		class="button relative z-10 bold hover:text-night font-bold p-1"
+		class="button"
 		:style="{ '--themeColor': `var(--color-${themeColor})` }"
 		:href="url"
 		><slot
 	/></a>
 	<nuxt-link
 		v-else
-		class="button relative z-10 bold hover:text-night font-bold p-1"
+		class="button"
 		:style="{ '--themeColor': `var(--color-${themeColor})` }"
 		:to="url"
 		><slot
@@ -16,38 +16,16 @@
 </template>
 
 <style scoped>
-.button::after {
-	content: '';
-	position: absolute;
-	height: 4px;
-	width: calc(100% - 0.5rem);
-	left: 0.25rem;
-	bottom: -0.25rem;
-	transition: all 50ms ease;
-	transition-property: width height bottom left;
+.button {
 	background-color: var(--themeColor);
-	z-index: -10;
+	@apply relative z-10 font-bold px-2 py-1 border-4 text-coal border-coal rounded-lg opacity-90;
 }
-.button:hover::after {
-	width: calc(100% + 0.5rem);
-	height: calc(100% + 0.5rem);
-	bottom: -0.25rem;
-	left: -0.25rem;
-	@apply rounded-md;
+.button:hover {
+	@apply text-coal dark:text-night opacity-100;
 }
-
-.light .button::after {
-	height: 4px;
-	background-color: var(--color-coal);
+.dark .button {
+	border-color: var(--themeColor);
 }
-.light .button:hover::after {
-	background-color: var(--themeColor);
-	height: calc(100% + 0.5rem);
-	border: 4px solid var(--color-coal);
-}
-
-/*
-} */
 </style>
 <script>
 export default {
