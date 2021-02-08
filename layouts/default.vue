@@ -2,8 +2,8 @@
 	<div
 		class="w-full border-solid border-12 border-night light:text-coal text-sm h-full min-h-screen overscroll"
 	>
-		<BaseNav />
-		<div class="my-16 lg:my-36">
+		<BaseNav :isMenuOpen="isMenuOpen" :toggleMenu="toggleMenu" />
+		<div class="my-16 lg:my-36" :class="isMenuOpen ? 'hidden' : ''">
 			<Nuxt />
 		</div>
 	</div>
@@ -27,3 +27,19 @@
   bottom: -20rem;
 } */
 </style>
+
+<script>
+import { ref } from '@nuxtjs/composition-api'
+export default {
+	setup() {
+		const isMenuOpen = ref()
+		function toggleMenu() {
+			isMenuOpen.value = !isMenuOpen.value
+		}
+		return {
+			isMenuOpen,
+			toggleMenu,
+		}
+	},
+}
+</script>

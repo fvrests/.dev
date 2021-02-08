@@ -1,27 +1,40 @@
 <template>
 	<Section>
-		<div class="h-24 flex flex-row items-center justify-between">
+		<nav class="h-24 flex flex-row items-center justify-between">
 			<div
 				class="rounded-full border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
 			>
 				<NuxtLink to="/">
-					<img src="/portrait.png" class="transform scale-150 z-50" />
+					<img
+						src="/portrait.png"
+						class="transform scale-150 z-50"
+						@click="toggleMenu"
+					/>
 				</NuxtLink>
 			</div>
-			<div class="flex flex-row space-x-8 items-center">
+			<div class="flex flex-row items-center">
+				<ColorModeToggle class="mr-8" />
 				<DesktopNav :links="links" />
-				<MobileNav
-					v-if="isMenuOpen"
-					:links="links"
-					:isMenuOpen="isMenuOpen"
-				/>
-				<ColorModeToggle />
+				<transition
+					enter-active-class="transition-all transition-fastest ease-out-quad"
+					leave-active-class="transition-all transition-fastest ease-in-quad"
+					enter-class="opacity-0"
+					enter-to-class="opacity-100"
+					leave-class="opacity-100"
+					leave-to-class="opacity-0"
+				>
+					<MobileNav
+						v-if="isMenuOpen"
+						:links="links"
+						:toggleMenu="toggleMenu"
+					/>
+				</transition>
 				<button
 					class="flex flex-col items-center justify-center space-y-1 w-10 h-10 cursor-pointer md:hidden z-50"
 					@click="toggleMenu"
 				>
 					<div
-						class="w-4 h-1 transition-transform rounded-sm"
+						class="w-4 h-1 transition-transform duration-100 rounded-sm"
 						:class="[
 							isMenuOpen
 								? 'transform -rotate-45 translate-y-1 bg-paper'
@@ -30,7 +43,7 @@
 					/>
 
 					<div
-						class="w-4 h-1 transition-transform rounded-sm"
+						class="w-4 h-1 transition-transform duration-100 rounded-sm"
 						:class="[
 							isMenuOpen
 								? `bg-paper transform rotate-45 -translate-y-1`
@@ -39,17 +52,19 @@
 					/>
 				</button>
 			</div>
-		</div>
+		</nav>
 	</Section>
 </template>
 
 <script>
-import { ref } from '@nuxtjs/composition-api'
+// import { ref } from '@nuxtjs/composition-api'
 
 export default {
+	props: {
+		isMenuOpen: { type: Boolean, required: true },
+		toggleMenu: { type: Function },
+	},
 	setup() {
-		const isMenuOpen = ref()
-
 		const links = [
 			{
 				name: 'projects',
@@ -72,14 +87,7 @@ export default {
 				themeColor: 'leaf',
 			},
 		]
-
-		function toggleMenu() {
-			isMenuOpen.value = !isMenuOpen.value
-		}
-
 		return {
-			isMenuOpen,
-			toggleMenu,
 			links,
 		}
 	},

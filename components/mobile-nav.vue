@@ -10,12 +10,13 @@
 					<nuxt-link
 						:to="link.url"
 						class="p-3 text-paper hover:text-night text-3xl select-none rounded-xl"
-						@click="toggleMenu"
 						:class="`hover:bg-${link.themeColor}`"
 						:style="{
 							'--themeColor': `var(--color-${link.themeColor})`,
 						}"
-						>{{ link.name }}</nuxt-link
+						><span @click="toggleMenu">{{
+							link.name
+						}}</span></nuxt-link
 					>
 				</li>
 			</ul>
@@ -29,17 +30,13 @@
 }
 </style>
 <script>
-import toggleMenu from './base-nav'
 export default {
 	props: {
 		links: {
 			type: Array,
 			required: true,
 		},
-		isMenuOpen: {
-			type: Boolean,
-			required: true,
-		},
+		toggleMenu: { type: Function },
 	},
 	return() {
 		toggleMenu
