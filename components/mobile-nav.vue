@@ -7,17 +7,17 @@
 				class="flex flex-col justify-center items-center font-bold fixed w-screen h-screen top-0 left-0 space-y-16 z-40"
 			>
 				<li v-for="link in links" :key="link.name">
-					<nuxt-link
-						:to="link.url"
-						class="p-3 text-paper hover:text-night text-3xl select-none rounded-xl"
-						:class="`hover:bg-${link.themeColor}`"
-						:style="{
-							'--themeColor': `var(--color-${link.themeColor})`,
-						}"
-						><span @click="toggleMenu">{{
-							link.name
-						}}</span></nuxt-link
-					>
+					<span @click="toggleMenu">
+						<nuxt-link
+							:to="link.url"
+							class="p-3 text-paper hover:text-night text-3xl select-none rounded-xl"
+							:class="`hover:bg-${link.themeColor}`"
+							:style="{
+								'--themeColor': `var(--color-${link.themeColor})`,
+							}"
+							>{{ link.name }}</nuxt-link
+						>
+					</span>
 				</li>
 			</ul>
 		</div>
