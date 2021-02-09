@@ -32,7 +32,7 @@ export default {
 			{
 				rel: 'stylesheet',
 				href:
-					'https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Public+Sans:wght@500;700&display=swap',
+					'https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Public+Sans:wght@500;700&display=swap',
 			},
 			{
 				rel: 'stylesheet',
@@ -113,5 +113,8 @@ export default {
 				]
 			}
 		},
+	},
+	server: {
+		host: '0.0.0.0',
 	},
 }
