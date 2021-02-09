@@ -3,13 +3,10 @@
 		<nav class="h-24 flex flex-row items-center justify-between">
 			<div
 				class="rounded-full border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
+				v-on="isMenuOpen ? { click: toggleMenu } : {}"
 			>
 				<NuxtLink to="/">
-					<img
-						src="/portrait.png"
-						class="transform scale-150 z-50"
-						@click="toggleMenu"
-					/>
+					<img src="/portrait.png" class="transform scale-150 z-50" />
 				</NuxtLink>
 			</div>
 			<div class="flex flex-row items-center">
