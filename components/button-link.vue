@@ -18,7 +18,7 @@
 <style scoped>
 .button {
 	background-color: var(--themeColor);
-	@apply relative z-10 font-bold px-2 py-1 border-4 text-coal border-coal rounded-lg opacity-90;
+	@apply relative text-sm z-10 font-bold px-2 py-1 border-4 text-coal border-coal rounded-lg opacity-90;
 }
 .button:hover {
 	@apply text-coal dark:text-night opacity-100;
