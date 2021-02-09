@@ -7,7 +7,9 @@ let themeColors = [
 	'lemon',
 	'leaf',
 	'coal',
+	'coalSoft',
 	'night',
+	'paperSoft',
 	'paper',
 ]
 
@@ -43,8 +45,10 @@ module.exports = {
 				rose: 'var(--color-rose)',
 				lemon: 'var(--color-lemon)',
 				leaf: 'var(--color-leaf)',
+				coalSoft: 'var(--color-coal-soft)',
 				coal: 'var(--color-coal)',
 				night: 'var(--color-night)',
+				paperSoft: 'var(--color-paper-soft)',
 				paper: 'var(--color-paper)',
 			},
 			fontFamily: {

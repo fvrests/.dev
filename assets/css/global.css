@@ -3,8 +3,10 @@
 	--color-rose: #f5e0dc;
 	--color-lemon: #fce5c4;
 	--color-leaf: #d6dad4;
+	--color-coal-soft: #504d4d;
 	--color-coal: #252222;
 	--color-night: #111010;
+	--color-paper-soft: #d1cecd;
 	--color-paper: #fcf9f8;
 }
 .light:root {
@@ -35,50 +37,36 @@ body {
 
 /* text */
 .nuxt-content h1 {
-	@apply font-display text-5xl pt-24 mb-14;
+	@apply font-display text-3xl pt-8 mb-10;
 }
 .nuxt-content h2 {
-	@apply font-display text-4xl pt-20 mb-10 opacity-90;
+	@apply font-display text-2xl pt-6 mb-6 opacity-90;
 }
 .nuxt-content h3 {
-	@apply font-bold text-2xl opacity-90 pt-16 mb-8;
+	@apply font-bold text-xl opacity-90 pt-4 mb-4;
 }
 .nuxt-content h4 {
-	@apply font-bold italic text-xl opacity-90 pt-14 mb-6;
+	@apply font-bold italic text-lg opacity-90 pt-2 mb-2;
 }
 .nuxt-content p {
-	@apply text-lg opacity-80 pt-4 mb-6;
+	@apply text-coalSoft dark:text-paperSoft pt-2 mb-4;
 }
 
 /* text links */
 .nuxt-content a {
-	@apply font-bold dark:hover:text-lavender relative;
+	@apply font-bold opacity-90 hover:opacity-100 dark:text-paper dark:hover:text-lavender relative;
 }
 .nuxt-content a::before {
 	content: '';
-	transition: all 50ms ease;
-	transition-property: width height bottom left;
-	z-index: -10;
-	bottom: -0.2rem;
-	@apply absolute h-0.5 w-full left-0 bg-lavender;
+	@apply absolute h-1 -bottom-1 w-full left-0 bg-lavender transition-all duration-300;
 }
 .nuxt-content a:hover::before {
-	bottom: -0.1rem;
 	@apply bg-rose;
-}
-@media (prefers-color-scheme: light) {
-	.nuxt-content a::before {
-		z-index: -10;
-		@apply bg-lavender h-1 -bottom-1;
-	}
-	.nuxt-content a:hover::before {
-		@apply bg-rose h-1.5;
-	}
 }
 
 /* blockquotes */
 .nuxt-content blockquote {
-	@apply relative pl-8;
+	@apply relative pl-6;
 }
 .nuxt-content blockquote :matches(h1, h2, h3, h4) {
 	@apply pt-4;
@@ -86,41 +74,41 @@ body {
 .nuxt-content blockquote::before {
 	content: '';
 	height: calc(100% - 1rem);
-	@apply absolute w-1 left-0 bottom-0 bg-lavender;
+	@apply absolute w-1 left-0 bottom-0 bg-lavender opacity-60;
 }
 .nuxt-content blockquote > blockquote::before {
-	@apply absolute w-1 left-0 bottom-0 bg-rose;
+	@apply absolute w-1 left-0 bottom-0 bg-rose opacity-60;
 }
 
 /* lists */
 /* unordered list */
 .nuxt-content ul {
-	@apply pt-8 leading-loose;
+	@apply pt-4 leading-loose;
 }
 .nuxt-content ul li {
-	@apply text-lg opacity-90 mb-8 font-bold relative pl-16;
+	@apply opacity-90 mb-4 relative pl-8;
 }
 .nuxt-content ul li p {
-	@apply text-lg opacity-90 pt-0 mb-8 font-bold relative;
+	@apply opacity-90 pt-0 mb-4 relative;
 }
 .nuxt-content ul li::before {
 	content: '';
-	@apply absolute left-8 top-2 w-3 h-3 bg-lavender rounded-sm border-3 border-night;
+	@apply absolute left-0 top-2.5 w-2 h-2 bg-lavender rounded-sm border-2 border-night;
 }
 
 /* ordered list */
 /* up to 10 items: if needed will have to create more */
 .nuxt-content ol {
-	@apply pt-8 leading-loose;
+	@apply pt-4 leading-loose;
 }
 .nuxt-content ol li {
-	@apply text-lg opacity-90 mb-8 font-bold relative pl-16;
+	@apply opacity-90 mb-4 relative pl-8;
 }
 .nuxt-content ol li p {
-	@apply text-lg opacity-90 pt-0 mb-8 font-bold relative;
+	@apply opacity-90 pt-0 mb-4 relative;
 }
 .nuxt-content ol li::before {
-	@apply absolute left-8 top-0 font-mono;
+	@apply absolute left-0 top-0 font-mono;
 }
 .nuxt-content ol li:nth-child(1):before {
 	content: '1.';
@@ -155,12 +143,12 @@ body {
 
 /* horizontal rule */
 .nuxt-content hr {
-	@apply my-16 h-1 bg-coal dark:bg-paper opacity-60;
+	@apply my-12 h-1 bg-coal dark:bg-paper opacity-60;
 }
 
 /* images */
 .nuxt-content img {
-	@apply border-8 border-coal dark:border-night rounded-xl;
+	@apply border-8 border-coal dark:border-night rounded-xl mt-8 opacity-100;
 }
 
 /* code */
