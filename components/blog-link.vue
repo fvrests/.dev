@@ -7,15 +7,13 @@
 			}"
 		>
 			<Subheading
-				class="blog-text transition-all duration-300 opacity-90"
+				class="blog-text transition-all duration-300 opacity-80"
 			>
 				{{ article.title }}
 			</Subheading>
-			<p
-				class="blog-text transition-all duration-300 bold mb-6 opacity-70"
-			>
+			<BaseText class="blog-text transition-all duration-300">
 				{{ article.description }}
-			</p>
+			</BaseText>
 		</NuxtLink>
 	</div>
 </template>

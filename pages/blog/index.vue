@@ -4,74 +4,67 @@
 			<Heading>
 				blog
 			</Heading>
-			<ul class="space-y-20">
-				<li
-					v-for="article of articles"
-					:key="article.slug"
-					class="blog-item"
-				>
-					<NuxtLink
-						:to="{
-							name: 'blog-slug',
-							params: { slug: article.slug },
-						}"
+			<div class="mt-8">
+				<ul>
+					<li
+						v-for="article of articles"
+						:key="article.slug"
+						class="blog-item mb-16"
 					>
-						<div class="relative">
-							<div
-								class="absolute top-2 -left-28 text-right flex flex-row items-center"
-							>
-								<div class="invisible md:visible">
-									<p
-										class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
-									>
-										{{
-											formatDate(
-												article.createdAt,
-												'date'
-											)
-										}}
-									</p>
-									<p
-										class="blog-text text-xs opacity-70 leading-loose transition-all duration-300"
-									>
-										{{
-											formatDate(
-												article.createdAt,
-												'year'
-											)
-										}}
-									</p>
-								</div>
+						<NuxtLink
+							:to="{
+								name: 'blog-slug',
+								params: { slug: article.slug },
+							}"
+						>
+							<div class="relative">
 								<div
-									class="ml-4 h-10 w-0.5 bg-coal dark:bg-paper blog-text opacity-70 transition-all duration-300"
-								/>
-							</div>
-							<div>
-								<Subheading
-									class="blog-text transition-all duration-300 opacity-90"
+									class="absolute top-2 -left-28 text-right hidden lg:flex flex-row items-center"
 								>
-									{{ article.title }}
-								</Subheading>
-
-								<p
-									class="blog-text transition-all duration-300 text-md bold mb-6 opacity-70"
-								>
-									{{ article.description }}
-								</p>
-								<!-- <div
-									v-if="article.img"
-									class="overflow-hidden border-6 border-night light:border-coal rounded-xl w-full max-h-72 flex-grow-0 flex flex-col justify-center"
-								>
-									<img
-										:src="`/blog/${article.img}`"
-										class="object-cover w-full transform scale-100 transition-all duration-300"
+									<div>
+										<p
+											class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
+										>
+											{{
+												formatDate(
+													article.createdAt,
+													'date'
+												)
+											}}
+										</p>
+										<p
+											class="blog-text text-xs opacity-70 leading-loose transition-all duration-300"
+										>
+											{{
+												formatDate(
+													article.createdAt,
+													'year'
+												)
+											}}
+										</p>
+									</div>
+									<div
+										class="ml-4 h-10 w-0.5 bg-coal dark:bg-paper blog-text opacity-70 transition-all duration-300"
 									/>
-								</div> -->
+								</div>
+								<div>
+									<Subheading
+										class="blog-text transition-all duration-300 opacity-80"
+									>
+										{{ article.title }}
+									</Subheading>
+
+									<BaseText
+										class="blog-text transition-all duration-300"
+									>
+										{{ article.description }}
+									</BaseText>
+								</div>
 							</div>
-						</div>
-					</NuxtLink>
-				</li>
-			</ul>
+						</NuxtLink>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</Section>
 </template>

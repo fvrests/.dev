@@ -1,5 +1,5 @@
-<template
-	><button
+<template>
+	<button
 		class="w-6 h-6 cursor-pointer bg-contain bg-center z-50"
 		@click="
 			$colorMode.preference =

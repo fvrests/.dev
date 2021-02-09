@@ -2,7 +2,7 @@
 	<nuxt-link
 		:key="project.title"
 		:to="`projects/${project.slug}`"
-		class="card flex flex-col mb-12 lg:mb-0 rounded-xl max-h-screen-sm p-6 hover:shadow-xl transition duration-300 text-coal"
+		class="card flex flex-col mb-12 lg:mb-0 rounded-xl max-h-screen-sm p-4 sm:p-6 hover:shadow-xl transition duration-300 text-coal"
 		:class="`bg-${project.themeColor}`"
 	>
 		<h3
@@ -15,7 +15,7 @@
 		</div>
 		<div
 			v-if="project.images"
-			class="overflow-hidden border-8 border-night light:border-coal rounded-xl w-full mx-auto mt-8"
+			class="overflow-hidden border-8 border-night light:border-coal rounded-xl w-full mx-auto mt-4 sm:mt-8"
 		>
 			<img
 				:src="`/${project.slug}/${project.images[0].url}`"

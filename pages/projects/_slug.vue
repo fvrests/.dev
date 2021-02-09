@@ -8,14 +8,11 @@
 						class="w-16 h-16 border-6 border-coal dark:border-night rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
 						:style="`background-image: url(/${data.slug}/${data.icon});`"
 					></div>
-					<h2
-						class="font-display text-4xl sm:text-5xl mb-2 sm:mb-4 text-center"
-					>
+					<Heading class="text-center">
 						{{ data.title }}
-					</h2>
-
+					</Heading>
 					<div
-						class="card-text font-bold transform transition-all duration-300 mb-6 sm:mb-8 text-center"
+						class="card-text font-bold transform transition-all duration-300 -mt-4 mb-12 text-center"
 					>
 						{{ data.content }}
 					</div>

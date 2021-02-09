@@ -1,5 +1,5 @@
 <template>
-	<h2 class="font-display text-6xl lg:text-7xl mb-12 sm:mb-16">
+	<h2 class="font-display text-5xl mb-12 lowercase">
 		<slot />
 	</h2>
 </template>

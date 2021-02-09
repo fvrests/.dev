@@ -1,38 +1,38 @@
 <template>
 	<div>
-		<Section>
-			<Responsive class="mb-20 lg:mb-40">
+		<Section class="mb-36">
+			<Responsive>
 				<BaseImage
 					backdrop
-					class="w-48 md:w-56 mb-8 xl:mb-0"
+					class="w-36 xl:w-48 mb-8 xl:mb-0"
 					url="bio@2x.png"
 					themeColor="leaf"
 				/>
 
-				<div class="flex-1">
+				<div class="flex-1 max-w-prose">
 					<Subheading>hi! i'm lynn.</Subheading>
 					<BaseText class="leading-loose mb-12"
-						>i’m exploring
+						>I’m exploring
 						<span class="highlight bg-lemon"
 							>front-end development, accessibility, UI & UX</span
-						>. &nbsp;the tools i use most include
+						>. &nbsp;The tools I use most include
 						<span class="highlight bg-leaf"
 							>vue, react, html, css, js, & figma</span
-						>. &nbsp;i’m searching for communities where
+						>. &nbsp;I’m searching for communities where
 						<span class="highlight bg-lavender"
 							>mutual growth & mentorship</span
 						>
 						&nbsp;are valued & celebrated. ✨</BaseText
 					>
-					<ButtonLink themeColor="leaf" url="/about">
+					<TextLink themeColor="leaf" url="/about">
 						get to know me →
-					</ButtonLink>
+					</TextLink>
 				</div>
 			</Responsive>
 		</Section>
-		<Section>
+		<Section class="mb-36">
 			<Heading>projects</Heading>
-			<div v-for="project in projects" class="project mb-16">
+			<div v-for="project in projects" class="project mb-24">
 				<Responsive v-if="project.highlighted">
 					<BaseImage
 						v-if="project.images"
@@ -41,11 +41,11 @@
 						backdrop
 						class="mb-8 xl:mb-0 max-w-lg"
 					/>
-					<div class="w-full mb-20 xl:mb-0">
+					<div class="w-full">
 						<Subheading>
 							{{ project.title }}
 						</Subheading>
-						<BaseText class="mb-8 text-lg opacity-90">
+						<BaseText class="mb-8">
 							{{ project.content }}
 						</BaseText>
 						<LinkList
@@ -56,30 +56,30 @@
 					</div>
 				</Responsive>
 			</div>
-			<div class="mb-20 lg:mb-40">
-				<ButtonLink url="/projects" themeColor="lemon" class="text-xl"
-					>more projects →</ButtonLink
+			<div>
+				<TextLink url="/projects" themeColor="lemon"
+					>more projects →</TextLink
 				>
 			</div>
 		</Section>
-		<Section>
+		<Section class="mb-36">
 			<Heading>blog</Heading>
 			<BlogLink
 				v-for="article of articles"
 				:article="article"
 				:key="article.slug"
 			></BlogLink>
-			<div class="mt-12 mb-20 lg:mb-40">
-				<ButtonLink url="/blog" class="text-xl" themeColor="rose"
-					>more articles →</ButtonLink
+			<div class="mt-24">
+				<TextLink url="/blog" themeColor="rose"
+					>more articles →</TextLink
 				>
 			</div>
 		</Section>
-		<Section>
+		<Section class="mb-36">
 			<Heading>contact me</Heading>
-			<ButtonLink url="/contact" class="text-lg" themeColor="lavender">
+			<TextLink url="/contact" themeColor="lavender">
 				details →
-			</ButtonLink>
+			</TextLink>
 		</Section>
 	</div>
 </template>
