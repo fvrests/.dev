@@ -1,7 +1,7 @@
 <template>
 	<Section>
-		<Heading>projects</Heading>
-		<div class="grid grid-cols-1 lg:gap-8 lg:grid-cols-2">
+		<Heading class="mb-8">Projects</Heading>
+		<div class="grid grid-cols-1 lg:gap-10 lg:grid-cols-2">
 			<ProjectCard
 				v-for="project in projects"
 				:key="project.name"

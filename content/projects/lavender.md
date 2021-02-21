@@ -1,4 +1,4 @@
-# a simple, soft new tab
+## A simple, soft new tab
 
 Lavender is a new tab extension for Chrome that aims to minimize distractions & allow the user to maintain a focused workflow.
 
@@ -8,22 +8,23 @@ Lavender's simplicity is at the core of its design and functionality.
 
 _Choose from five calming pastel background colors_
 
-## the basics
+### Packaged with the basics
 
 While Lavender is intended to be minimal, a few user-focused features are included:
 
--   automatic location fetching
--   built-in unit options for time & temperature
--   live-updating data
--   storage sync across Chrome browsers
+-   Automatic location fetching
+-   Built-in unit options for time & temperature
+-   Live-updating time & weather data
+-   Storage sync across Chrome browsers
 
 ![options panel showing settings for colors, units, layout and location](/lavender/lavender-options@2x.png)
 
 _User-customizable units, theming & layout options_
 
-## relevant skills
+## Relevant skills
 
 -   VueJS & Vue composition API
--   state management with Vuex
--   asynchronous data fetching from external APIs
--   live-updating content
+-   State management with Vuex
+-   Asynchronous data fetching from external APIs
+    -   Also, trying not to overload a free API limit (aka playing with 🔥)
+-   Building & publishing a Chrome extension

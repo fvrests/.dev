@@ -1,9 +1,14 @@
 <template>
 	<div class="relative" :class="[themeColor, { backdrop: backdrop }]">
-		<img
-			:src="`/${url}`"
-			class="w-full border-8 border-night relative z-20 rounded-xl"
-		/>
+		<div
+			class="relative w-full h-full border-8 border-border object-cover overflow-hidden rounded-xl z-20"
+		>
+			<img
+				:src="`/${url}`"
+				class="w-full h-full transform transition-all duration-300 scale-100 z-20"
+				:class="zoomOnHover ? 'hover:scale-105' : ''"
+			/>
+		</div>
 	</div>
 </template>
 
@@ -11,22 +16,22 @@
 .backdrop {
 	margin-top: 20px;
 }
-.backdrop::after {
+.backdrop::before {
 	content: '';
 	top: -20px;
 	left: -20px;
-	@apply absolute w-full h-full border-8 border-solid border-coal dark:border-night rounded-xl z-10;
+	@apply absolute w-full h-full border-8 border-border rounded-xl z-10;
 }
-.backdrop.lemon::after {
+.backdrop.lemon::before {
 	@apply bg-lemon;
 }
-.backdrop.rose::after {
+.backdrop.rose::before {
 	@apply bg-rose;
 }
-.backdrop.leaf::after {
+.backdrop.leaf::before {
 	@apply bg-leaf;
 }
-.backdrop.lavender::after {
+.backdrop.lavender::before {
 	@apply bg-lavender;
 }
 </style>
@@ -35,8 +40,9 @@
 export default {
 	props: {
 		url: { type: String, required: true },
-		themeColor: { type: String, required: 'rose' },
+		themeColor: { type: String, default: '' },
 		backdrop: { type: Boolean, default: false },
+		zoomOnHover: { type: Boolean, default: false },
 	},
 }
 </script>

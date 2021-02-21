@@ -2,7 +2,7 @@
 	<Section>
 		<nav class="h-24 flex flex-row items-center justify-between">
 			<div
-				class="rounded-full border-night border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
+				class="rounded-full border-border border-4 w-12 h-12 transition-all duration-100 opacity-90 hover:opacity-100 z-50 overflow-hidden"
 				v-on="isMenuOpen ? { click: toggleMenu } : {}"
 			>
 				<NuxtLink to="/">
@@ -31,20 +31,20 @@
 					@click="toggleMenu"
 				>
 					<div
-						class="w-4 h-1 transition-transform duration-100 rounded-sm"
+						class="w-4 h-1 transition-transform duration-100 rounded-sm bg-fg"
 						:class="[
 							isMenuOpen
-								? 'transform -rotate-45 translate-y-1 bg-paper'
-								: 'bg-night dark:bg-paper',
+								? 'transform -rotate-45 translate-y-1'
+								: '',
 						]"
 					/>
 
 					<div
-						class="w-4 h-1 transition-transform duration-100 rounded-sm"
+						class="w-4 h-1 transition-transform duration-100 rounded-sm bg-fg"
 						:class="[
 							isMenuOpen
-								? `bg-paper transform rotate-45 -translate-y-1`
-								: 'bg-night dark:bg-paper',
+								? `transform rotate-45 -translate-y-1`
+								: '',
 						]"
 					/>
 				</button>

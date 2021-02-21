@@ -3,7 +3,7 @@
 		<NuxtLink
 			v-if="prev"
 			:to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-			class="text-primary font-bold hover:underline"
+			class="font-bold hover:underline"
 		>
 			{{ prev.title }}
 		</NuxtLink>

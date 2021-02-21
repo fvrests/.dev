@@ -5,7 +5,7 @@
 
 <style>
 .text-link {
-	@apply font-bold opacity-90 hover:opacity-100 dark:text-paper dark:hover:text-lavender relative;
+	@apply font-bold text-fgSubtle hover:text-fg dark:hover:text-lavender relative;
 }
 .text-link::before {
 	content: '';

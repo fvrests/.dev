@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div
-			class="mb-2 h-10 border-3 border-paper rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
+			class="mb-2 h-10 border-3 border-fgMuted rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
 		>
 			<input
 				v-model="searchQuery"
@@ -16,7 +16,7 @@
 			<input
 				v-model="searchQuery"
 				autocomplete="off"
-				class="text-night font-bold dark:text-paper bg-paper dark:bg-coal scale-150 border-3 border-coal dark:border-paper p-2 rounded-md"
+				class="font-bold text-fg bg-page scale-150 border-3 border-border p-2 rounded-md"
 			/>
 			<div class="clearSearch absolute right-2 w-24 h-24">
 				<svg

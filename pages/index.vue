@@ -1,17 +1,22 @@
 <template>
 	<div>
-		<Section class="mb-36">
+		<Section class="mb-24">
 			<Responsive>
-				<BaseImage
-					backdrop
-					class="w-36 xl:w-48 mb-8 xl:mb-0"
-					url="bio@2x.png"
-					themeColor="leaf"
-				/>
+				<div class="flex">
+					<nuxt-link to="/about">
+						<BaseImage
+							backdrop
+							class="w-36 lg:w-48 mb-8 lg:mb-0"
+							url="bio@2x.png"
+							themeColor="leaf"
+							zoomOnHover
+						/>
+					</nuxt-link>
+				</div>
 
 				<div class="flex-1 max-w-prose">
-					<Subheading>hi! i'm lynn.</Subheading>
-					<BaseText class="leading-loose mb-12"
+					<Subheading class="mb-4"> Hi, I'm lynn.</Subheading>
+					<BaseText class="leading-loose mb-8 text-fgSubtle"
 						>I’m exploring
 						<span class="highlight bg-lemon"
 							>front-end development, accessibility, UI & UX</span
@@ -24,62 +29,69 @@
 						>
 						&nbsp;are valued & celebrated. ✨</BaseText
 					>
-					<TextLink themeColor="leaf" url="/about">
-						get to know me →
-					</TextLink>
+					<ButtonLink url="/about" themeColor="leaf"
+						>Get to know me →</ButtonLink
+					>
 				</div>
 			</Responsive>
 		</Section>
-		<Section class="mb-36">
-			<Heading>projects</Heading>
-			<div v-for="project in projects" class="project mb-24">
-				<Responsive v-if="project.highlighted">
-					<BaseImage
-						v-if="project.images"
-						:url="`${project.slug}/${project.images[0].url}`"
-						:themeColor="project.themeColor"
-						backdrop
-						class="mb-8 xl:mb-0 max-w-lg"
-					/>
-					<div class="w-full">
-						<Subheading>
-							{{ project.title }}
-						</Subheading>
-						<BaseText class="mb-8">
-							{{ project.content }}
-						</BaseText>
-						<LinkList
-							v-if="project.links"
-							:links="project.links"
-							:themeColor="project.themeColor"
-						/>
-					</div>
-				</Responsive>
+		<Section class="mb-24">
+			<Heading class="mb-8">Projects</Heading>
+			<div
+				v-for="project in projects"
+				v-if="project.highlighted"
+				class="project mb-16"
+			>
+				<nuxt-link :to="`projects/${project.slug}`" zoomImagesOnHover>
+					<Responsive>
+						<div class="flex">
+							<BaseImage
+								v-if="project.images"
+								:url="`${project.slug}/${project.images[0].url}`"
+								:themeColor="project.themeColor"
+								backdrop
+								class="mb-8 xl:mb-0 max-w-lg"
+							/>
+						</div>
+						<div class="w-full">
+							<div class="flex">
+								<Subheading class="mb-4">
+									{{ project.title }}
+								</Subheading>
+							</div>
+							<div class="flex">
+								<BaseText class="text-fgSubtle">
+									{{ project.content }}
+								</BaseText>
+							</div>
+						</div>
+					</Responsive>
+				</nuxt-link>
 			</div>
 			<div>
-				<TextLink url="/projects" themeColor="lemon"
-					>more projects →</TextLink
+				<ButtonLink url="/projects" class="text-lg" themeColor="lemon"
+					>More projects →</ButtonLink
 				>
 			</div>
 		</Section>
-		<Section class="mb-36">
-			<Heading>blog</Heading>
+		<Section class="mb-24">
+			<Heading class="mb-8">Blog</Heading>
 			<BlogLink
 				v-for="article of articles"
 				:article="article"
 				:key="article.slug"
 			></BlogLink>
-			<div class="mt-24">
-				<TextLink url="/blog" themeColor="rose"
-					>more articles →</TextLink
+			<div class="mt-16">
+				<ButtonLink url="/blog" class="text-lg" themeColor="rose"
+					>More articles →</ButtonLink
 				>
 			</div>
 		</Section>
-		<Section class="mb-36">
-			<Heading>contact me</Heading>
-			<TextLink url="/contact" themeColor="lavender">
-				details →
-			</TextLink>
+		<Section class="mb-24">
+			<Heading class="mb-8">Contact me</Heading>
+			<ButtonLink url="/contact" class="text-lg" themeColor="lavender">
+				Details →
+			</ButtonLink>
 		</Section>
 	</div>
 </template>

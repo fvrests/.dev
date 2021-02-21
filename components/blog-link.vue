@@ -1,17 +1,17 @@
 <template>
-	<div class="blog-item">
+	<div
+		class="blog-item text-fgSubtle hover:text-fg transition-all duration-100 p-4 -mx-4 rounded-lg"
+	>
 		<NuxtLink
 			:to="{
 				name: 'blog-slug',
 				params: { slug: article.slug },
 			}"
 		>
-			<Subheading
-				class="blog-text transition-all duration-300 opacity-80"
-			>
+			<Subheading class="mb-2">
 				{{ article.title }}
 			</Subheading>
-			<BaseText class="blog-text transition-all duration-300">
+			<BaseText>
 				{{ article.description }}
 			</BaseText>
 		</NuxtLink>
@@ -25,11 +25,3 @@ export default {
 	},
 }
 </script>
-<style scoped>
-.blog-item {
-	@apply mb-8;
-}
-.blog-item:hover .blog-text {
-	@apply opacity-100 text-night dark:text-paper;
-}
-</style>

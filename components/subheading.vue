@@ -1,5 +1,7 @@
 <template>
-	<h3 class="text-3xl font-display mb-2 lowercase">
+	<h3 class="text-2xl font-display">
 		<slot />
 	</h3>
 </template>
+
+<style scoped></style>

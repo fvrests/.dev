@@ -5,7 +5,7 @@
 				<AppSearchInput class="mb-8 md:mb-0 md:float-right" />
 				<div
 					v-if="article.img"
-					class="overflow-hidden border-8 -mx-4 border-night light:border-coal rounded-xl w-full max-w-screen-md mb-8 sm:mb-12"
+					class="overflow-hidden border-8 -mx-4 border-border rounded-xl w-full max-w-screen-md mb-8 sm:mb-12"
 				>
 					<img
 						:src="`/blog/${article.img}`"
@@ -13,9 +13,7 @@
 					/>
 				</div>
 
-				<h2
-					class="mb-6 text-4xl lg:text-5xl font-display text-coal dark:text-paper"
-				>
+				<h2 class="mb-6 text-4xl lg:text-5xl font-display">
 					{{ article.title }}
 				</h2>
 				<p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
@@ -40,7 +38,7 @@
 				<article>
 					<nuxt-content :document="article" class="text-lg" />
 				</article>
-				<prev-next :prev="prev" :next="next" />
+				<PrevNext :prev="prev" :next="next" />
 			</div>
 		</div>
 	</Section>
@@ -57,7 +55,7 @@ export default {
 	async asyncData({ $content, params }) {
 		const article = await $content('blog', params.slug).fetch()
 
-		const [prev, next] = await $content()
+		const [prev, next] = await $content('blog')
 			.only(['title', 'slug'])
 			.sortBy('createdAt', 'asc')
 			.surround('blog', params.slug)

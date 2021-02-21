@@ -2,14 +2,16 @@
 	<a
 		v-if="isExternal"
 		class="button"
-		:style="{ '--themeColor': `var(--color-${themeColor})` }"
+		:style="
+			({ '--themeColor': `var(--${themeColor})`, '--themeColorAlt': `var(--${themeColor}-alt)` })
+		"
 		:href="url"
 		><slot
 	/></a>
 	<nuxt-link
 		v-else
 		class="button"
-		:style="{ '--themeColor': `var(--color-${themeColor})` }"
+		:style="({ '--themeColor': `var(--${themeColor})`, '--themeColorAlt': `var(--${themeColor}-alt)` })"
 		:to="url"
 		><slot
 	/></nuxt-link>
@@ -18,13 +20,17 @@
 <style scoped>
 .button {
 	background-color: var(--themeColor);
-	@apply relative text-sm z-10 font-bold px-2 py-1 border-4 text-coal border-coal rounded-lg opacity-90;
+	@apply relative text-sm z-10 font-bold px-2 py-1 border-4 border-border rounded-lg;
 }
 .button:hover {
-	@apply text-coal dark:text-night opacity-100;
+	background-color: var(--themeColorAlt);
 }
 .dark .button {
 	border-color: var(--themeColor);
+	@apply text-page;
+}
+.dark .button:hover {
+	border-color: var(--themeColorAlt);
 }
 </style>
 <script>

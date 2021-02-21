@@ -2,7 +2,7 @@
 	<!-- padding -->
 	<div class="px-8">
 		<!-- max width -->
-		<div class="max-w-screen-md xl:max-w-screen-lg mx-auto">
+		<div class="max-w-screen-md mx-auto">
 			<slot />
 		</div>
 	</div>

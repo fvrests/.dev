@@ -5,14 +5,14 @@
 				<template v-if="data">
 					<div
 						v-if="data.icon"
-						class="w-16 h-16 border-6 border-coal dark:border-night rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
+						class="w-16 h-16 border-6 border-border rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
 						:style="`background-image: url(/${data.slug}/${data.icon});`"
 					></div>
-					<Heading class="text-center">
+					<Heading class="text-center mb-8">
 						{{ data.title }}
 					</Heading>
 					<div
-						class="card-text font-bold transform transition-all duration-300 -mt-4 mb-12 text-center"
+						class="card-text font-bold transform transition-all duration-300 -mt-4 mb-8 text-center"
 					>
 						{{ data.content }}
 					</div>
@@ -26,9 +26,11 @@
 						</template>
 					</div>
 
+					<!-- todo: github stars, users, featured etc -->
+
 					<div
 						v-if="data.images"
-						class="overflow-hidden border-8 -mx-4 border-night light:border-coal rounded-xl w-full max-w-screen-lg mb-8"
+						class="overflow-hidden border-8 -mx-4 border-border rounded-xl w-full max-w-screen-lg mb-8"
 					>
 						<img
 							:src="`/${data.slug}/${data.images[0].url}`"
@@ -39,6 +41,7 @@
 				<div v-if="content" class="w-full prose">
 					<nuxt-content :document="content" />
 				</div>
+				<PrevNext :prev="prev" :next="next" />
 			</div>
 		</Section>
 	</div>
@@ -62,20 +65,13 @@ export default {
 		if (projectData) {
 			data = { ...projectData }
 		}
-		return { slug, content, data }
+		const [prev, next] = await $content('projects')
+			.only(['title', 'slug'])
+			.sortBy('createdAt', 'asc')
+			.surround('projects', params.slug)
+			.fetch()
+
+		return { slug, content, data, prev, next }
 	},
 }
-// export default {
-// 	async asyncData({ $content, params }) {
-// 		const article = await $content(`/blog/${params.slug}`).fetch()
-
-// 		const [prev, next] = await $content()
-// 			.only(['title', 'slug'])
-// 			.sortBy('createdAt', 'asc')
-// 			.surround(`/blog/${params.slug}`)
-// 			.fetch()
-
-// 		return { article, prev, next }
-// 	},
-// }
 </script>

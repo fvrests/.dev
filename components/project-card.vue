@@ -2,26 +2,24 @@
 	<nuxt-link
 		:key="project.title"
 		:to="`projects/${project.slug}`"
-		class="card flex flex-col mb-12 lg:mb-0 rounded-xl max-h-screen-sm p-4 sm:p-6 hover:shadow-xl transition duration-300 text-coal"
+		class="card flex flex-col mb-12 lg:mb-0 rounded-xl max-h-screen-sm p-4 hover:shadow-xl transition duration-300 zoomImagesOnHover"
 		:class="`bg-${project.themeColor}`"
 	>
-		<h3
-			class="card-text text-3xl lg:text-4xl font-display mb-1 transform transition-all duration-300"
+		<Subheading
+			class="mb-4 card-text transform transition-all duration-300 dark:text-page"
 		>
 			{{ project.title }}
-		</h3>
-		<div class="card-text font-bold transform transition-all duration-300">
+		</Subheading>
+		<div
+			class="card-text text-sm transform transition-all duration-300 -mt-3 dark:text-page"
+		>
 			{{ project.type }}
 		</div>
-		<div
+		<BaseImage
 			v-if="project.images"
-			class="overflow-hidden border-8 border-night light:border-coal rounded-xl w-full mx-auto mt-4 sm:mt-8"
-		>
-			<img
-				:src="`/${project.slug}/${project.images[0].url}`"
-				class="object-cover w-full h-full transform scale-100 transition-all duration-300"
-			/>
-		</div>
+			:url="`${project.slug}/${project.images[0].url}`"
+			class="mx-auto mt-4"
+		/>
 	</nuxt-link>
 </template>
 
@@ -34,9 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.card:hover img {
-	@apply scale-105;
-}
 .card:hover .card-text {
 	@apply -translate-y-1;
 }

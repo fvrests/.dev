@@ -1,7 +1,7 @@
 <template>
 	<div class="md:hidden w-sm">
 		<div
-			class="fixed w-screen h-screen top-0 left-0 bg-coal dark:bg-night z-30"
+			class="fixed w-screen h-screen top-0 left-0 bg-surface dark:bg-border z-30"
 		>
 			<ul
 				class="flex flex-col justify-center items-center font-bold fixed w-screen h-screen top-0 left-0 space-y-16 z-40"
@@ -10,10 +10,10 @@
 					<span @click="toggleMenu">
 						<nuxt-link
 							:to="link.url"
-							class="p-3 text-paper hover:text-night text-3xl select-none rounded-xl"
+							class="p-3 text-fgSubtle hover:text-fg dark:hover:text-page text-2xl select-none rounded-xl"
 							:class="`hover:bg-${link.themeColor}`"
 							:style="{
-								'--themeColor': `var(--color-${link.themeColor})`,
+								'--themeColor': `var(--${link.themeColor})`,
 							}"
 							>{{ link.name }}</nuxt-link
 						>
@@ -26,7 +26,7 @@
 <style>
 .nuxt-link-active {
 	background-color: var(--themeColor);
-	@apply text-night;
+	@apply dark:text-page;
 }
 </style>
 <script>

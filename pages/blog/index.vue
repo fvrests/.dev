@@ -1,8 +1,8 @@
 <template>
 	<Section>
 		<div class="max-w-prose mx-auto">
-			<Heading>
-				blog
+			<Heading class="mb-8">
+				Blog
 			</Heading>
 			<div class="mt-8">
 				<ul>
@@ -44,7 +44,7 @@
 										</p>
 									</div>
 									<div
-										class="ml-4 h-10 w-0.5 bg-coal dark:bg-paper blog-text opacity-70 transition-all duration-300"
+										class="ml-4 h-10 w-0.5 bg-page blog-text opacity-70 transition-all duration-300"
 									/>
 								</div>
 								<div>
@@ -55,7 +55,7 @@
 									</Subheading>
 
 									<BaseText
-										class="blog-text transition-all duration-300"
+										class="blog-text transition-all duration-300 text-fgSubtle"
 									>
 										{{ article.description }}
 									</BaseText>
@@ -71,7 +71,7 @@
 
 <style scoped>
 .blog-item:hover .blog-text {
-	@apply opacity-100 text-night dark:text-paper;
+	@apply opacity-100 text-fg;
 }
 .blog-item:hover img {
 	@apply scale-105;

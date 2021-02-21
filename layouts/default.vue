@@ -1,7 +1,5 @@
 <template>
-	<div
-		class="w-full border-solid border-12 border-night h-full min-h-screen overscroll"
-	>
+	<div class="w-full border-12 border-border h-full min-h-screen overscroll">
 		<BaseNav :isMenuOpen="isMenuOpen" :toggleMenu="toggleMenu" />
 		<div class="my-24 lg:my-36" :class="isMenuOpen ? 'hidden' : ''">
 			<Nuxt />
@@ -17,7 +15,7 @@
   left: -1rem;
   right: -1rem;
   position: absolute;
-  background: var(--color-night);
+  background: var(--border);
   height: 20.5rem;
 }
 .overscroll::before {
