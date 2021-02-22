@@ -1,14 +1,12 @@
-## A simple, soft new tab
+## A soft new tab
 
 Lavender is a new tab extension for Chrome that aims to minimize distractions & allow the user to maintain a focused workflow.
 
-Lavender's simplicity is at the core of its design and functionality.
-
 ![multiple pastel background colors offered](/lavender/lavender-colors@2x.png)
 
-_Choose from five calming pastel background colors_
+_Available in 6 ~aesthetic~ colors_
 
-### Packaged with the basics
+### It does things, but not too many
 
 While Lavender is intended to be minimal, a few user-focused features are included:
 
@@ -19,12 +17,12 @@ While Lavender is intended to be minimal, a few user-focused features are includ
 
 ![options panel showing settings for colors, units, layout and location](/lavender/lavender-options@2x.png)
 
-_User-customizable units, theming & layout options_
+_Customizable units, theming & layout options for the refined user_
 
 ## Relevant skills
 
 -   VueJS & Vue composition API
 -   State management with Vuex
 -   Asynchronous data fetching from external APIs
-    -   Also, trying not to overload a free API limit (aka playing with 🔥)
+    -   Also, trying not to overload a free API limit (aka playing with 🔥 aka pls help me)
 -   Building & publishing a Chrome extension
