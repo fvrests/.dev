@@ -78,11 +78,6 @@ export default {
 				url: '/about',
 				themeColor: 'rose',
 			},
-			{
-				name: 'contact',
-				url: '/contact',
-				themeColor: 'leaf',
-			},
 		]
 		return {
 			links,
