@@ -5,65 +5,12 @@
 				Blog
 			</Heading>
 			<div class="mt-8">
-				<ul>
-					<li
-						v-for="article of articles"
-						:key="article.slug"
-						class="blog-item mb-16"
-					>
-						<NuxtLink
-							:to="{
-								name: 'blog-slug',
-								params: { slug: article.slug },
-							}"
-						>
-							<div class="relative">
-								<div
-									class="absolute top-2 -left-28 text-right hidden lg:flex flex-row items-center"
-								>
-									<div>
-										<p
-											class="blog-text text-sm font-bold uppercase opacity-90 transition-all duration-300"
-										>
-											{{
-												formatDate(
-													article.createdAt,
-													'date'
-												)
-											}}
-										</p>
-										<p
-											class="blog-text text-xs opacity-70 leading-loose transition-all duration-300"
-										>
-											{{
-												formatDate(
-													article.createdAt,
-													'year'
-												)
-											}}
-										</p>
-									</div>
-									<div
-										class="ml-4 h-10 w-0.5 bg-page blog-text opacity-70 transition-all duration-300"
-									/>
-								</div>
-								<div>
-									<Subheading
-										class="blog-text transition-all duration-300 opacity-80"
-									>
-										{{ article.title }}
-									</Subheading>
-
-									<BaseText
-										class="blog-text transition-all duration-300 text-fgSubtle"
-									>
-										{{ article.description }}
-									</BaseText>
-								</div>
-							</div>
-						</NuxtLink>
-					</li>
-				</ul>
+				<BlogLink
+					v-for="article of articles"
+					:article="article"
+					:key="article.slug"
+					dates
+				></BlogLink>
 			</div>
 		</div>
 	</Section>
