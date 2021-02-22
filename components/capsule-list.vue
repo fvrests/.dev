@@ -3,7 +3,7 @@
 		<div
 			v-for="item in items"
 			:key="item"
-			class="themed font-bold px-2 py-2 dark:text-page text-sm rounded-full mr-4 my-2 flex-shrink-0"
+			class="themed font-bold px-1 py-2 dark:text-page text-sm rounded-full mr-4 my-2 flex-shrink-0"
 		>
 			<span class="mr-1 p-1 bg-page dark:bg-fg rounded-full">{{
 				item.symbol

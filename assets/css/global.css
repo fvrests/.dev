@@ -1,6 +1,6 @@
 :root {
 	--lavender: #cdc5d4;
-	--lavender-alt: #dad7db;
+	--lavender-alt: #dbd3dd;
 	--rose: #e2bab4;
 	--rose-alt: #ebc7c1;
 	--lemon: #f7cc95;
@@ -22,7 +22,7 @@
 	--fg-subtle: #464242;
 
 	--page: #fcf9f8;
-	--surface: #f8f3f1;
+	--surface: #f7edea;
 	--border: #2c2929;
 }
 
@@ -51,7 +51,7 @@ body {
 	@apply font-display text-3xl pt-8 mb-10;
 }
 .nuxt-content h2 {
-	@apply font-display text-2xl pt-6 mb-6;
+	@apply font-bold text-2xl pt-6 mb-6;
 }
 .nuxt-content h3 {
 	@apply font-bold text-xl pt-4 mb-4;

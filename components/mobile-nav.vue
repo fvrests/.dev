@@ -10,7 +10,7 @@
 					<span @click="toggleMenu">
 						<nuxt-link
 							:to="link.url"
-							class="p-3 text-fg hover:text-fgBright dark:hover:text-page text-2xl select-none rounded-xl"
+							class="p-3 text-fg hover:text-fgBright dark:hover:text-page text-2xl select-none rounded-xl border-4 border-transparent hover:border-border dark:hover:border-transparent"
 							:class="`hover:bg-${link.themeColor}`"
 							:style="{
 								'--themeColor': `var(--${link.themeColor})`,
@@ -26,7 +26,7 @@
 <style>
 .nuxt-link-active {
 	background-color: var(--themeColor);
-	@apply dark:text-page;
+	@apply dark:text-page border-border dark:border-transparent;
 }
 </style>
 <script>

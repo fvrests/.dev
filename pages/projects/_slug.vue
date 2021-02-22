@@ -5,7 +5,7 @@
 				<template v-if="data">
 					<div
 						v-if="data.icon"
-						class="w-16 h-16 border-6 border-border rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
+						class="w-16 h-16 border-4 border-border rounded-full overflow-hidden bg-cover bg-no-repeat bg-center mr-8 mb-8"
 						:style="`background-image: url(/${data.slug}/${data.icon});`"
 					></div>
 					<Heading class="text-center mb-8">
