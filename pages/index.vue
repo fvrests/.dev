@@ -9,13 +9,12 @@
 							class="w-36 lg:w-48 mb-8 lg:mb-0"
 							url="bio@2x.png"
 							themeColor="leaf"
-							zoomOnHover
 						/>
 					</nuxt-link>
 				</div>
 
 				<div class="flex-1 max-w-prose">
-					<Subheading class="mb-4"> Hi, I'm lynn.</Subheading>
+					<Subheading class="mb-2 text-fg"> Hi, I'm lynn.</Subheading>
 					<BaseText class="leading-loose mb-8 text-fgSubtle"
 						>I’m exploring
 						<span class="highlight bg-lemon"
@@ -36,13 +35,13 @@
 			</Responsive>
 		</Section>
 		<Section class="mb-24">
-			<Heading class="mb-8">Projects</Heading>
+			<Heading class="mb-8 text-fg">Projects</Heading>
 			<div
 				v-for="project in projects"
 				v-if="project.highlighted"
-				class="project mb-16"
+				class="project p-8 -mx-8 mb-6 hover:bg-surface rounded-xl zoomImagesOnHover"
 			>
-				<nuxt-link :to="`projects/${project.slug}`" zoomImagesOnHover>
+				<nuxt-link :to="`projects/${project.slug}`">
 					<Responsive>
 						<div class="flex">
 							<BaseImage
@@ -50,12 +49,12 @@
 								:url="`${project.slug}/${project.images[0].url}`"
 								:themeColor="project.themeColor"
 								backdrop
-								class="mb-8 xl:mb-0 max-w-lg"
+								class="mb-8 lg:mb-0 max-w-lg"
 							/>
 						</div>
 						<div class="w-full">
 							<div class="flex">
-								<Subheading class="mb-4">
+								<Subheading class="mb-2 text-fg">
 									{{ project.title }}
 								</Subheading>
 							</div>
@@ -69,8 +68,8 @@
 				</nuxt-link>
 			</div>
 			<div>
-				<ButtonLink url="/projects" class="text-lg" themeColor="lemon"
-					>More projects →</ButtonLink
+				<ButtonLink url="/projects" class="mt-16" themeColor="lemon"
+					>All projects →</ButtonLink
 				>
 			</div>
 		</Section>
@@ -82,16 +81,10 @@
 				:key="article.slug"
 			></BlogLink>
 			<div class="mt-16">
-				<ButtonLink url="/blog" class="text-lg" themeColor="rose"
-					>More articles →</ButtonLink
+				<ButtonLink url="/blog" themeColor="lavender"
+					>Go to blog →</ButtonLink
 				>
 			</div>
-		</Section>
-		<Section class="mb-24">
-			<Heading class="mb-8">Contact me</Heading>
-			<ButtonLink url="/contact" class="text-lg" themeColor="lavender">
-				Details →
-			</ButtonLink>
 		</Section>
 	</div>
 </template>

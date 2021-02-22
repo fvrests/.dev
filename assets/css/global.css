@@ -8,22 +8,22 @@
 	--leaf: #bec2bb;
 	--leaf-alt: #caccc8;
 
-	--fg: #fcf9f8;
-	--fg-subtle: #e0dcdb;
-	--fg-muted: #dad5d4;
+	--fg-bright: #fdfbfb;
+	--fg: #dad5d4;
+	--fg-subtle: #cec9c7;
 
 	--page: #252323;
-	--surface: #353232;
-	--border: #0f0f0f;
+	--surface: #2e2c2c;
+	--border: #0a0a0a;
 }
 .light:root {
-	--fg: #252323;
-	--fg-subtle: #504d4d;
-	--fg-muted: #5a5757;
+	--fg-bright: #0a0a0a;
+	--fg: #363535;
+	--fg-subtle: #464242;
 
 	--page: #fcf9f8;
 	--surface: #f8f3f1;
-	--border: #0f0f0f;
+	--border: #2c2929;
 }
 
 html {
@@ -154,7 +154,7 @@ body {
 
 /* horizontal rule */
 .nuxt-content hr {
-	@apply my-12 h-1 bg-fgMuted opacity-60;
+	@apply my-12 h-1 bg-fg opacity-60;
 }
 
 /* images */

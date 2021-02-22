@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div
-			class="mb-2 h-10 border-3 border-fgMuted rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
+			class="mb-2 h-10 border-3 border-fg rounded-md relative inline-flex items-center focus-within:ring ring-red-500"
 		>
 			<input
 				v-model="searchQuery"
