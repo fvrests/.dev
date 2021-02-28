@@ -27,11 +27,11 @@
 }
 
 html {
-	@apply bg-border;
+	@apply bg-border min-h-screen h-full;
 }
 
 body {
-	@apply h-full antialiased bg-page text-fg transition-all duration-300;
+	@apply antialiased bg-page text-fg transition-all duration-300 text-sm;
 }
 
 /* use with bg-(theme color) for emphasized text */
@@ -57,7 +57,7 @@ body {
 	@apply font-bold text-xl pt-4 mb-4;
 }
 .nuxt-content h4 {
-	@apply font-bold italic text-lg  pt-2 mb-2;
+	@apply font-bold italic text-lg pt-2 mb-2;
 }
 .nuxt-content p {
 	@apply text-fgSubtle pt-2 mb-4;

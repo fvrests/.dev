@@ -82,7 +82,7 @@
 			></BlogLink>
 			<div class="mt-16">
 				<ButtonLink url="/blog" themeColor="lavender"
-					>Go to blog →</ButtonLink
+					>More articles →</ButtonLink
 				>
 			</div>
 		</Section>

@@ -4,6 +4,7 @@
 		<div class="my-24 lg:my-36" :class="isMenuOpen ? 'hidden' : ''">
 			<Nuxt />
 		</div>
+		<Footer />
 	</div>
 </template>
 
