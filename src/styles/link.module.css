@@ -1,0 +1,26 @@
+.nav {
+	font-size: 14px;
+	font-family: var(--display);
+	font-weight: bold;
+	color: var(--f-med);
+	padding: 4px 1px 1px 1px;
+	border-bottom: 3px solid transparent;
+}
+.nav:hover {
+	/* background-color: var(--accent); */
+	/* color: var(--f-high); */
+	color: var(--accent2);
+	border-bottom: 3px solid var(--accent);
+}
+:global(.dark) .nav:hover {
+	background-color: transparent;
+	color: var(--accent2);
+}
+.inline {
+	font-weight: bold;
+	border-bottom: 2px solid transparent;
+}
+.inline:hover {
+border-bottom: 2px solid var(--accent);
+	color: var(--accent2);
+}

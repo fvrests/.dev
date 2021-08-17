@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+/* custom variables */
+:root {
+	--b-high: #fffaf3;
+	--b-med: #faf4ed;
+	--b-low: #f2e9de;
+
+	--f-high: #211e1f;
+	--f-med: #3c3738;
+	--f-low: #554e4f;
+	--accent: #dcbbaf;
+	--accent2: #76779a; 
+
+	--display: 'Atkinson Hyperlegible';
+}
+.dark {
+	--f-high: #fffaf3;
+	--f-med: #faf4ed;
+	--f-low: #f2e9de;
+
+	--b-high: #211e1f;
+	--b-med: #3c3738;
+	--b-low: #554e4f;
+
+	--accent: #dcbbaf;
+	--accent2: #d0ced6; 
+	}
+
+/* resets */
+html {
+	font-size: 15px;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+h1, h2, h3, h4, h5, h6, p, div {
+	margin: 0;
+	padding: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+/* defaults */
+html,
+body {
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	background-color: var(--b-high);
+	color: var(--f-low);
+}
+
+/* section */
+.section {
+	padding: 0px 48px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+}
+
+@media (min-width: 800px) {
+	.section {
+		padding: 0px 175px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.section {
+		padding: 0px 300px;
+	}
+}
+
+
+/* height & width */
+.h-full {
+	height: 100%;
+}
+.w-full {
+	width: 100%;
+}
+
+/* space */
+.space-lg {
+	height: 96px;
+}
+
+/* grid */
+.grid {
+	margin: 0 auto;
+	width: 100%;
+	display: grid;
+	column-gap: 18px;
+	row-gap: 12px;
+	place-content: start / stretch;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+/* flex */
+.flex {
+	display: flex;
+}
+.flex-col {
+	flex-direction: column;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.align-center {
+	align-items: center;
+}
+

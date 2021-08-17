@@ -1,0 +1,30 @@
+.base {
+	margin-bottom: 8px;
+}
+
+.heading {
+	color: var(--f-high);
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 14px;
+}
+
+.subheading {
+	color: var(--f-low);
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+.label {
+	color: var(--f-low);
+	font-style: italic;
+	font-size: 13px;
+	margin-bottom: 4px;
+}
+
+.highlight {
+	color: var(--f-high);
+	background-color: var(--accent);
+	padding: 0 2px;
+}
