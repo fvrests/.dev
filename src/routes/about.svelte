@@ -7,7 +7,7 @@
 <section class="section">
 	<img src="/bio@2x.png" alt="lynn" class="bio" title="🦀 🦁 🦂 😉" />
 	<div>
-		<h2 class={text.heading}>About the developer</h2>
+		<h3 class={text.heading}>About the developer</h3>
 		<div>
 			<p class={text.base}>
 				I'm a biology & psychology grad with a day job in public insurance

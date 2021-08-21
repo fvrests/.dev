@@ -6,7 +6,7 @@
 <section class="section">
 	<div class="grid">
 		<div>
-			<h3 class={text.heading}>Hi, I'm Lynn</h3>
+			<h2 class={text.heading}>Hi, I'm Lynn</h2>
 			<p class={text.base}>
 				I'm exploring front-end development, accessibility, UI & UX.
 			</p>
@@ -24,7 +24,7 @@
 <div class="space-lg" />
 <section class="section">
 	<div><h3 class={text.heading}>Projects</h3></div>
-	<div class="grid">
+	<div class="grid" >
 		<a href="projects/lavender">
 			<img
 				src="/lavender/lavender@2x.png"
@@ -45,3 +45,8 @@
 		</a>
 	</div>
 </section>
+<style>
+.hover {
+	background-color: var(--b-low)
+}
+</style>
