@@ -10,7 +10,7 @@
 	--f-med: #3c3738;
 	--f-low: #554e4f;
 	--accent: #dcbbaf;
-	--accent2: #76779a; 
+	--accent2: #545570;
 
 	--display: 'Atkinson Hyperlegible';
 }
@@ -24,8 +24,8 @@
 	--b-low: #554e4f;
 
 	--accent: #dcbbaf;
-	--accent2: #d0ced6; 
-	}
+	--accent2: #d0ced6;
+}
 
 /* resets */
 html {
@@ -38,7 +38,14 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-h1, h2, h3, h4, h5, h6, p, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
 	margin: 0;
 	padding: 0;
 }
@@ -73,7 +80,6 @@ body {
 		padding: 0px 300px;
 	}
 }
-
 
 /* height & width */
 .h-full {
@@ -116,4 +122,3 @@ body {
 .align-center {
 	align-items: center;
 }
-
