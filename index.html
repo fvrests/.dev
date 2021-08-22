@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/moon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fvrests</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
+
+<script setup>
+	window.isDark = false
+	try {
+		const isDark = window.localStorage.getItem('dark-mode')
+		if (isDark) {
+			document.querySelector('html').className = 'dark'
+			window.isDark = true
+		}
+	} catch (err) {
+		console.log('Unable to set theme from Local Storage')
+	}
+</script>

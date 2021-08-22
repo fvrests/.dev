@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+:root {
+	--f-high: #242222;
+	--f-med: #3b3535;
+	--f-low: #443c3c;
+
+	--b-high: #e9e0d5;
+	--b-med: #f8f1e9;
+	--b-low: #fffaf3;
+
+	--nav-height: 96px;
+
+	--space-small: 16px;
+	--space-medium: 36px;
+	--space-large: 64px;
+}
+.dark:root {
+	--f-high: #fffaf3;
+	--f-med: #f8f1e9;
+	--f-low: #e9e0d5;
+
+	--b-high: #443c3c;
+	--b-med: #3b3535;
+	--b-low: #242222;
+}
+
+@font-face {
+	font-family: 'maragsa';
+	src: url('~/assets/fonts/Maragsa-Display.otf') format('opentype');
+}
+
+html,
+body {
+	background-color: var(--b-low);
+	color: var(--f-med);
+	font-size: 13px;
+	font-family: 'Work Sans', system-ui, -apple-system,
+		/* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto,
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; /* 2 */
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* html {
+	scroll-behavior: smooth;
+} */
+
+/* heading styles */
+.title,
+.heading {
+	font-family: 'maragsa';
+	letter-spacing: 1px;
+}
+.title {
+	font-size: 96px;
+}
+.heading {
+	font-size: 64px;
+}
+.label {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.h-full {
+	height: 100vh;
+}
+.h-fill {
+	height: calc(100vh - var(--nav-height));
+	position: absolute;
+	top: var(--nav-height);
+}
+@media only screen and (max-width: 600px) {
+	.title {
+		font-size: 64px;
+	}
+	.heading {
+		font-size: 24px;
+	}
+}
