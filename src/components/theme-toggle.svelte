@@ -21,9 +21,9 @@
 
 <style>
 	.toggle {
-		font-size: 20px;
-		height: 36px;
-		width: 36px;
+		font-size: 14px;
+		height: 32px;
+		width: 32px;
 		border-radius: 50%;
 		border: 1px solid transparent;
 		display: flex;
