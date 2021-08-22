@@ -24,29 +24,35 @@
 <div class="space-lg" />
 <section class="section">
 	<div><h3 class={text.heading}>Projects</h3></div>
-	<div class="grid" >
-		<a href="projects/lavender">
-			<img
-				src="/lavender/lavender@2x.png"
-				alt="lavender app screenshot"
-				style="width: 100%; border-radius: 4px; margin: 16px 0;"
-			/>
+	<div class="grid">
+		<a href="projects/lavender" class="project">
+			<div>
+				<img src="/lavender/lavender@2x.png" alt="lavender app screenshot" />
+			</div>
 			<h3 class={text.subheading}>Lavender</h3>
 			<p class={text.label}>Chrome new tab</p>
 		</a>
-		<a href="projects/rose-pine">
-			<img
-				src="/rose-pine/rose-pine@2x.png"
-				alt="rosé pine screenshot"
-				style="width: 100%; border-radius: 4px; margin: 16px 0;"
-			/>
+		<a href="projects/rose-pine" class="project">
+			<div>
+				<img src="/rose-pine/rose-pine@2x.png" alt="rosé pine screenshot" />
+			</div>
 			<h3 class={text.subheading}>Rosé Pine</h3>
 			<p class={text.label}>Theme</p>
 		</a>
 	</div>
 </section>
+
 <style>
-.hover {
-	background-color: var(--b-low)
-}
+	.project div {
+		border-radius: 4px;
+		margin: 16px 0;
+		overflow: hidden;
+	}
+	.project img {
+		transition: transform 400ms ease;
+	}
+	.project:hover img {
+		transform: scale(1.05);
+		transition: transform 400ms ease;
+	}
 </style>
