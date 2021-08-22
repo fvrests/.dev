@@ -7,7 +7,9 @@
 	<section class="flex align-center justify-between section">
 		<a href="." class="logo"> <div class="logo">🌿</div></a>
 		<div class="flex nav-right align-center">
-			<ThemeToggle />
+			<div>
+				<ThemeToggle />
+			</div>
 			<a class={link.nav} href="about">about</a>
 			<a class={link.nav} href="projects">projects</a>
 			<a class={link.nav} href="notes">notes</a>

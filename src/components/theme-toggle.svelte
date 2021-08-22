@@ -29,9 +29,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* TODO: try to set this margin within nav component */
 		/* TODO: remove margin & collapse nav into menu on small screens */
-		margin-right: 36px;
 	}
 	.toggle:hover {
 		background-color: var(--hover);
