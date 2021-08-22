@@ -17,7 +17,7 @@
 
 			<p class={text.base}>
 				I love oat lattes, minimalism, pair programming with my partner <a
-					href="twitter.com/mvllow"
+					href="https://twitter.com/mvllow"
 					class={link.inline}>@mvllow</a
 				>, and exploring personal disciplines. Some of these at the moment
 				include sustainability, daily yoga practice, running, vegan ethics, &
@@ -26,8 +26,8 @@
 		</div>
 	</div>
 	<p class={text.base}>
-		My <a href="twitter.com/fvrests" class={link.inline}>twitter</a> is always
-		open to DMs, suggestions & friend requests, & I love
+		My <a href="https://twitter.com/fvrests" class={link.inline}>twitter</a> is
+		always open to DMs, suggestions & friend requests, & I love
 		<a href="mailto:fvrests@icloud.com" class={link.inline}>emails</a> as well 🥰
 		Message me about your ideas, what you're working on or anything on your mind!
 	</p>
