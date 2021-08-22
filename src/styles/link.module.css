@@ -21,6 +21,6 @@
 	border-bottom: 2px solid transparent;
 }
 .inline:hover {
-border-bottom: 2px solid var(--accent);
+	border-bottom: 2px solid var(--accent);
 	color: var(--accent2);
 }

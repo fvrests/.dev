@@ -4,11 +4,38 @@
 		<meta charset="utf-8" />
 		<link
 			rel="icon"
-			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐️</text></svg>"
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			//check for localStorage, add as browser preference if missing
+			// TODO: store isDark variable to allow responsive icon for theme toggle
+			try {
+				// if dark theme is set in localStorage, add html class to set theme
+				if (+localStorage.getItem('dark') == 1) {
+					window.document.querySelector('html').className = 'dark';
+					// typeof window !== 'undefined' && window.isDark = true;
+					// console.log(window.isDark)
+				}
+				// if no local storage, follow system preference
+				else if (
+					+localStorage.getItem('dark') !== 0 &&
+					window.matchMedia &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches
+				) {
+					localStorage.setItem('dark', '1');
+					window.document.querySelector('html').className = '';
+					// typeof window !== 'undefined' && window.isDark = true;
+					// console.log(window.isDark)
+				}
+			} catch (err) {
+				console.log('Error setting theme:', err);
+			}
+		</script>
+
 		%svelte.head%
 	</head>
+
 	<body>
 		<div id="svelte">%svelte.body%</div>
 	</body>

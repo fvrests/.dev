@@ -2,19 +2,23 @@
 
 /* custom variables */
 :root {
+	--f-high: #211e1f;
+	--f-med: #3c3738;
+	--f-low: #554e4f;
+
 	--b-high: #fffaf3;
 	--b-med: #faf4ed;
 	--b-low: #f2ebe2;
 
-	--f-high: #211e1f;
-	--f-med: #3c3738;
-	--f-low: #554e4f;
+	--hover: var(--b-med);
+	--outline: var(--b-low);
 
 	--accent: #dcbbaf;
 	--accent2: #545570;
 
 	--display: 'Atkinson Hyperlegible';
 }
+
 .dark {
 	--f-high: #fffaf3;
 	--f-med: #faf4ed;
@@ -32,13 +36,16 @@
 html {
 	font-size: 15px;
 }
+
 img {
 	max-width: 100%;
 }
+
 a {
 	text-decoration: none;
 	color: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -50,8 +57,19 @@ div {
 	margin: 0;
 	padding: 0;
 }
+
 p {
 	line-height: 1.5;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 /* defaults */
@@ -86,6 +104,7 @@ body {
 .h-full {
 	height: 100%;
 }
+
 .w-full {
 	width: 100%;
 }
@@ -111,15 +130,19 @@ body {
 .flex {
 	display: flex;
 }
+
 .flex-col {
 	flex-direction: column;
 }
+
 .justify-center {
 	justify-content: center;
 }
+
 .justify-between {
 	justify-content: space-between;
 }
+
 .align-center {
 	align-items: center;
 }
