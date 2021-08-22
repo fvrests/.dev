@@ -7,5 +7,4 @@
 <Nav />
 <slot />
 
-<style>
-</style>
+<style></style>
