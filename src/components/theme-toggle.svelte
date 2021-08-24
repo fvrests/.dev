@@ -1,18 +1,27 @@
 <script>
 	import { theme } from '$lib/store';
 	import { fly } from 'svelte/transition';
+	import { tweened } from 'svelte/motion';
 
 	let themes = ['dark', 'light', 'system'];
 	let themeIcons = ['full_moon', 'sunny', 'last_quarter_moon'];
 	let index = themes.indexOf($theme);
-	let popup = false;
+	let toast = false;
+
+	let toastProgress = tweened(0, {
+		duration: 800
+	});
+
+	$: if ($toastProgress >= 1) {
+		toastProgress.set(0);
+	}
+	$: toast = $toastProgress > 0;
+
 	let toggleTheme = () => {
 		index += 1;
-		popup = true;
-		setTimeout(() => {
-			popup = false;
-		}, 2000);
+		toastProgress.set(1);
 	};
+
 	$: $theme = themes[index];
 	$: if (index > themes.length - 1) index = 0;
 </script>
@@ -25,10 +34,10 @@
 	/></button
 >
 
-{#if popup}
-	<div class="popup" transition:fly={{ y: 100, duration: 300 }}>
+{#if toast}
+	<div class="toast" transition:fly={{ y: 100, duration: 600 }}>
 		theme set to&nbsp;<span class="theme-name">{$theme}</span><i
-			class={`popup-icon em-svg em-${themeIcons[index]}`}
+			class={`toast-icon em-svg em-${themeIcons[index]}`}
 			aria-label={`${theme}`}
 		/>
 	</div>
@@ -49,7 +58,7 @@
 		background-color: var(--overlay);
 		border: 1px solid var(--outline);
 	}
-	.popup {
+	.toast {
 		position: fixed;
 		bottom: 36px;
 		right: 36px;
@@ -63,7 +72,7 @@
 	.theme-name {
 		font-weight: bold;
 	}
-	.popup-icon {
+	.toast-icon {
 		margin: 0px 8px;
 		width: 16px;
 		height: 16px;
