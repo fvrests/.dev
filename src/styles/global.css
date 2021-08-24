@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
-/* custom variables */
-:root {
+  :root {
 	--f-high: #211e1f;
 	--f-med: #3c3738;
 	--f-low: #554e4f;
@@ -9,17 +8,13 @@
 	--b-high: #fffaf3;
 	--b-med: #faf4ed;
 	--b-low: #f2ebe2;
-
-	--hover: var(--b-med);
-	--outline: var(--b-low);
-
+	
 	--accent: #dcbbaf;
 	--accent2: #545570;
+  }
 
-	--display: 'Atkinson Hyperlegible';
-}
-
-.dark {
+@media (prefers-color-scheme: dark) {
+  :root {
 	--f-high: #fffaf3;
 	--f-med: #faf4ed;
 	--f-low: #f2ebe2;
@@ -30,7 +25,44 @@
 
 	--accent: #dcbbaf;
 	--accent2: #d0ced6;
+  }
 }
+
+.light:root {
+	--f-high: #211e1f;
+	--f-med: #3c3738;
+	--f-low: #554e4f;
+
+	--b-high: #fffaf3;
+	--b-med: #faf4ed;
+	--b-low: #f2ebe2;
+	
+	--accent: #dcbbaf;
+	--accent2: #545570;
+
+}
+
+.dark:root {
+--f-high: #fffaf3;
+--f-med: #faf4ed;
+--f-low: #f2ebe2;
+
+--b-high: #211e1f;
+--b-med: #3c3738;
+--b-low: #554e4f;
+
+--accent: #dcbbaf;
+--accent2: #d0ced6;
+}
+
+
+/* all themes */
+:root {
+	--overlay: var(--b-med);
+	--outline: var(--b-low);
+	--display: 'Atkinson Hyperlegible';
+}
+
 
 /* resets */
 html {

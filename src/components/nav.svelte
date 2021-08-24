@@ -5,7 +5,15 @@
 
 <nav class="desktop-nav">
 	<section class="flex align-center justify-between section">
-		<a href="." class="logo"> <div class="logo">🌿</div></a>
+		<a href="." class="logo">
+			<i
+				class="em em-herb"
+				aria-role="presentation"
+				aria-label="home"
+				style="width: 20px; height: 20px;"
+			/></a
+		>
+
 		<div class="flex nav-right align-center">
 			<a class={link.nav} href="about">about</a>
 			<a class={link.nav} href="projects">projects</a>
@@ -32,7 +40,6 @@
 		margin-right: 36px;
 	}
 	.logo {
-		font-size: 20px;
 		height: 36px;
 		width: 36px;
 		border-radius: 50%;
@@ -42,7 +49,7 @@
 		justify-content: center;
 	}
 	.logo:hover {
-		background-color: var(--hover);
+		background-color: var(--overlay);
 		border: 1px solid var(--outline);
 	}
 </style>
