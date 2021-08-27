@@ -29,7 +29,7 @@
 <style>
 	.preview-container {
 		border-radius: 6px;
-		margin: 16px 0;
+		margin: 18px 0;
 		aspect-ratio: 3 / 2;
 		width: 100%;
 		height: 100%;
@@ -43,14 +43,14 @@
 		background-color: var(--b-high);
 		background-position: center;
 		background-size: cover;
-		transition: transform 400ms ease;
+		transition: var(--transition);
 		width: 100%;
 		height: 100%;
 	}
 
 	.project:hover .preview,
 	.project:focus .preview {
-		transform: scale(1.05);
-		transition: transform 400ms ease;
+		transform: scale(1.03);
+		transition: var(--transition);
 	}
 </style>
