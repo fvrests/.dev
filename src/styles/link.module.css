@@ -10,7 +10,7 @@
 .nav:hover {
 	color: var(--f-high);
 	background-color: var(--overlay);
-	border: 2px solid var(--outline);
+	border: 2px solid var(--border);
 }
 .inline {
 	font-weight: bold;

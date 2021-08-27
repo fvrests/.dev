@@ -50,6 +50,6 @@
 	}
 	.logo:hover {
 		background-color: var(--overlay);
-		border: 2px solid var(--outline);
+		border: 2px solid var(--border);
 	}
 </style>

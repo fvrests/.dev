@@ -56,7 +56,7 @@
 	}
 	.toggle:hover {
 		background-color: var(--overlay);
-		border: 2px solid var(--outline);
+		border: 2px solid var(--border);
 	}
 	.toast {
 		position: fixed;
@@ -64,7 +64,7 @@
 		right: 36px;
 		padding: 16px;
 		background: var(--overlay);
-		border: 2px solid var(--outline);
+		border: 2px solid var(--border);
 		border-radius: 8px;
 		display: flex;
 		align-items: center;

@@ -57,8 +57,9 @@
 /* all themes */
 :root {
 	--overlay: var(--b-med);
-	--outline: var(--b-low);
+	--border: var(--b-low);
 	--display: 'Atkinson Hyperlegible';
+	--transition: all 300ms ease;
 }
 
 /* resets */
@@ -141,6 +142,12 @@ body {
 /* space */
 .space-lg {
 	height: 96px;
+}
+.space-med {
+	height: 36px;
+}
+.space-sm {
+	height: 18px;
 }
 
 /* grid */
