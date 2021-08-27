@@ -2,17 +2,15 @@
 	font-size: 14px;
 	font-family: var(--display);
 	font-weight: bold;
-	color: var(--f-med);
-	padding: 4px 1px 1px 1px;
-	border-bottom: 2px solid transparent;
+	color: var(--f-low);
+	padding: 6px;
+	border: 2px solid transparent;
+	border-radius: 8px;
 }
 .nav:hover {
-	color: var(--accent2);
-	border-bottom: 2px solid var(--accent);
-}
-:global(.dark) .nav:hover {
-	background-color: transparent;
-	color: var(--accent2);
+	color: var(--f-high);
+	background-color: var(--overlay);
+	border: 2px solid var(--outline);
 }
 .inline {
 	font-weight: bold;
