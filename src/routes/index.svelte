@@ -26,15 +26,21 @@
 	<div><h3 class={text.heading}>Projects</h3></div>
 	<div class="grid">
 		<a href="projects/lavender" class="project">
-			<div>
-				<img src="/lavender/lavender@2x.png" alt="lavender app screenshot" />
+			<div class="preview-container" role="img" aria-label="lavender app">
+				<div
+					class="preview"
+					style="background-image: url('/lavender/lavender@2x.png')"
+				/>
 			</div>
 			<h3 class={text.subheading}>Lavender</h3>
 			<p class={text.label}>Chrome new tab</p>
 		</a>
 		<a href="projects/rose-pine" class="project">
-			<div>
-				<img src="/rose-pine/rose-pine@2x.png" alt="rosé pine screenshot" />
+			<div class="preview-container" role="img" aria-label="rosé pine theme">
+				<div
+					class="preview"
+					style="background-image: url('/rose-pine/rose-pine@2x.png')"
+				/>
 			</div>
 			<h3 class={text.subheading}>Rosé Pine</h3>
 			<p class={text.label}>Theme</p>
@@ -43,15 +49,29 @@
 </section>
 
 <style>
-	.project div {
-		border-radius: 4px;
+	.preview-container {
+		border-radius: 6px;
 		margin: 16px 0;
+		aspect-ratio: 3 / 2;
+		width: 100%;
+		height: 100%;
 		overflow: hidden;
+
+		/* prevent Safari bug causing child to overflow border radius during transition	 */
+		transform: translateZ(0);
 	}
-	.project img {
+
+	.preview {
+		background-color: var(--b-high);
+		background-position: center;
+		background-size: cover;
 		transition: transform 400ms ease;
+		width: 100%;
+		height: 100%;
 	}
-	.project:hover img {
+
+	.project:hover .preview,
+	.project:focus .preview {
 		transform: scale(1.05);
 		transition: transform 400ms ease;
 	}
