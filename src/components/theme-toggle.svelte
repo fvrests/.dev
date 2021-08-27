@@ -36,7 +36,7 @@
 
 {#if toast}
 	<div class="toast" transition:fly={{ y: 100, duration: 600 }}>
-		theme set to&nbsp;<span class="theme-name">{$theme}</span><i
+		Theme set to&nbsp;<span class="theme-name">{$theme}</span><i
 			class={`toast-icon em-svg em-${themeIcons[index]}`}
 			aria-label={`${theme}`}
 		/>
