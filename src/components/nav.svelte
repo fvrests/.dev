@@ -43,13 +43,13 @@
 		height: 36px;
 		width: 36px;
 		border-radius: 50%;
-		border: 1px solid transparent;
+		border: 2px solid transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 	.logo:hover {
 		background-color: var(--overlay);
-		border: 1px solid var(--outline);
+		border: 2px solid var(--outline);
 	}
 </style>
