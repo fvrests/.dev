@@ -32,7 +32,7 @@
 	<h2 class={text.heading}>Notes</h2>
 
 	<div class="space-sm" />
-	<div class="flex flex-row post">
+	<a class="flex flex-row post" href="/notes">
 		<div>
 			<img src="/sample-image.jpg" alt="desk" class="post-image" />
 		</div>
@@ -42,10 +42,10 @@
 				Blog post description goes here and may have lots of words in it
 			</p>
 		</div>
-	</div>
+	</a>
 
-	<div class="space-med" />
-	<div class="flex flex-row post">
+	<div class="space-sm" />
+	<a class="flex flex-row post" href="/notes">
 		<div>
 			<img src="/sample-image-2.jpg" alt="desk" class="post-image" />
 		</div>
@@ -55,10 +55,10 @@
 			</h3>
 			<p class={text.label}>Blog post description goes here too</p>
 		</div>
-	</div>
+	</a>
 
-	<div class="space-med" />
-	<div class="flex flex-row post">
+	<div class="space-sm" />
+	<a class="flex flex-row post" href="/notes">
 		<div>
 			<img src="/sample-image-3.jpg" alt="desk" class="post-image" />
 		</div>
@@ -68,7 +68,7 @@
 				Some description goes here which might be a little longer
 			</p>
 		</div>
-	</div>
+	</a>
 </section>
 
 <div class="space-lg" />
@@ -79,7 +79,20 @@
 <div class="space-sm" />
 
 <style>
+	.post {
+		border-radius: 8px;
+		padding: 18px;
+		margin-left: -18px;
+		border: 3px solid transparent;
+		/* TODO: make this better  */
+		transition: all 400ms ease;
+	}
+	.post:hover {
+		background-color: var(--overlay);
+		transition: all 400ms ease;
+	}
 	.post-image {
+		/* TODO: put aspect ratio on div around so that vertical images can be cropped */
 		aspect-ratio: 2 / 1;
 		max-width: 100px;
 		border-radius: 4px;
