@@ -1,7 +1,8 @@
 <script>
-	import '~/styles/normalize.css';
-	import '~/styles/global.css';
-	import Nav from '~/components/nav.svelte';
+	import "../app.postcss";
+    import '~/styles/normalize.css';
+    import '~/styles/global.css';
+    import Nav from '~/components/nav.svelte';
 
 </script>
 
@@ -17,7 +18,9 @@ let localTheme = localStorage.getItem('theme') || 'system'
 	} catch {}</script>
 </svelte:head>
 
-<Nav />
-<slot />
+<Nav>
+<slot>
 
 <style></style>
+</slot></Nav>
+<slot></slot>
