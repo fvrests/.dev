@@ -33,8 +33,13 @@
 
 	<div class="space-sm" />
 	<a class="flex flex-row post" href="/notes">
-		<div>
-			<img src="/sample-image.jpg" alt="desk" class="post-image" />
+		<div class="post-image-container">
+			<div
+				aria-role="img"
+				alt="desk"
+				class="post-image"
+				style="background-image: url('/sample-image.jpg')"
+			/>
 		</div>
 		<div>
 			<h3 class={text.subheading}>This is the title of a blog post</h3>
@@ -46,8 +51,13 @@
 
 	<div class="space-sm" />
 	<a class="flex flex-row post" href="/notes">
-		<div>
-			<img src="/sample-image-2.jpg" alt="desk" class="post-image" />
+		<div class="post-image-container">
+			<div
+				aria-role="img"
+				alt="desk"
+				class="post-image"
+				style="background-image: url('/sample-image-2.jpg')"
+			/>
 		</div>
 		<div>
 			<h3 class={text.subheading}>
@@ -59,8 +69,13 @@
 
 	<div class="space-sm" />
 	<a class="flex flex-row post" href="/notes">
-		<div>
-			<img src="/sample-image-3.jpg" alt="desk" class="post-image" />
+		<div class="post-image-container">
+			<div
+				aria-role="img"
+				alt="desk"
+				class="post-image"
+				style="background-image: url('/sample-image-3.jpg')"
+			/>
 		</div>
 		<div>
 			<h3 class={text.subheading}>Short blog post</h3>
@@ -91,15 +106,35 @@
 		background-color: var(--overlay);
 		transition: all 400ms ease;
 	}
-	.post-image {
-		/* TODO: put aspect ratio on div around so that vertical images can be cropped */
-		aspect-ratio: 2 / 1;
+	.post-image-container {
+		border-radius: 4px;
+		overflow: hidden;
+		aspect-ratio: 3 / 2;
+		width: 100%;
+		height: auto;
+		max-height: 100%;
 		max-width: 100px;
 		border-radius: 4px;
 		margin-right: 18px;
-		transition: var(--transition);
 	}
-	.post:hover .post-image {
+	.post-image {
+		/* TODO: put aspect ratio on div around so that vertical images can be cropped */
+		position: relative;
+		background-color: var(--b-high);
+		background-position: center;
+		background-size: cover;
 		transition: var(--transition);
+		width: 100%;
+		height: 100%;
+	}
+	.post-image:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom, transparent, black);
+		opacity: 0.05;
 	}
 </style>

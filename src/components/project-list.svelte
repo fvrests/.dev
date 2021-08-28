@@ -32,7 +32,7 @@
 		margin: 18px 0;
 		aspect-ratio: 3 / 2;
 		width: 100%;
-		height: 100%;
+		height: auto;
 		overflow: hidden;
 
 		/* prevent Safari bug causing child to overflow border radius during transition	 */
