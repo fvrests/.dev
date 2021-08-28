@@ -6,8 +6,10 @@
 	--f-low: #554e4f;
 
 	--b-high: #fffaf3;
-	--b-med: #faf4ed;
-	--b-low: #f2ebe2;
+	/* --b-med: #faf4ed; */
+	--b-med: #f7f1ea;
+	/* --b-low: #f2ebe2; */
+	--b-low: #ece6de;
 
 	--accent: #dcbbaf;
 	--accent2: #545570;
@@ -16,8 +18,10 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--f-high: #fffaf3;
-		--f-med: #faf4ed;
-		--f-low: #f2ebe2;
+		/* --f-med: #faf4ed; */
+		--f-med: #f7f1ea;
+		/* --f-low: #f2ebe2; */
+		--f-low: #ece6de;
 
 		--b-high: #211e1f;
 		--b-med: #3c3738;
@@ -34,8 +38,10 @@
 	--f-low: #554e4f;
 
 	--b-high: #fffaf3;
-	--b-med: #faf4ed;
-	--b-low: #f2ebe2;
+	/* --b-med: #faf4ed; */
+	--b-med: #f7f1ea;
+	/* --b-low: #f2ebe2; */
+	--b-low: #ece6de;
 
 	--accent: #dcbbaf;
 	--accent2: #545570;
@@ -43,8 +49,10 @@
 
 .dark:root {
 	--f-high: #fffaf3;
-	--f-med: #faf4ed;
-	--f-low: #f2ebe2;
+	/* --f-med: #faf4ed; */
+	--f-med: #f7f1ea;
+	/* --f-low: #f2ebe2; */
+	--f-low: #ece6de;
 
 	--b-high: #211e1f;
 	--b-med: #3c3738;
