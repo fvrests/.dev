@@ -68,6 +68,7 @@
 		border-radius: 8px;
 		display: flex;
 		align-items: center;
+		z-index: 10;
 	}
 	.theme-name {
 		font-weight: bold;
