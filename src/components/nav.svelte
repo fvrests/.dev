@@ -15,9 +15,9 @@
 		>
 
 		<div class="flex nav-right align-center" style="margin-right: -8px;">
-			<a class={link.nav} href="about">about</a>
-			<a class={link.nav} href="projects">projects</a>
-			<a class={link.nav} href="notes">notes</a>
+			<a class={link.nav} href="/about">about</a>
+			<a class={link.nav} href="/projects">projects</a>
+			<a class={link.nav} href="/notes">notes</a>
 			<div>
 				<ThemeToggle />
 			</div>
