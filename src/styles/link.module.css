@@ -14,10 +14,8 @@
 }
 .inline {
 	font-weight: bold;
-	border-bottom: 2px solid var(--accent);
-	color: var(--f-med);
+	text-decoration: underline;
 }
 .inline:hover {
-	border-bottom: 2px solid var(--accent);
-	color: var(--accent2);
+	color: var(--accent);
 }
