@@ -2,7 +2,6 @@
 	import text from '~/styles/text.module.css';
 </script>
 
-<div><h3 class={text.heading}>Projects</h3></div>
 <div class="grid">
 	<a href="projects/lavender" class="project">
 		<div class="preview-container" role="img" aria-label="lavender app">
@@ -29,7 +28,7 @@
 <style>
 	.preview-container {
 		border-radius: 6px;
-		margin: 18px 0;
+		margin-bottom: 18px;
 		aspect-ratio: 3 / 2;
 		width: 100%;
 		height: auto;

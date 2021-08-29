@@ -1,37 +1,36 @@
 <script>
 	import text from '~/styles/text.module.css';
+	import link from '~/styles/link.module.css';
 	import ProjectList from '~/components/project-list.svelte';
+	import Section from '~/components/section.svelte';
 </script>
 
 <div class="space-lg" />
 <section class="section">
-	<div class="grid">
-		<div>
-			<h2 class={text.heading}>Hi, I'm Lynn</h2>
-			<p class={text.base}>
-				I'm exploring front-end development, accessibility, UI & UX.
-			</p>
-			<p class={text.base}>
-				The tools I use most include Vue, React, HTML, CSS, JS, & Figma.
-			</p>
-			<p class={text.base}>
-				I'm searching for communities where diversity, mutual growth &
-				mentorship are valued & celebrated. ˙ᵕ˙
-			</p>
-		</div>
-	</div>
+	<h2 class={text.heading}>Hi, I'm Lynn</h2>
+	<p class={text.base}>
+		I'm exploring front-end development, accessibility, UI & UX.
+	</p>
+	<p class={text.base}>
+		The tools I use most include Vue, React, HTML, CSS, JS, & Figma.
+	</p>
+	<p class={text.base}>
+		I'm searching for communities where diversity, mutual growth & mentorship
+		are valued & celebrated. ˙ᵕ˙
+	</p>
 </section>
 
 <div class="space-lg" />
-<section class="section">
+
+<Section title="Projects">
 	<ProjectList />
-</section>
+	<div class="space-med" />
+	<span> <a class={link.inline} href="/projects">More projects</a></span>
+</Section>
 
 <div class="space-lg" />
-<section class="section">
-	<h2 class={text.heading}>Notes</h2>
 
-	<div class="space-sm" />
+<Section title="Notes">
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
@@ -50,6 +49,7 @@
 	</a>
 
 	<div class="space-sm" />
+
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
@@ -59,15 +59,19 @@
 				style="background-image: url('/sample-image-2.jpg')"
 			/>
 		</div>
-		<div>
+		<div style="max-width: 500px;">
 			<h3 class={text.subheading}>
 				This is the title of a slightly longer blog post
 			</h3>
-			<p class={text.label}>Blog post description goes here too</p>
+			<p class={text.label}>
+				Blog post description goes here too Blog post description goes here too
+				Blog post description goes here too Blog post description goes here too
+			</p>
 		</div>
 	</a>
 
 	<div class="space-sm" />
+
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
@@ -84,12 +88,13 @@
 			</p>
 		</div>
 	</a>
-</section>
+</Section>
 
 <style>
 	.post {
 		border-radius: 8px;
 		padding: 18px;
+		margin-top: -18px;
 		margin-left: -18px;
 		border: 3px solid transparent;
 		/* TODO: make this better  */
