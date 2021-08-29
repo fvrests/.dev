@@ -26,7 +26,8 @@
 		--b-med: #3c3738;
 		--b-low: #554e4f;
 
-		--accent: #dcbbaf;
+		/* --accent: #dcbbaf; */
+		--accent: #c5c0d1;
 	}
 }
 
@@ -55,7 +56,8 @@
 	--b-med: #3c3738;
 	--b-low: #554e4f;
 
-	--accent: #dcbbaf;
+	/* --accent: #dcbbaf; */
+	--accent: #c5c0d1;
 }
 
 /* all themes */
