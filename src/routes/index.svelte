@@ -1,12 +1,12 @@
 <script>
 	import text from '~/styles/text.module.css';
-	import link from '~/styles/link.module.css';
 	import ProjectList from '~/components/project-list.svelte';
 	import Section from '~/components/section.svelte';
+	import FolderLink from '~/components/folder-link.svelte';
 </script>
 
-<div class="space-lg" />
 <section class="section">
+	<div class="space-lg" />
 	<h2 class={text.heading}>Hi, I'm Lynn</h2>
 	<p class={text.base}>
 		I'm exploring front-end development, accessibility, UI & UX.
@@ -25,7 +25,7 @@
 <Section title="Projects">
 	<ProjectList />
 	<div class="space-med" />
-	<span> <a class={link.inline} href="/projects">More projects</a></span>
+	<FolderLink href="/projects">View all</FolderLink>
 </Section>
 
 <div class="space-lg" />
@@ -88,6 +88,8 @@
 			</p>
 		</div>
 	</a>
+	<div class="space-med" />
+	<FolderLink href="/notes">Read more</FolderLink>
 </Section>
 
 <style>
