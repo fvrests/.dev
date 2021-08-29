@@ -5,7 +5,7 @@
 
 <nav class="desktop-nav">
 	<section class="flex align-center space-between section">
-		<a href="." class="logo">
+		<a href="." class="logo" style="margin-left: -9px;">
 			<i
 				class="em em-herb"
 				aria-role="presentation"
@@ -14,7 +14,7 @@
 			/></a
 		>
 
-		<div class="flex nav-right align-center">
+		<div class="flex nav-right align-center" style="margin-right: -8px;">
 			<a class={link.nav} href="about">about</a>
 			<a class={link.nav} href="projects">projects</a>
 			<a class={link.nav} href="notes">notes</a>
