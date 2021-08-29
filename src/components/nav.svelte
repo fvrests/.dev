@@ -4,7 +4,7 @@
 </script>
 
 <nav class="desktop-nav">
-	<section class="flex align-center justify-between section">
+	<section class="flex align-center space-between section">
 		<a href="." class="logo">
 			<i
 				class="em em-herb"

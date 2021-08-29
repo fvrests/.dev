@@ -86,13 +86,6 @@
 	</a>
 </section>
 
-<div class="space-lg" />
-<div class="space-lg" />
-<section class="section flex">
-	<div>fvrests</div>
-</section>
-<div class="space-sm" />
-
 <style>
 	.post {
 		border-radius: 8px;
