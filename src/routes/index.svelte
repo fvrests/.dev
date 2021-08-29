@@ -118,7 +118,7 @@
 		background-size: cover;
 		transition: var(--transition);
 		width: 100%;
-		height: 100%;
+		padding-top: 66.66%;
 	}
 	.post-image:after {
 		content: '';

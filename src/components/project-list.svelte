@@ -34,6 +34,7 @@
 		width: 100%;
 		height: auto;
 		overflow: hidden;
+		/* padding-top: 100%; */
 
 		/* prevent Safari bug causing child to overflow border radius during transition	 */
 		transform: translateZ(0);
@@ -45,7 +46,7 @@
 		background-size: cover;
 		transition: var(--transition);
 		width: 100%;
-		height: 100%;
+		padding-top: 66.66%;
 	}
 
 	.project:hover .preview,
