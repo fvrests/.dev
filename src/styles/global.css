@@ -162,10 +162,10 @@ body {
 	width: 100%;
 	display: grid;
 	column-gap: 18px;
-	row-gap: 12px;
+	row-gap: 24px;
 	place-content: start / stretch;
 	grid-auto-flow: row;
-	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 }
 
 /* flex */
