@@ -4,6 +4,7 @@
 	export let date;
 	export let cover;
 	export let tagline;
+	export let slug;
 </script>
 
 <div class="space-lg" />

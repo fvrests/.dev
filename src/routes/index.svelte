@@ -1,8 +1,8 @@
 <script>
-	import text from '~/styles/text.module.css';
 	import ProjectList from '~/components/project-list.svelte';
 	import Section from '~/components/section.svelte';
 	import FolderLink from '~/components/folder-link.svelte';
+	import text from '~/styles/text.module.css';
 </script>
 
 <section class="section">

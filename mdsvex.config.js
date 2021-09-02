@@ -1,3 +1,8 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
+
 const config = {
 	extensions: ['.svelte.md', '.md', '.svx'],
 
@@ -8,9 +13,9 @@ const config = {
 	remarkPlugins: [],
 	rehypePlugins: [],
 	layout: {
-		notes: './src/routes/notes/_layout.svelte',
-		projects: './src/routes/projects/_layout.svelte',
-		_: './src/routes/__layout.svelte'
+		notes: path.join(dirname, './src/routes/notes/_layout.svelte'),
+		projects: path.join(dirname, './src/routes/projects/_layout.svelte')
+		// _: path.join(dirname, './src/routes/__layout.svelte')
 	}
 };
 

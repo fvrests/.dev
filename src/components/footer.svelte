@@ -1,4 +1,4 @@
-<section class="section flex space-between" style="margin-bottom: 24px;">
+<section class="section flex space-between" style="margin-bottom: 36px;">
 	<div class="flex flex-col footer-column">
 		<div class="heading">Fvrests</div>
 		<a class="link" href="/about">About</a>
@@ -12,9 +12,9 @@
 	</div>
 	<div class="flex flex-col footer-column">
 		<div class="heading">Site</div>
-		<div>Built by fvrests in 2021 with</div>
+		<div>Built by fvrests in 2021</div>
 		<span
-			><a class="link" href="https://kit.svelte.dev/">Sveltekit</a>
+			>with <a class="link" href="https://kit.svelte.dev/">Sveltekit</a>
 			& <a class="link" href="https://mdsvex.com/">MDsveX</a>
 		</span>
 	</div>

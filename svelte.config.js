@@ -1,8 +1,8 @@
-import preprocess from "svelte-preprocess";
+import preprocess from 'svelte-preprocess';
 import path from 'path';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
-/** @type {import('@sveltejs/kit').Config} */
+
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
@@ -18,9 +18,12 @@ const config = {
 		}
 	},
 
-	preprocess: [mdsvex(mdsvexConfig), preprocess({
-        "postcss": true
-    })]
+	preprocess: [
+		mdsvex(mdsvexConfig),
+		preprocess({
+			postcss: true
+		})
+	]
 };
 
 export default config;

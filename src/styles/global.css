@@ -165,7 +165,8 @@ body {
 	row-gap: 24px;
 	place-content: start / stretch;
 	grid-auto-flow: row;
-	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	/* TODO: max 2 columns */
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 
 /* flex */
