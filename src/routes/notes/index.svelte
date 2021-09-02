@@ -18,8 +18,5 @@
 <section class="section">
 	<h3 class={text.heading}>Notes</h3>
 	<div class="space-sm" />
-	<PostList />
-	{#each posts as post}
-		<a href="/notes/{post.slug}">{post.title}</a>
-	{/each}
+	<PostList {posts} />
 </section>

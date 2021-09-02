@@ -1,17 +1,16 @@
 <script>
 	import text from '~/styles/text.module.css';
-
-	import { metadata as lavender } from '~/routes/projects/lavender.md';
-	import { metadata as rosePine } from '~/routes/projects/rose-pine.md';
-
-	let projects = [lavender, rosePine];
+	export let projects = [];
 </script>
 
 <div class="grid">
 	{#each projects as project}
-		<a href={project.slug} class="project">
+		<a href={`/projects/${project.slug}`} class="project">
 			<div class="preview-container" role="img" aria-label={project.title}>
-				<div class="preview" style={`background-image: url(${project.cover}`} />
+				<div
+					class="preview"
+					style={`background-image: url(/projects/${project.cover}`}
+				/>
 			</div>
 			<h3 class={text.subheading}>{project.title}</h3>
 			<p class={text.label}>{project.tagline}</p>

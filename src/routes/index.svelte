@@ -1,8 +1,19 @@
+<script context="module">
+	export async function load({ fetch }) {
+		const res = await fetch('/projects/projects.json');
+		const { projects } = await res.json();
+		return {
+			props: { projects }
+		};
+	}
+</script>
+
 <script>
 	import ProjectList from '~/components/project-list.svelte';
 	import Section from '~/components/section.svelte';
 	import FolderLink from '~/components/folder-link.svelte';
 	import text from '~/styles/text.module.css';
+	export let projects = [];
 </script>
 
 <section class="section">
@@ -23,7 +34,7 @@
 <div class="space-lg" />
 
 <Section title="Projects">
-	<ProjectList />
+	<ProjectList {projects} />
 	<div class="space-med" />
 	<FolderLink href="/projects">View all</FolderLink>
 </Section>
@@ -34,7 +45,7 @@
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
-				aria-role="img"
+				role="img"
 				alt="desk"
 				class="post-image"
 				style="background-image: url('/sample-image.jpg')"
@@ -53,7 +64,7 @@
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
-				aria-role="img"
+				role="img"
 				alt="desk"
 				class="post-image"
 				style="background-image: url('/sample-image-2.jpg')"
@@ -75,7 +86,7 @@
 	<a class="flex flex-row post" href="/notes">
 		<div class="post-image-container">
 			<div
-				aria-role="img"
+				role="img"
 				alt="desk"
 				class="post-image"
 				style="background-image: url('/sample-image-3.jpg')"
