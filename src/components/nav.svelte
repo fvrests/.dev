@@ -8,7 +8,7 @@
 		<a href="." class="logo" style="margin-left: -9px;">
 			<i
 				class="em em-herb"
-				aria-role="presentation"
+				role="presentation"
 				aria-label="home"
 				style="width: 20px; height: 20px;"
 			/></a

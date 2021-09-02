@@ -18,7 +18,7 @@
 		><i
 			class:active={hovering}
 			class={`em em-${hovering ? 'open_file_folder' : 'file_folder'} flex`}
-			aria-role="presentation"
+			role="presentation"
 			aria-label="file folder"
 			style="width: 14px; height: 14px;"
 		/>
