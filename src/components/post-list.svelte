@@ -20,7 +20,7 @@
 			</p>
 		</div>
 	</a>
-	<div class="space-sm" />
+	<div class="space-med" />
 {/each}
 
 <style>
