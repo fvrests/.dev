@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 :root {
-	--f-high: #211e1f;
-	--f-med: #2c2b2b;
-	--f-low: #423f3f;
+	--f-high: #1e1b1b;
+	--f-med: #2e2a2a;
+	--f-low: #3c3838;
 
 	--b-high: #fffaf3;
-	/* --b-med: #faf4ed; */
 	--b-med: #f7f1ea;
-	/* --b-low: #f2ebe2; */
 	--b-low: #ece6de;
 
 	--accent: #c29e92;
@@ -17,14 +15,12 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--f-high: #fffaf3;
-		/* --f-med: #faf4ed; */
 		--f-med: #f7f1ea;
-		/* --f-low: #f2ebe2; */
 		--f-low: #ece6de;
 
-		--b-high: #211e1f;
-		--b-med: #2c2b2b;
-		--b-low: #423f3f;
+		--b-high: #1e1b1b;
+		--b-med: #2e2a2a;
+		--b-low: #3c3838;
 
 		/* --accent: #dcbbaf; */
 		--accent: #c5c0d1;
@@ -32,14 +28,12 @@
 }
 
 .light:root {
-	--f-high: #211e1f;
-	--f-med: #2c2b2b;
-	--f-low: #423f3f;
+	--f-high: #1e1b1b;
+	--f-med: #2e2a2a;
+	--f-low: #3c3838;
 
 	--b-high: #fffaf3;
-	/* --b-med: #faf4ed; */
 	--b-med: #f7f1ea;
-	/* --b-low: #f2ebe2; */
 	--b-low: #ece6de;
 
 	--accent: #c29e92;
@@ -47,14 +41,12 @@
 
 .dark:root {
 	--f-high: #fffaf3;
-	/* --f-med: #faf4ed; */
 	--f-med: #f7f1ea;
-	/* --f-low: #f2ebe2; */
 	--f-low: #ece6de;
 
-	--b-high: #211e1f;
-	--b-med: #2c2b2b;
-	--b-low: #423f3f;
+	--b-high: #1e1b1b;
+	--b-med: #2e2a2a;
+	--b-low: #3c3838;
 
 	/* --accent: #dcbbaf; */
 	--accent: #c5c0d1;
@@ -118,7 +110,7 @@ body {
 
 /* section */
 .section {
-	padding: 0px 48px;
+	padding: 0px 24px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1400px;
