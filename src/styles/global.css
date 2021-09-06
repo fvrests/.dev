@@ -116,6 +116,12 @@ body {
 	max-width: 1400px;
 }
 
+@media (min-width: 500px) {
+	.section {
+		padding: 0px 48px;
+	}
+}
+
 @media (min-width: 800px) {
 	.section {
 		padding: 0px 150px;

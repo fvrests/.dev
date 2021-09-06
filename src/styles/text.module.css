@@ -1,5 +1,6 @@
 .base {
 	margin-bottom: 8px;
+	color: var(--f-low);
 }
 
 .heading {
@@ -20,10 +21,4 @@
 	font-style: italic;
 	font-size: 13px;
 	margin-bottom: 4px;
-}
-
-.highlight {
-	color: var(--f-high);
-	background-color: var(--accent);
-	padding: 0 2px;
 }

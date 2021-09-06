@@ -27,8 +27,7 @@
 	.post {
 		border-radius: 8px;
 		padding: 18px;
-		margin-top: -18px;
-		margin-left: -18px;
+		margin: -18px -18px 0 -18px;
 		border: 3px solid transparent;
 		/* TODO: make this better  */
 		transition: all 400ms ease;
@@ -42,11 +41,10 @@
 		overflow: hidden;
 		aspect-ratio: 3 / 2;
 		width: 100%;
-		height: auto;
 		max-height: 100%;
-		max-width: 100px;
-		border-radius: 4px;
+		max-width: 150px;
 		margin-right: 18px;
+		flex-shrink: 0;
 	}
 	.post-image {
 		/* TODO: put aspect ratio on div around so that vertical images can be cropped */
