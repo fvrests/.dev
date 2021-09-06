@@ -45,13 +45,15 @@
 
 <style>
 	.toggle {
+		z-index: 20;
 		height: 32px;
 		width: 32px;
-		border-radius: 50%;
+		border-radius: 8px;
 		border: 2px solid transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-right: -8px;
 		/* TODO: remove margin & collapse nav into menu on small screens */
 	}
 	.toggle:hover {
@@ -68,7 +70,7 @@
 		border-radius: 8px;
 		display: flex;
 		align-items: center;
-		z-index: 10;
+		z-index: 20;
 	}
 	.theme-name {
 		font-weight: bold;
