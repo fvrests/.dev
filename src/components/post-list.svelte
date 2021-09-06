@@ -26,8 +26,8 @@
 <style>
 	.post {
 		border-radius: 8px;
-		padding: 18px;
-		margin: -18px -18px 0 -18px;
+		padding: 12px;
+		margin: -12px -12px 0 -12px;
 		border: 3px solid transparent;
 		/* TODO: make this better  */
 		transition: all 400ms ease;
@@ -39,21 +39,17 @@
 	.post-image-container {
 		border-radius: 4px;
 		overflow: hidden;
-		aspect-ratio: 3 / 2;
+		height: 100%;
 		width: 100%;
-		max-height: 100%;
-		max-width: 150px;
+		max-width: 100px;
 		margin-right: 18px;
 		flex-shrink: 0;
 	}
 	.post-image {
-		/* TODO: put aspect ratio on div around so that vertical images can be cropped */
 		position: relative;
 		background-color: var(--b-high);
 		background-position: center;
 		background-size: cover;
-		transition: var(--transition);
-		width: 100%;
 		padding-top: 66.66%;
 	}
 	.post-image:after {
