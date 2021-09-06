@@ -1,5 +1,4 @@
 <script>
-	import link from '~/styles/link.module.css';
 	import ThemeToggle from '~/components/theme-toggle.svelte';
 	let open = false;
 	const toggleMenu = () => {
